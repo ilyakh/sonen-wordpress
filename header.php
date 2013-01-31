@@ -32,22 +32,22 @@
 
 <?php
 
-$domain = 
+$theme_uri = 'http://sonen.ifi.uio.no/ny/wp-content/themes/sonen';
 
 $files = array(
 	/* bootstrap: responsive scafolding grid */
-	'<link href="' + get_theme_root_uri() + '/css/bootstrap.min.css" rel="stylesheet" media="screen">',
+	'<link href="' . $theme_uri . '/css/bootstrap.min.css" rel="stylesheet" media="screen">',
 	'<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-	'<link href="' + get_theme_root_uri() + '/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
+	'<link href="' . $theme_uri . '/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
 	/* fonts */
 	'<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />',
 );
 
 $less = array( 
 	/* less js stylesheets */
-	'<link rel="stylesheet/less" type="text/css" href="' + get_theme_root_uri() + '/less/style.less" />',
+	'<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/style.less" />',
 	/* less js script */
-	'<script src="' + get_theme_root_uri() + '/js/less.js" type="text/javascript"></script>'	
+	'<script src="' . $theme_uri . '/js/less.js" type="text/javascript"></script>'
 );
 
 print( implode( "\n", $files ) );
@@ -57,8 +57,6 @@ print( implode( "\n", $less ) );
 </head>
 
 <body <?php body_class(); ?>>
-
-
 
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
