@@ -34,13 +34,13 @@
 
 $files = array(
 	/* bootstrap: responsive scafolding grid */
-	'<link href="wp-content/themes/ttsandbox/css/bootstrap.min.css" rel="stylesheet" media="screen">',
+	'<link href="wp-content/themes/sonen/css/bootstrap.min.css" rel="stylesheet" media="screen">',
 	'<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-	'<link href="wp-content/themes/ttsandbox/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
+	'<link href="wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
 	/* fonts */
 	/* '<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />', */
 	/* category styling */ 
-	'<link href="wp-content/themes/ttsandbox/css/overrides.css" rel="stylesheet">'
+	'<link href="wp-content/themes/sonen/css/overrides.css" rel="stylesheet">'
 );
 
 print( implode( "\n", $files ) );
