@@ -21,33 +21,37 @@
 			
 			<header class="entry-header">
 				
-				<div class="entry-category">
-					<a class="category-name" href="<?php the_permalink(); ?>">
-						<?php if ( in_category( 'prosjekt' ) ) : ?>
-							Prosjekt
-						<?php elseif ( in_category( 'arrangement' ) ) : ?>
-							Arrangement					
-						<?php elseif ( in_category( 'artikkel' ) ) : ?>
-							Artikkel
-						<?php else: ?>
+				<div class="foundation">
+					<div class="entry-category">
+						<a class="category-name" href="<?php the_permalink(); ?>">
+							<?php if ( in_category( 'prosjekt' ) ) : ?>
+								Prosjekt
+							<?php elseif ( in_category( 'arrangement' ) ) : ?>
+								Arrangement					
+							<?php elseif ( in_category( 'artikkel' ) ) : ?>
+								Artikkel
+							<?php else: ?>
+								
+							<?php endif; ?>
 							
-						<?php endif; ?>
-						
-						<?php if ( in_category( 'anbefalt' ) ) : ?>
-							<i class="icon-white icon-star"></i>
-						<?php endif; ?>
-						
-					</a>
-					
-
-					
-					<div>
-						<?php the_post_thumbnail(); ?>
+							<?php if ( in_category( 'anbefalt' ) ) : ?>
+								<i class="icon-white icon-star"></i>
+							<?php endif; ?>
+						</a>
 					</div>
 					
+					<div class="entry-thumbnail">
+						<a href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail(); ?>
+						</a>
+					</div>
 				</div>
 				
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h1 class="entry-title">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_title(); ?>
+					</a>
+				</h1>
 				
 			</header><!-- .entry-header -->
 			

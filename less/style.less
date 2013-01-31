@@ -21,12 +21,29 @@
 	margin-bottom: 0rem;
 	border-radius: 0 0 0.25em 0.25em;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	
+}
+
+.entry-header {
+	text-align: center;
+	
+	.entry-title {
+		font-weight: normal;
+		text-transform: uppercase;
+		text-align: left;
+	}
+	
+	.foundation {
+		background-color: #EEE;
+		border-radius: 0 0 0.25em 0.25em;
+	}
+	
 }
 
 .entry-category {
-
-	
+		
 	.category-name {
+		text-align: left;
 		padding: 0.5em 0.5em 0.5em 0.6em;
 		display: block;
 		color: white;
@@ -42,8 +59,15 @@
 	i {
 		float: right;
 		margin-top: 0.2em;
-	}	
+	}
+	
 }
+
+.entry-thumbnail {
+	
+}
+
+
 
 article.category-artikkel .category-name {
 	background-color: @artikkel-bg;
@@ -66,9 +90,15 @@ article.category-anbefalt .category-name {
 }
 
 
-article {
-	padding: 0;
-	margin: 0;
+
+.entry-content p {
+	text-align: justify;
+	line-height: 18px;
+}
+
+.entry-content a:hover {
+	color: gray;
+	text-decoration: none;
 }
 
 div.post-thumbnail h1.entry-title {
@@ -115,15 +145,7 @@ div.post-thumbnail {
 }
 
 
-.entry-content p {
-	text-align: justify;
-	line-height: 18px;
-}
 
-.entry-content a:hover {
-	color: gray;
-	text-decoration: none;
-}
 
 
 
@@ -149,4 +171,7 @@ img.header-image {
 	border-radius: 0;
 	box-shadow: none;
 }
+
+
+
 
