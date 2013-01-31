@@ -31,11 +31,10 @@
 							<?php elseif ( in_category( 'artikkel' ) ) : ?>
 								Artikkel
 							<?php else: ?>
-								
 							<?php endif; ?>
 							
 							<?php if ( in_category( 'anbefalt' ) ) : ?>
-								<i class="icon-white icon-star"></i>
+								<i class="icon-white icon-star">&nbsp</i>
 							<?php endif; ?>
 						</a>
 					</div>
