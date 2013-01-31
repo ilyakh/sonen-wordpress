@@ -1,0 +1,40 @@
+article {
+	padding: 0;
+	margin: 0;
+}
+
+.single-image-box {
+	width: 100%;
+	background-image: url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/pw_maze_white.png');
+	padding: 0.5em;
+}
+
+
+
+
+div.post-thumbnail h1.entry-title {
+	font-size: 2em;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+
+div.post-thumbnail a {
+	color: black;
+}
+
+
+div.post-thumbnail article.category-artikkel {
+	
+}
+
+div.post-thumbnail article.category-prosjekt {
+	
+}
+
+div.post-thumbnail article.category-arrangement {
+	
+}
+
+div.post-thumbnail article.category-anbefalt {
+	
+}
