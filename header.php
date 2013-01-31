@@ -38,12 +38,18 @@ $files = array(
 	'<meta name="viewport" content="width=device-width, initial-scale=1.0">',
 	'<link href="wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
 	/* fonts */
-	/* '<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />', */
-	/* category styling */ 
-	'<link href="wp-content/themes/sonen/css/overrides.css" rel="stylesheet">'
+	'<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />',
+);
+
+$less = array( 
+	/* less js stylesheets */
+	'<link rel="stylesheet/less" type="text/css" href="wp-content/themes/sonen/less/style.less" />',
+	/* less js script */
+	'<script src="wp-content/themes/sonen/js/less.js" type="text/javascript"></script>'	
 );
 
 print( implode( "\n", $files ) );
+print( implode( "\n", $less ) );
 
 ?>
 </head>
@@ -56,12 +62,10 @@ print( implode( "\n", $files ) );
 	<header id="masthead" class="site-header" role="banner">
 		
 		<!-- Adds HEADER IMAGE aka LOGO -->
-		<div class="header-image-container">
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 		<?php endif; ?>
-		</div>		
 		
 		<!-- Renders NAVIGATION MENU -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">

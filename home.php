@@ -14,12 +14,11 @@
  * @since Twenty Twelve 1.0
  */
 
-
-get_header(); 
-
 ?>
 
+<?php get_header(); ?>
 
+<div>
 
 <?php if ( have_posts() ) : /* Starts the LOOP */ ?>
 	
@@ -106,5 +105,7 @@ get_header();
 
 
 <?php /* get_sidebar(); */ ?>
+
+</div>
 
 <?php get_footer(); ?>

@@ -8,55 +8,131 @@
  */
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-		<div class="featured-post">
-			<?php _e( 'Featured post', 'twentytwelve' ); ?>
-		</div>
-		<?php endif; ?>
-		<header class="entry-header">
-			<?php if ( is_single() ) : ?>
-				<div class="single-image-box"><?php the_post_thumbnail(); ?></div>
-			<?php else : ?>
-				<?php the_post_thumbnail(); ?>
-			<?php endif; // is_single() ?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php if ( ! is_single() ) : ?>
 			
-			<?php if ( is_single() ) : ?>
+			<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+			<div class="featured-post">
+				<?php _e( 'Featured post', 'twentytwelve' ); ?>
+			</div>
+			<?php endif; ?>
+			
+			<header class="entry-header">
+				
+				<div class="entry-category">
+					<a class="category-name" href="<?php the_permalink(); ?>">
+						<?php if ( in_category( 'prosjekt' ) ) : ?>
+							Prosjekt
+						<?php elseif ( in_category( 'arrangement' ) ) : ?>
+							Arrangement					
+						<?php elseif ( in_category( 'artikkel' ) ) : ?>
+							Artikkel
+						<?php else: ?>
+							
+						<?php endif; ?>
+						
+						<?php if ( in_category( 'anbefalt' ) ) : ?>
+							<i class="icon-white icon-star"></i>
+						<?php endif; ?>
+						
+					</a>
+					
+
+					
+					<div>
+						<?php the_post_thumbnail(); ?>
+					</div>
+					
+				</div>
+				
 				<h1 class="entry-title"><?php the_title(); ?></h1>
+				
+			</header><!-- .entry-header -->
+			
+			
+		
+			<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+				<div class="entry-summary">
+					<?php the_excerpt(); ?>
+				</div><!-- .entry-summary -->
 			<?php else : ?>
+			<div class="entry-content">
+					
+				<a href="<?php the_permalink(); ?>" 
+					title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+					<?php the_content(); ?>
+				</a>
+				
+
+			<div class="read-more">
+				<a href="<?php the_permalink(); ?>" 
+					title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+					Les mer
+				</a>
+			</div>
+				
+			</div><!-- .entry-content -->
+
+			
+			<?php endif; ?>	
+	
+		
+		<?php else : ?>
+			
+			<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+			<div class="featured-post">
+				<?php _e( 'Featured post', 'twentytwelve' ); ?>
+			</div>
+			<?php endif; ?>
+			<header class="entry-header">
+			
+				
+				<div class="header-category">
+					<?php if ( in_category( 'prosjekt' ) ) : ?>
+						Prosjekt
+					<?php elseif ( in_category( 'arrangement' ) ) : ?>
+						Arrangement					
+					<?php elseif ( in_category( 'artikkel' ) ) : ?>
+						Artikkel
+					<?php else: ?>
+						
+					<?php endif; ?>
+					
+					<?php if ( in_category( 'anbefalt' ) ) : ?>
+						<i class="icon-white icon-star"></i>
+					<?php endif; ?>
+				
+				</div>
+				<?php the_post_thumbnail(); ?>
+				
 				<h1 class="entry-title">
 					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h1>
-			<?php endif; // is_single() ?>
-			
-			<?php /*
-			<?php if ( comments_open() ) : ?>
-				<div class="comments-link">
-					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
-				</div><!-- .comments-link -->
-			<?php endif; // comments_open() ?>
-			*/ ?>
-			
-		</header><!-- .entry-header -->
+				
+				<?php if ( comments_open() ) : ?>
+					<div class="comments-link">
+						<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
+					</div><!-- .comments-link -->
+				<?php endif; // comments_open() ?>
+				
+			</header><!-- .entry-header -->
 
-		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-		<?php else : ?>
-		<div class="entry-content">
-		<?php if ( is_single() ) : ?>
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
-		<?php else : ?>
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_excerpt(); ?></a>
-		<?php endif; ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-		</div><!-- .entry-content -->
-		<?php endif; ?>
-		
-		
-		<!-- Display ABOUT AUTHOR footer -->
-		<?php if ( is_single() ) : ?>
+			<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+			<div class="entry-summary">
+				<?php the_excerpt(); ?>
+			</div><!-- .entry-summary -->
+			<?php else : ?>
+			<div class="entry-content">
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+			</div>
+			<!-- .entry-content -->
+			<?php endif; ?>
+			
+			<!-- Display ABOUT AUTHOR footer -->
+			
 			<footer class="entry-meta">
 				<?php twentytwelve_entry_meta(); ?>
 				<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
@@ -78,9 +154,7 @@
 					</div><!-- .author-info -->
 				<?php endif; ?>
 			</footer><!-- .entry-meta -->
-		<?php endif; // is_single() ?>
-		
-		
-		
-	</article><!-- #post -->
+		<?php endif; ?>
 	
+</article><!-- #post -->
+
