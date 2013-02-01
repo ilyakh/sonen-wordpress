@@ -12,6 +12,51 @@
 
 
 
+
+
+
+.site {
+	padding: 0;
+}
+
+footer {
+	width: 100%;
+	float: left;
+	display: block;
+	color: white;
+	
+	.credits {
+		height: 300px;
+		background-image: url( 'http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/debut_dark.png' );
+	}
+	
+	.copyright {
+		height: 114px;
+		background-image: none;
+		background-color: black;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	body .site {
+		padding: 0;
+	}
+	
+}
+
+
+header.site-header {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+div#main {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+}
+
+
 /**
  *	Glues the category header to the thumbnail image
  */
@@ -20,8 +65,7 @@
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
 	border-radius: 0 0 0.25em 0.25em;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	
+	box-shadow: none;
 }
 
 .entry-header {
@@ -36,9 +80,31 @@
 	.foundation {
 		background-color: #EEE;
 		border-radius: 0 0 0.25em 0.25em;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		
+		img.wp-post-image {
+			width: 100%;
+		}
+		
 	}
-	
 }
+
+
+
+.span4 {
+	.foundation {
+		max-height: 225px;
+		overflow: hidden;
+	}
+}
+
+.span6 {
+	.foundation {
+		max-height: 320px;
+		overflow: hidden;
+	}
+}
+
 
 .entry-category {
 		
@@ -62,12 +128,6 @@
 	}
 	
 }
-
-.entry-thumbnail {
-	
-}
-
-
 
 article.category-artikkel .category-name {
 	background-color: @artikkel-bg;
@@ -93,18 +153,23 @@ article.category-anbefalt .category-name {
 
 .entry-content p {
 	text-align: justify;
-	line-height: 18px;
+	line-height: 20px;
 }
 
 .entry-content a:hover {
-	color: gray;
 	text-decoration: none;
 }
 
-div.post-thumbnail h1.entry-title {
+h1.entry-title {
 	font-size: 2em;
+	font-family: Arial;
 	line-height: 1em;
 	text-transform: uppercase;
+	
+	a {
+		color: black;
+	}
+	
 }
 
 div.post-thumbnail a {
@@ -132,7 +197,8 @@ div.post-thumbnail {
 			
 			a {
 				position: absolute;
-				bottom: 0px;
+				bottom: 2px;
+				right: 2px;
 				display: block;
 				width: 100%;
 				text-align: right;

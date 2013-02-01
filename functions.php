@@ -46,7 +46,7 @@ function twentytwelve_setupas() {
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
 	
-	set_post_thumbnail_size( 960, 9000, true ); // Unlimited height, soft crop
+	set_post_thumbnail_size( 960, 593, true ); // Unlimited height, soft crop
 	
 	add_image_size( 'whole', 960, 593, true ); 	// whole page
     add_image_size( 'half', 520, 321, true ); 	// half-page

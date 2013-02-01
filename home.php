@@ -18,7 +18,7 @@
 
 <?php get_header(); ?>
 
-<div>
+
 
 <?php if ( have_posts() ) : /* Starts the LOOP */ ?>
 	
