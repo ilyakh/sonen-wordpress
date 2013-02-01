@@ -1,22 +1,81 @@
-@small-text: 13px;
-@normal-text: 21px;
-@large-text: 34px;
+@small-text:      13px;
+@normal-text:     21px;
+@large-text:      34px;
 
 
-@prosjekt-bg: #556270;
-@arrangement-bg: #FF4040;
-@artikkel-bg: #025D8C;
-@anbefalt-bg: #FF9900;
-
-
-
+@prosjekt-bg:     #556270;
+@arrangement-bg:  darkred;
+@artikkel-bg:     #025D8C;
+@anbefalt-bg:     #FF9900;
 
 
 
 
 
-.site {
-	padding: 0;
+body.custom-background {
+    background-image:
+        url( '../img/light-bg.png' );
+}
+
+div.widget-area {
+    line-height: 1em;
+    ul, li {
+        line-height: 1em;
+    }
+}
+
+
+.arrangement-banner {
+    width: 100%;
+    background-image:
+        url( '../img/light-dark-bg.png' );
+    color: white;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    .arrangement-content-area {
+        overflow: hidden;
+        height: 157px;
+        max-width: 960px;
+        max-width: 68.571428571rem;
+        margin-left: auto;
+        margin-right: auto;
+        background-image:
+            url( '../img/dark-bg.png' );
+        box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+
+        .arrangement-header {
+            font-family: 'FuturaBTW01-MediumConde', Arial, sans;
+            font-size: 1.4em;
+            padding: 1em 1em 0.25em 1em;
+        }
+
+        .arrangement-list {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            padding: 1em 1em 0.25em 1em;
+
+            .arrangement-element {
+                height: 100px;
+                background-image:
+                    url( '../img/red-bg.png' );
+                border-radius: 0.5em;
+                float: left;
+                margin: 0.5em;
+                padding: 1em;
+                width: 225px;
+
+            }
+        }
+    }
+}
+
+.bottomless {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 footer {
@@ -24,28 +83,86 @@ footer {
 	float: left;
 	display: block;
 	color: white;
-	
+
+    .credits, .copyright {
+        padding: 1em;
+    }
+
 	.credits {
 		height: 300px;
-		background-image: url( 'http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/debut_dark.png' );
+		background-image: url( '../img/dark-bg.png' );
 	}
 	
 	.copyright {
-		height: 114px;
+        text-align: right;
 		background-image: none;
 		background-color: black;
+        color: #a9a9a9;
+        font-weight: bold;
 	}
+}
+
+.entry-meta {
+    display: block;
+    background-color: gray;
+    border-radius: 0.5em;
+
+    .author-info, .author-description {
+        border-top: none;
+        margin: 0;
+        margin: 0rem;
+        padding-top: 0;
+        padding-top: 0rem;
+        overflow: hidden;
+        padding: 0.5em;
+        color: white;
+        line-height: 1em;
+    }
+
+}
+
+.nav-next, .nav-previous {
+    display: block;
+    margin-top: 4em;
 }
 
 @media screen and (min-width: 960px) {
 	body .site {
 		padding: 0;
+        margin-top: 0;
+        margin-bottom: 0px;
+        margin-bottom: 0rem;
 	}
+
+    .bottomless {
+        padding: 0;
+        padding: 0rem;
+        margin-bottom: 0px;
+        margin-bottom: 0rem;
+
+    }
 	
 }
 
 
+@media screen and (min-width: 600px) {
+    .foundation {
+        .span4 {
+            img.wp-post-image {
+                max-height: 300px;
+            }
+        }
+    }
+
+    .bottomless {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+
 header.site-header {
+    padding-top: 0;
 	padding-left: 30px;
 	padding-right: 30px;
 }
@@ -93,17 +210,18 @@ div#main {
 
 .span4 {
 	.foundation {
-		max-height: 225px;
+		max-height: 300px;
 		overflow: hidden;
 	}
 }
 
 .span6 {
 	.foundation {
-		max-height: 320px;
+		max-height: 340px;
 		overflow: hidden;
 	}
 }
+
 
 
 .entry-category {
@@ -113,7 +231,7 @@ div#main {
 		padding: 0.5em 0.5em 0.5em 0.6em;
 		display: block;
 		color: white;
-		font-family: 'FuturaBTW01-MediumConde';
+		font-family: 'FuturaBTW01-MediumConde', Arial, sans;
 		font-size: 1.2em;
 		color: white;
 		text-transform: uppercase;
@@ -183,7 +301,7 @@ div.post-thumbnail {
 		position: relative;
 		
 		.read-more {
-			font-family: 'FuturaBTW01-MediumConde';
+			font-family: 'FuturaBTW01-MediumConde', Arial, sans;
 			font-size: 1.2em;
 			text-transform: uppercase;
 			background-image: url( '../img/read-more-bg.png' );
@@ -203,11 +321,8 @@ div.post-thumbnail {
 				width: 100%;
 				text-align: right;
 			}
-			
 		}
 	}
-	
-
 }
 
 

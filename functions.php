@@ -57,12 +57,6 @@ function twentytwelve_setupas() {
 add_action( 'after_setup_theme', 'twentytwelve_setup' );
 
 endif;
- 
-
-function get_preview_header() {
-	
-} 
-
 
 ?>
 

@@ -59,7 +59,9 @@ print( implode( "\n", $less ) );
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="hfeed site">
+
+
+<div id="page" class="hfeed site bottomless">
 	<header id="masthead" class="site-header" role="banner">
 		
 		<!-- Adds HEADER IMAGE aka LOGO -->
@@ -69,6 +71,7 @@ print( implode( "\n", $less ) );
 		<?php endif; ?>
 		
 		<!-- Renders NAVIGATION MENU -->
+        <?php /*
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
@@ -83,10 +86,10 @@ print( implode( "\n", $less ) );
 			); 
 			?>
 		</nav>
+        */ ?>
+
 		<!-- #site-navigation -->		
 
-
-		
 		<!-- Presents BLOG INFO -->
 		<?php /*
 		<hgroup>
@@ -94,10 +97,41 @@ print( implode( "\n", $less ) );
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 		*/ ?>
-		
 
-	
-		
+
 	</header><!-- #masthead -->
+</div>
 
+<!-- Creates a borderless EVENT banner -->
+<div class="arrangement-banner">
+    <div class="arrangement-content-area">
+        <?php
+            /* modified loop allows a specific article quantity */
+            $number_of_posts = 5;
+            $quantified_query = new WP_Query( 'category_name=arrangemet&posts_per_page=' + $number_of_posts );
+        ?>
+
+        <div class="arrangement-header">Dette skjer på sonen</div>
+        <div class="arrangement-list row-fluid">
+            <div class="arrangement-element">26 JAN</div>
+            <div class="arrangement-element">31 JAN</div>
+            <div class="arrangement-element">02 FEB</div>
+            <div class="arrangement-element">26 JAN</div>
+            <div class="arrangement-element">31 JAN</div>
+            <div class="arrangement-element">02 FEB</div>
+            <div class="arrangement-element">26 JAN</div>
+            <div class="arrangement-element">31 JAN</div>
+            <div class="arrangement-element">02 FEB</div>
+            <div class="arrangement-element">26 JAN</div>
+            <div class="arrangement-element">31 JAN</div>
+            <div class="arrangement-element">02 FEB</div>
+            <div class="arrangement-element">26 JAN</div>
+            <div class="arrangement-element">31 JAN</div>
+            <div class="arrangement-element">02 FEB</div>
+        </div>
+
+    </div>
+</div>
+
+<div id="page" class="hfeed site">
 	<div id="main" class="wrapper">

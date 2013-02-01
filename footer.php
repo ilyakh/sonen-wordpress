@@ -17,7 +17,7 @@
 <footer>
 
 	<div class="credits"></div>
-	<div class="copyright"></div>
+	<div class="copyright">Institutt for informatikk, Universitetet i Oslo © 2012</div>
 	
 </footer>
 

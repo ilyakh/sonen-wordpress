@@ -21,32 +21,31 @@
 
 
 <?php if ( have_posts() ) : /* Starts the LOOP */ ?>
-	
-	
+
+
 	<?php $i=1; /* POST counter */ ?>
-	
+
 	<!-- Opens the featured article area -->
 	<div id="featured" class="row-fluid site-content">
-	
+
 	<?php /* while ( have_posts() ) : the_post(); */ ?>
-	
+
 	<?php
-		/* modified loop allows more  */
+		/* modified loop allows a specific article quantity */
 		$number_of_posts = 50;
 		$quantified_query = new WP_Query( 'posts_per_page=' + $number_of_posts );
-		
+
 		while ( $quantified_query->have_posts() ) : $quantified_query->the_post();
 	?>
 
 		<!-- Distributes the posts: first the half-page width and then the one-thirds -->
 		<?php if ( $i <= 2 ) : ?>
-		
+
 			<div class="span6 post-thumbnail featured">
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			</div>
-				
+
 		<?php elseif ( $i > 2 ) : ?>
-			
 			<?php if ( $i % 3 == 0 ) : ?>
 			</div>
 			<div id="primary" class="row-fluid site-content">
@@ -56,20 +55,19 @@
 				<div class="span4 post-thumbnail">
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				</div>
-
 		<?php endif; ?>
 
 		<!-- Increments the post counter -->
 		<?php $i++; ?>
-	
+
 	<?php endwhile; ?>
 	</div>
-	
-	<?php /* wentytwelve_content_nav( 'nav-below' ); */ ?>
+
+	<?php /* twentytwelve_content_nav( 'nav-below' ); */ ?>
 
 
 <?php else : /* NO POSTS */ ?>
-	
+
 	<article id="post-0" class="post no-results not-found">
 
 	<?php if ( current_user_can( 'edit_posts' ) ) :

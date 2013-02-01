@@ -71,12 +71,6 @@
 				</a>
 				
 
-			<div class="read-more">
-				<a href="<?php the_permalink(); ?>" 
-					title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
-					Les mer
-				</a>
-			</div>
 				
 			</div><!-- .entry-content -->
 
@@ -137,10 +131,11 @@
 			<!-- Display ABOUT AUTHOR footer -->
 			
 			<footer class="entry-meta">
-				<?php twentytwelve_entry_meta(); ?>
-				<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
-				<?php if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) : 
-				// If a user has filled out their description and this is a multi-author blog, show a bio on their entries. ?>
+				<?php /* twentytwelve_entry_meta(); */ ?>
+
+				<?php /* edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); */ ?>
+				<?php /* if ( is_singular() && get_the_author_meta( 'description' ) && is_multi_author() ) :
+				// If a user has filled out their description and this is a multi-author blog, show a bio on their entries.*/ ?>
 					<div class="author-info">
 						<div class="author-avatar">
 							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentytwelve_author_bio_avatar_size', 68 ) ); ?>
@@ -155,7 +150,7 @@
 							</div><!-- .author-link	-->
 						</div><!-- .author-description -->
 					</div><!-- .author-info -->
-				<?php endif; ?>
+				<?php /* endif; */ ?>
 			</footer><!-- .entry-meta -->
 		<?php endif; ?>
 	
