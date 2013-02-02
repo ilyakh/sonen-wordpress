@@ -9,6 +9,68 @@
 @anbefalt-bg:     #FF9900;
 
 
+@max-preview-height: 600px;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Neo Sans W02';
+}
+
+
+.events {
+    background-image: url( '../img/dark-bg.png' );
+    color: white;
+    box-shadow: 0 6px 12px rgba(100, 100, 100, 0.4);
+    height: @max-preview-height;
+    padding: 1em;
+
+}
+
+.single-container {
+
+    .single {}
+
+    .entry-meta {
+        display: block;
+        background-image: url('../img/light-bg.png');
+
+        .author-info,
+        .author-description p,
+        .author-link a {
+            border-top: none;
+            margin: 0;
+            margin: 0rem;
+            padding: 0;
+            padding: 0rem;
+        }
+    }
+}
+
+.preview-container {
+
+    .preview {}
+
+    .entry-title {
+        margin-top: 0.6em;
+    }
+
+    .entry-header {
+        margin-bottom: 0;
+    }
+
+    .entry-content {
+        max-height: 300px;
+        overflow: hidden;
+        position: relative;
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            color: black;
+        }
+    }
+}
 
 
 
@@ -25,19 +87,19 @@ div.widget-area {
 }
 
 
-.arrangement-banner {
+.menu-banner {
     width: 100%;
     background-image:
         url( '../img/light-dark-bg.png' );
     color: white;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
 
+    .main-navigation {
+        margin-top: 0px;
+        text-align: left;
+    }
 
-    .arrangement-content-area {
-        overflow: hidden;
-        height: 157px;
+    .menu {
+
         max-width: 960px;
         max-width: 68.571428571rem;
         margin-left: auto;
@@ -46,29 +108,9 @@ div.widget-area {
             url( '../img/dark-bg.png' );
         box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 
-        .arrangement-header {
-            font-family: 'FuturaBTW01-MediumConde', Arial, sans;
-            font-size: 1.4em;
-            padding: 1em 1em 0.25em 1em;
-        }
-
-        .arrangement-list {
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
-            padding: 1em 1em 0.25em 1em;
-
-            .arrangement-element {
-                height: 100px;
-                background-image:
-                    url( '../img/red-bg.png' );
-                border-radius: 0.5em;
-                float: left;
-                margin: 0.5em;
-                padding: 1em;
-                width: 225px;
-
-            }
+        li a {
+            color: white;
+            padding-left: 1.5em;
         }
     }
 }
@@ -84,46 +126,52 @@ footer {
 	display: block;
 	color: white;
 
-    .credits, .copyright {
-        padding: 1em;
-    }
 
-	.credits {
+	.site-info {
 		height: 300px;
 		background-image: url( '../img/dark-bg.png' );
-	}
-	
-	.copyright {
-        text-align: right;
-		background-image: none;
-		background-color: black;
-        color: #a9a9a9;
-        font-weight: bold;
+        font-size: 0.8em;
+
+        .credits-row, .sponsors-row {
+            max-width: 960px;
+            max-width: 68.571428571rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            .credits-column {
+                padding: 1.5em;
+            }
+        }
+
+
 	}
 }
 
-.entry-meta {
-    display: block;
-    background-color: gray;
-    border-radius: 0.5em;
-
-    .author-info, .author-description {
-        border-top: none;
-        margin: 0;
-        margin: 0rem;
-        padding-top: 0;
-        padding-top: 0rem;
-        overflow: hidden;
-        padding: 0.5em;
-        color: white;
-        line-height: 1em;
-    }
-
+.copyright-row {
+    text-align: right;
+    color: #a9a9a9;
+    background-color: black;
+    font-weight: bold;
+    padding: 0.5em;
 }
+
+
+
+.author-avatar img {
+    height: auto;
+    vertical-align: baseline;
+    box-shadow: none;
+    margin-left: 0.5em;
+}
+
 
 .nav-next, .nav-previous {
     display: block;
     margin-top: 4em;
+}
+
+.nav.main-navigation {
+    color: white;
 }
 
 @media screen and (min-width: 960px) {
@@ -165,6 +213,10 @@ header.site-header {
     padding-top: 0;
 	padding-left: 30px;
 	padding-right: 30px;
+
+    background-image: url('../img/segl.png');
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 div#main {
@@ -278,11 +330,13 @@ article.category-anbefalt .category-name {
 	text-decoration: none;
 }
 
+
 h1.entry-title {
 	font-size: 2em;
-	font-family: Arial;
+	font-family: 'Neo Sans W02', Arial, sans;
 	line-height: 1em;
 	text-transform: uppercase;
+
 	
 	a {
 		color: black;
@@ -294,36 +348,7 @@ div.post-thumbnail a {
 	color: black;
 }
 
-div.post-thumbnail {
-	.entry-content {
-		max-height: 300px;
-		overflow: hidden;
-		position: relative;
-		
-		.read-more {
-			font-family: 'FuturaBTW01-MediumConde', Arial, sans;
-			font-size: 1.2em;
-			text-transform: uppercase;
-			background-image: url( '../img/read-more-bg.png' );
-			background-repeat: repeat-x;
-			position: absolute;
-			bottom: 0px;
-			right: 0px;
-			z-index: 255;
-			width: 100%;
-			height: 75px;
-			
-			a {
-				position: absolute;
-				bottom: 2px;
-				right: 2px;
-				display: block;
-				width: 100%;
-				text-align: right;
-			}
-		}
-	}
-}
+
 
 
 

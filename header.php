@@ -33,7 +33,7 @@
 <?php
 
 $theme_uri = '/wordpress-no/wp-content/themes/sonen';
-$theme_uri = '/ny/wp-content/themes/sonen';
+// $theme_uri = '/ny/wp-content/themes/sonen';
 
 $files = array(
 	/* bootstrap: responsive scafolding grid */
@@ -64,74 +64,20 @@ print( implode( "\n", $less ) );
 
 <div id="page" class="hfeed site bottomless">
 	<header id="masthead" class="site-header" role="banner">
-		
 		<!-- Adds HEADER IMAGE aka LOGO -->
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 		<?php endif; ?>
-		
-		<!-- Renders NAVIGATION MENU -->
-        <?php /*
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-			
-			<!-- Calls the WP_NAV_MENU -->
-			<?php 
-			wp_nav_menu( 
-				array( 
-					'theme_location' => 'primary', 
-					'menu_class' => 'nav-menu'
-				)
-			); 
-			?>
-		</nav>
-        */ ?>
-
-		<!-- #site-navigation -->		
-
-		<!-- Presents BLOG INFO -->
-		<?php /*
-		<hgroup>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
-		*/ ?>
-
-
 	</header><!-- #masthead -->
 </div>
 
 <!-- Creates a borderless EVENT banner -->
-<div class="arrangement-banner">
-    <div class="arrangement-content-area">
-        <?php
-            /* modified loop allows a specific article quantity */
-            $number_of_posts = 5;
-            $quantified_query = new WP_Query( 'category_name=arrangemet&posts_per_page=' + $number_of_posts );
-        ?>
-
-        <div class="arrangement-header">Dette skjer på sonen</div>
-        <div class="arrangement-list row-fluid">
-            <div class="arrangement-element">26 JAN</div>
-            <div class="arrangement-element">31 JAN</div>
-            <div class="arrangement-element">02 FEB</div>
-            <div class="arrangement-element">26 JAN</div>
-            <div class="arrangement-element">31 JAN</div>
-            <div class="arrangement-element">02 FEB</div>
-            <div class="arrangement-element">26 JAN</div>
-            <div class="arrangement-element">31 JAN</div>
-            <div class="arrangement-element">02 FEB</div>
-            <div class="arrangement-element">26 JAN</div>
-            <div class="arrangement-element">31 JAN</div>
-            <div class="arrangement-element">02 FEB</div>
-            <div class="arrangement-element">26 JAN</div>
-            <div class="arrangement-element">31 JAN</div>
-            <div class="arrangement-element">02 FEB</div>
-        </div>
-
-    </div>
+<div class="menu-banner">
+    <nav id="site-navigation" class="main-navigation row-fluid" role="navigation">
+        <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
+        <?php wp_nav_menu( array( 'container' => '' ) ); ?>
+    </nav>
 </div>
 
 <div id="page" class="hfeed site">
