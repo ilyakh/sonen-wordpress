@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
         .author-info,
         .author-description p,
         .author-link a {
+            color: black;
             border-top: none;
             margin: 0;
             margin: 0rem;
@@ -43,6 +44,24 @@ h1, h2, h3, h4, h5, h6 {
             padding: 0rem;
         }
     }
+
+    .entry-title-container {
+        text-align: center;
+        vertical-align: middle;
+
+        floater	{ float:left; height:50%; margin-bottom:-130px;}
+        content	{ clear:both; height: 360px; position:relative; }
+
+    }
+}
+
+.author-info {
+    border-top: 1px solid #ededed;
+    margin: 0;
+    margin: 0rem;
+    padding-top: 24px;
+    padding-top: 1.714285714rem;
+    overflow: hidden;
 }
 
 .preview-container {
@@ -126,25 +145,34 @@ footer {
 	display: block;
 	color: white;
 
-
 	.site-info {
-		height: 300px;
+		min-height: 300px;
 		background-image: url( '../img/dark-bg.png' );
         font-size: 0.8em;
 
         .credits-row, .sponsors-row {
             max-width: 960px;
             max-width: 68.571428571rem;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
+            padding: 1.5em;
 
             .credits-column {
-                padding: 1.5em;
+                height: auto;
+                word-wrap: break-word;
+                overflow: auto;
+                padding-right: 3em;
+                padding-left: 3em;
+
+            }
+
+            .sponsors-row {
+
             }
         }
-
-
 	}
+
+
+
 }
 
 .copyright-row {
@@ -152,7 +180,11 @@ footer {
     color: #a9a9a9;
     background-color: black;
     font-weight: bold;
-    padding: 0.5em;
+    padding: 0.5em 1.0em 0.5em 0.5em;
+
+    a:hover, a:active, a:visited {
+        color: #a9a9a9;
+    }
 }
 
 

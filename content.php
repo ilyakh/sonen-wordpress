@@ -87,36 +87,38 @@
 
             <div class="row-fluid">
                 <div class="span6">
+                    <header class="entry-header">
+                        <div class="foundation">
+                            <div class="entry-category">
+                                <a class="category-name" href="<?php the_permalink(); ?>">
+                                    <?php if ( in_category( 'prosjekt' ) ) : ?>
+                                        Prosjekt
+                                    <?php elseif ( in_category( 'arrangement' ) ) : ?>
+                                        Arrangement
+                                    <?php elseif ( in_category( 'artikkel' ) ) : ?>
+                                        Artikkel
+                                    <?php else: ?>
 
-                <header class="entry-header">
-                    <div class="foundation">
-                        <div class="entry-category">
-                            <a class="category-name" href="<?php the_permalink(); ?>">
-                                <?php if ( in_category( 'prosjekt' ) ) : ?>
-                                    Prosjekt
-                                <?php elseif ( in_category( 'arrangement' ) ) : ?>
-                                    Arrangement
-                                <?php elseif ( in_category( 'artikkel' ) ) : ?>
-                                    Artikkel
-                                <?php else: ?>
+                                    <?php endif; ?>
 
-                                <?php endif; ?>
+                                    <?php if ( in_category( 'anbefalt' ) ) : ?>
+                                        <i class="icon-white icon-star">&nbsp;</i>
+                                    <?php endif; ?>
+                                </a>
+                            </div>
 
-                                <?php if ( in_category( 'anbefalt' ) ) : ?>
-                                    <i class="icon-white icon-star">&nbsp;</i>
-                                <?php endif; ?>
-                            </a>
+                            <div class="entry-thumbnail">
+                                <?php the_post_thumbnail('large'); ?>
+                            </div>
+
                         </div>
-
-                        <div class="entry-thumbnail">
-                            <?php the_post_thumbnail('large'); ?>
-                        </div>
-                    </div>
-                </header><!-- .entry-header -->
+                    </header><!-- .entry-header -->
                 </div>
-                <div class="span6">
+                <div class="span6 entry-title-container">
                     <h1 class="entry-title">
-                        <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+                        <div class="floater">
+                            <a class="content" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+                        </div>
                     </h1>
                 </div>
             </div>
@@ -135,12 +137,20 @@
 
             <!-- Display ABOUT AUTHOR footer -->
 
-            <footer class="entry-meta">
-                <?php /* twentytwelve_entry_meta(); */ ?>
-                <div class="author-info">
-                    <div class="author-avatar">
-                        <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) ); ?>
-                    </div><!-- .author-avatar -->
+            </article>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+            <div class="menu-banner">
+                <div class="menu">
+                    <div class="author-info">
+                        <div class="author-avatar">
+                            <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) ); ?>
+                        </div><!-- .author-avatar -->
+
 
                     <div class="author-description">
                         <div><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></div>
@@ -151,10 +161,25 @@
                             <?php printf( __( 'View all posts by %s', 'twentytwelve' ), get_the_author() ); ?>
                             </a>
                         </div>
+                    </div>
+                        <!-- .author-description -->
 
-                    </div><!-- .author-description -->
+                    </div><!-- .author-info -->
 
-                </div><!-- .author-info -->
+                </div>
+            </div>
+
+<div id="page" class="hfeed site">
+    <div id="main" class="wrapper">
+        <div class="single-container">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <div class="entry-content">
+
+            <footer class="entry-meta">
+
+
+                <?php /* twentytwelve_entry_meta(); */ ?>
+
             </footer><!-- .entry-meta -->
         </article>
     </div>
