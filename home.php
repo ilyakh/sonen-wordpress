@@ -89,10 +89,9 @@
 
         <?php endwhile; ?>
 
-        <?php if ( ($i % 3) != 0 ) : ?>
         </div>
         </div>
-        <?php endif; ?>
+
 
         </div>
         <?php /* twentytwelve_content_nav( 'nav-below' ); */ ?>
