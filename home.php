@@ -25,7 +25,7 @@
         $i=1; /* POST counter */
         /* modified loop allows a specific article quantity */
         $number_of_posts = 50;
-        $quantified_query = new WP_Query( 'posts_per_page=' + $number_of_posts );
+        $quantified_query = new WP_Query( 'posts_per_page=' . $number_of_posts );
     ?>
 
         <div class="row-fluid site-content">

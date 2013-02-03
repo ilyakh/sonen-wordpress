@@ -44,10 +44,16 @@
         </div>
 
         <div class="sponsors-row row-fluid">
-            <div class="span6">
-                <img src="" alt="" />
+            <div class="span4">
+                &nbsp;
             </div>
-            <div class="span6"></div>
+            <div class="span4" style="padding-left: 3em;">
+                <h4>Sonen støttes av</h4>
+                <img src="/wordpress-no/wp-content/themes/sonen/img/statoil-transparent.png" alt="" />
+            </div>
+            <div class="span4">
+                &nbsp;
+            </div>
         </div>
 	</div>
 
