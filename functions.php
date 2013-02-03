@@ -44,13 +44,12 @@ function twentytwelve_setupas() {
 	) );
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
-	add_theme_support( 'post-thumbnails' );
+	// add_theme_support( 'post-thumbnails' );
 	
-	set_post_thumbnail_size( 960, 593, true ); // Unlimited height, soft crop
-	
-	add_image_size( 'whole', 960, 593, true ); 	// whole page
-    add_image_size( 'half', 520, 321, true ); 	// half-page
-	add_image_size( 'third', 320, 198, true ); 	// a third of a page
+	set_post_thumbnail_size( 503, 9999, true ); // Unlimited height, soft crop
+
+    add_image_size( 'half', 503, 9999, true ); 	// half-page
+	add_image_size( 'third', 326, 9999, true ); 	// a third of a page
 
 }
 

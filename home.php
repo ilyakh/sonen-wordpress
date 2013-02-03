@@ -49,7 +49,9 @@
 
 
                 <?php if ( $i == 4 ) : ++$i ?>
+
                 <div class="span4 events">
+                    <h5><a href="/">Kommende Arrangementer</a></h5>
                     <?php
                         get_sidebar('events');
                     ?>

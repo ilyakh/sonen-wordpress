@@ -1,0 +1,50 @@
+.gce-list {
+    padding: 0;
+    margin: 0;
+
+    .calendar-date-container {
+        float: left;
+        background-image: url('../img/red-bg.png');
+        text-align: center;
+        border-radius: 0.25em;
+        padding: 0.5em 1em 0.25em 1em;
+
+
+        .calendar-day {
+            font-size: 1.6em;
+        }
+
+        .calendar-month-name {
+            font-size: 0.9em;
+        }
+
+    }
+
+    .event-description {
+        clear: both;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+    }
+
+    .calendar-day-name {
+        float: left;
+        padding: 1em 0.25em 0.25em 1em;
+    }
+
+}
+
+/*
+
+<div class="calendar-event">
+    <h6>[event-title]</h6>
+    <div class="calendar-date-container">
+        <div class="calendar-day">[start-custom format="d"]</div>
+        <div class="calendar-month-name">[start-custom format="F"]</div>
+    </div>
+    <div class="calendar-day-name">[start-custom format="D"], kl. [start-custom format="H:i"]</div>
+    <div class="event-description">
+        <a href="[url]">[description limit="120"]</a>
+    </div>
+</div>
+
+*/
