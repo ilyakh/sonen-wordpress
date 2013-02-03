@@ -43,7 +43,7 @@
 
                 <div class="entry-thumbnail">
                     <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('medium'); ?>
                     </a>
                 </div>
             </div>
