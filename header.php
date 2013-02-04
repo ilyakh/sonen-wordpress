@@ -32,23 +32,22 @@
 
 <?php
 
-$theme_uri = '/wordpress-no/wp-content/themes/sonen';
 $theme_uri = '/ny/wp-content/themes/sonen';
 
 $files = array(
 	/* bootstrap: responsive scafolding grid */
-	'<link href="' . $theme_uri . '/css/bootstrap.min.css" rel="stylesheet" media="screen">',
+	'<link href="' . esc_url( home_url( '/' ) ) . 'wp-content/themes/sonen/css/bootstrap.min.css" rel="stylesheet" media="screen">',
 	'<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-	'<link href="' . $theme_uri . '/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
+	'<link href="' . esc_url( home_url( '/' ) ) . 'wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
 	/* fonts */
 	'<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />'
 );
 
 $less = array( 
 	/* less js stylesheets */
-	'<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/style.less" />',
+	'<link rel="stylesheet/less" type="text/css" href="' . esc_url( home_url( '/' ) ). 'wp-content/themes/sonen/less/style.less" />',
 	/* less js script */
-	'<script src="' . $theme_uri . '/js/less.js" type="text/javascript"></script>'
+	'<script src="' . esc_url( home_url( '/' ) ) . 'wp-content/themes/sonen/js/less.js" type="text/javascript"></script>'
 );
 
 print( implode( "\n", $files ) );
@@ -58,27 +57,33 @@ print( implode( "\n", $less ) );
 ?>
 </head>
 
+<!-- BODY -->
 <body <?php body_class(); ?>>
 
+<!-- HEADER -->
+<header>
+    <div class="section">
+        <?php $header_image = get_header_image();
+        if ( ! empty( $header_image ) ) : ?>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+        <?php endif; ?>
+    </div>
 
+    <div class="area">
+        <div class="section">
+            <div class="banner-content">
+                <nav id="site-navigation" class="main-navigation">
+                    <?php wp_nav_menu( array( 'container' => '' ) ); ?>
+                </nav>
+            </div>
+        </div>
+    </div>
 
-<div id="page" class="hfeed site bottomless">
-	<header id="masthead" class="site-header" role="banner">
-		<!-- Adds HEADER IMAGE aka LOGO -->
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
-	</header><!-- #masthead -->
-</div>
+</header>
 
 <!-- Creates a borderless EVENT banner -->
-<div class="menu-banner">
-    <nav id="site-navigation" class="main-navigation row-fluid" role="navigation">
-        <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-        <?php wp_nav_menu( array( 'container' => '' ) ); ?>
-    </nav>
-</div>
 
-<div id="page" class="hfeed site">
-	<div id="main" class="wrapper">
+<!-- HEADER: END -->
+
+<!-- PAGE -->
+<div class="page">

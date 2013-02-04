@@ -1,24 +1,14 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains footer content and the closing of the
- * #main and #page div elements.
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
- */
-?>
+</div>
+<!-- PAGE: END -->
 
-	</div><!-- #main .wrapper -->
-</div><!-- #page -->
 
+<!-- FOOTER -->
 <footer>
 
 	<div class="site-info">
         <div class="credits-row row-fluid">
-            <div class="credits-column span4">
+            <div class="credits-column seal span4">
+                <h4>&nbsp;</h4>
                 <img src="/ny/wp-content/themes/sonen/img/segl.png" alt="" />
             </div>
 
@@ -62,7 +52,10 @@
     </div>
 
 </footer>
-
 <?php wp_footer(); ?>
+<!-- FOOTER: END -->
+
 </body>
+<!-- BODY: END -->
+
 </html>

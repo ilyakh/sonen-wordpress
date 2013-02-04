@@ -2,35 +2,37 @@
     padding: 0;
     margin: 0;
 
-    .calendar-date-container {
-        float: left;
-        background-image: url('../img/red-bg.png');
-        text-align: center;
-        border-radius: 0.25em;
-        padding: 0.5em 1em 0.25em 1em;
+    .calendar-event {
+        .calendar-date-container {
+            float: left;
+            display: inline-block;
+            background-image: url('../img/red-bg.png');
+            text-align: center;
+            border-radius: 0.25em;
+            padding: 0.5em 1em 0.25em 1em;
 
 
-        .calendar-day {
-            font-size: 1.6em;
+            .calendar-day {
+                font-size: 1.6em;
+            }
+
+            .calendar-month-name {
+                font-size: 0.9em;
+            }
+
         }
 
-        .calendar-month-name {
-            font-size: 0.9em;
+        .event-description {
+            clear: both;
+            padding-top: 1em;
+            padding-bottom: 0.5em;
         }
 
+        .calendar-day-name {
+            float: left;
+            padding: 1em 0.25em 0.25em 1em;
+        }
     }
-
-    .event-description {
-        clear: both;
-        padding-top: 1em;
-        padding-bottom: 0.5em;
-    }
-
-    .calendar-day-name {
-        float: left;
-        padding: 1em 0.25em 0.25em 1em;
-    }
-
 }
 
 /*
