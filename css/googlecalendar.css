@@ -1,0 +1,25 @@
+
+.gce-page-list{ /* Main calendar table */
+	white-space: normal;
+}
+
+.gce-feed-3{
+}
+
+.gce-feed-1{
+	list-style-type: none;
+}
+
+.gce-description{
+	color: gray;
+}
+
+.gce-place{
+	color: black;
+}
+
+.gce-date{
+	color: black;
+	font-style: italic;
+}
+

@@ -19,7 +19,7 @@
 	<div class="site-info">
         <div class="credits-row row-fluid">
             <div class="credits-column span4">
-                <?php get_sidebar('twitter'); ?>
+                <img src="/ny/wp-content/themes/sonen/img/segl.png" alt="" />
             </div>
 
             <div class="credits-column span4">
@@ -48,8 +48,7 @@
                 &nbsp;
             </div>
             <div class="span4" style="padding-left: 3em;">
-                <h4>Sonen støttes av</h4>
-                <img src="/wordpress-no/wp-content/themes/sonen/img/statoil-transparent.png" alt="" />
+                &nbsp;
             </div>
             <div class="span4">
                 &nbsp;
