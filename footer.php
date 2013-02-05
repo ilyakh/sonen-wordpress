@@ -19,7 +19,9 @@
 	<div class="site-info">
         <div class="credits-row row-fluid">
             <div class="credits-column span4 seal">
-                <img src="/ny/wp-content/themes/sonen/img/segl.png" alt="" />
+                <a href="http://www.uio.no/">
+                    <img src="/ny/wp-content/themes/sonen/img/segl.png" alt="" />
+                </a>
             </div>
 
             <div class="credits-column span4">
