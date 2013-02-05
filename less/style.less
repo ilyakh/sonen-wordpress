@@ -1,21 +1,32 @@
-
-
-
-@small-text:      13px;
-@normal-text:     21px;
-@large-text:      34px;
-
-
-@prosjekt-bg:     #556270;
-@arrangement-bg:  darkred;
-@artikkel-bg:     #025D8C;
-@anbefalt-bg:     #FF9900;
-
-
-@max-events-height: 480px;
-
 h1, h2, h3, h4, h5, h6 {
     font-family:'Neo Sans W02';
+}
+
+/* styles */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body .site {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.site-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .header-image {
+        margin-top: 0;
+        border-radius: 0;
+
+    }
+
+    img.header-image,
+    img.wp-post-image {
+        box-shadow: none;
+    }
 }
 
 
@@ -33,19 +44,7 @@ h1.entry-title {
     font-size: 0.9em;
 }
 
-.events {
-    background-image: url( '../img/dark-bg.png' );
-    color: white;
-    box-shadow: 0 6px 12px rgba( 100, 100, 100, 0.4 );
-    height: @max-events-height;
-    padding: 1em;
-    overflow-y: scroll;
-    overflow-x: hidden;
 
-    h5 {
-        text-transform: uppercase;
-    }
-}
 
 
 .entry-meta {
@@ -64,11 +63,12 @@ h1.entry-title {
 }
 
 .author-info {
-    border-top: 1px solid #ededed;
+    border-top: none;
     margin: 0;
     margin: 0rem;
     overflow: hidden;
     padding: 1em;
+    color: white;
 }
 
 
@@ -82,13 +82,6 @@ h1.entry-title {
     max-width: 300px;
     padding-left: 1em;
 }
-
-
-
-
-
-
-
 
 
 .entry-thumbnail {
@@ -127,37 +120,36 @@ div.widget-area {
 }
 
 
-.menu-banner {
+ul.nav-menu.toggled-on {
+    margin: 0;
+}
+
+.area {
     width: 100%;
-    background-image:
-        url( '../img/light-dark-bg.png' );
-    color: white;
+    background-image: url( '../img/light-dark-bg.png' );
 
-    .main-navigation {
-        margin-top: 0px;
-        text-align: left;
-    }
-
-    .menu {
-
-        max-width: 960px;
-        max-width: 68.571428571rem;
-        margin-left: auto;
-        margin-right: auto;
+    .site {
         background-image:
             url( '../img/dark-bg.png' );
         box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 
         li a {
             color: white;
-            padding-left: 1.5em;
+            padding: 0.5em;
         }
     }
 }
 
-.bottomless {
-    margin-bottom: 0;
-    padding-bottom: 0;
+#end {
+    background-color: inherit;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.separator {
+    background-color: white;
+    border-top: none;
+    border-bottom: none;
 }
 
 footer {
@@ -167,7 +159,9 @@ footer {
 	color: white;
 
 	.site-info {
-		min-height: 300px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        min-height: 300px;
 		background-image: url( '../img/dark-bg.png' );
         font-size: 0.8em;
 
@@ -183,6 +177,15 @@ footer {
                 overflow: auto;
                 padding-right: 3em;
                 padding-left: 3em;
+
+            }
+
+            .seal {
+                text-align: center;
+            }
+
+            .seal img {
+               margin: 2em auto 4em auto;
 
             }
 
@@ -223,36 +226,6 @@ footer {
 .nav.main-navigation {
     color: white;
 }
-
-@media screen and (min-width: 960px) {
-	body .site {
-		padding: 0;
-        margin-top: 0;
-        margin-bottom: 0px;
-        margin-bottom: 0rem;
-	}
-
-    .bottomless {
-        padding: 0;
-        padding: 0rem;
-        margin-bottom: 0px;
-        margin-bottom: 0rem;
-    }
-}
-
-
-
-
-@media screen and (min-width: 600px) {
-
-    .bottomless {
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-}
-
-
-
 
 
 
@@ -320,28 +293,6 @@ footer {
 	
 }
 
-article.category-artikkel .category-name {
-	background-color: @artikkel-bg;
-	border-bottom: 1px solid lighten( @artikkel-bg, 15% );
-}
-
-article.category-prosjekt .category-name {
-	background-color: @prosjekt-bg;
-	border-bottom: 1px solid lighten( @prosjekt-bg, 15% );
-}
-
-article.category-arrangement .category-name {
-	background-color: @arrangement-bg;
-	border-bottom: 1px solid lighten( @arrangement-bg, 15% );
-}
-
-article.category-anbefalt .category-name {
-	background-color: @anbefalt-bg;
-	border-bottom: 1px solid lighten( @anbefalt-bg, 15% );
-}
-
-
-
 .entry-content p {
 	text-align: justify;
 	line-height: 17px;
@@ -370,30 +321,13 @@ article.category-anbefalt .category-name {
 /*
  * Removes the default handling of the logo as image with rounded borders
  */
-img.header-image {
-	/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
-	border-radius: 0;
-	box-shadow: none;
-	padding: 0;
-	padding-bottom: 0;
-}
 
 
 
-header.site-header {
-    padding-top: 0;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-position: right;
-    background-repeat: no-repeat;
-}
-
-div#main {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-}
-
+@import 'menu.less';
+@import 'twitter.less';
 @import 'single.less';
 @import 'preview.less';
 @import 'calendar.less';
+@import 'twitter.less';
+@import 'responsive.less';

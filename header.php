@@ -62,7 +62,7 @@ print( implode( "\n", $less ) );
 
 
 
-<div id="page" class="hfeed site bottomless">
+<div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<!-- Adds HEADER IMAGE aka LOGO -->
 		<?php $header_image = get_header_image();
@@ -73,12 +73,14 @@ print( implode( "\n", $less ) );
 </div>
 
 <!-- Creates a borderless EVENT banner -->
-<div class="menu-banner">
-    <nav id="site-navigation" class="main-navigation row-fluid" role="navigation">
+
+<div class="area">
+    <nav id="site-navigation" class="main-navigation site" role="navigation">
         <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-        <?php wp_nav_menu( array( 'container' => '' ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
     </nav>
 </div>
+
 
 <div id="page" class="hfeed site">
 	<div id="main" class="wrapper">

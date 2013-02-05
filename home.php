@@ -40,7 +40,7 @@
 
                 <?php if ( $i == 3 ) : ?>
                 </div>
-                <div class="row-fluid">
+                <div class="row-fluid site-content">
                 <?php endif; ?>
 
                 <div class="span4 preview">
@@ -50,33 +50,35 @@
 
                 <?php if ( $i == 4 ) : ++$i ?>
 
-                <div class="span4 events">
-                    <h5><a href="/">Kommende Arrangementer</a></h5>
-                    <?php
-                        get_sidebar('events');
-                    ?>
+                <div class="span4" id="twitter">
+                    <?php get_sidebar('twitter'); ?>
                 </div>
-
-                </div>
-                </div>
-                </div>
-
-                <div class="menu-banner">
-                    <nav id="site-navigation" class="main-navigation row-fluid" role="navigation">
-                        <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-                        <?php wp_nav_menu( array( 'container' => '' ) ); ?>
-                    </nav>
-                </div>
-
-                <div id="page" class="hfeed site">
-                    <div id="main" class="wrapper">
 
                 <?php endif; ?>
 
             <?php elseif ( $i > 4 ) : ?>
+
                 <?php if ( ( $i ) % 3 == 0 ) : ?>
 
+                </div>
+
+                <?php if ( $i == 9 ) : ?>
+                </div>
+                <hr class="separator" />
+                </div>
+                </div>
+
+                <div class="area">
+                    <div class="site" id="events"><?php get_sidebar('events'); ?></div>
+                </div>
+
+                <div id="page" class="hfeed site">
+                    <div id="main" class="wrapper">
+                <?php endif; ?>
+
                 <div class="row-fluid site-content">
+
+
                 <?php endif; ?>
 
                 <div class="span4 preview">
@@ -90,11 +92,14 @@
         <?php endwhile; ?>
 
         </div>
-        </div>
+    </div>
 
+    <hr id="end" />
 
-        </div>
-        <?php /* twentytwelve_content_nav( 'nav-below' ); */ ?>
+    <?php twentytwelve_content_nav( 'nav-below' ); ?>
+
+    </div> <!-- /site -->
+
     </div></div>
 
     <?php else : /* NO POSTS */ ?>

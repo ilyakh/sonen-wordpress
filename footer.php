@@ -18,7 +18,7 @@
 
 	<div class="site-info">
         <div class="credits-row row-fluid">
-            <div class="credits-column span4">
+            <div class="credits-column span4 seal">
                 <img src="/ny/wp-content/themes/sonen/img/segl.png" alt="" />
             </div>
 
@@ -40,18 +40,6 @@
                 <a href="http://www.youtube.com/user/ifisonen">YouTube: http://www.youtube.com/user/ifisonen</a><br>
                 <a href="https://twitter.com/UniOslo_Sonen">Twitter: https://twitter.com/UniOslo_Sonen</a><br>
                 <a href="http://www.flickr.com/groups/sonen/">Flickr: http://www.flickr.com/groups/sonen/</a></p>
-            </div>
-        </div>
-
-        <div class="sponsors-row row-fluid">
-            <div class="span4">
-                &nbsp;
-            </div>
-            <div class="span4" style="padding-left: 3em;">
-                &nbsp;
-            </div>
-            <div class="span4">
-                &nbsp;
             </div>
         </div>
 	</div>

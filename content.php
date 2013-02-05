@@ -45,7 +45,7 @@
 
                 <div class="entry-thumbnail">
                     <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('thumbnail'); ?>
                     </a>
                 </div>
             </div>
@@ -68,7 +68,7 @@
         <div class="entry-content">
             <a href="<?php the_permalink(); ?>"
                 title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
-                <?php the_content(); ?>
+                <?php the_excerpt(); ?>
             </a>
         </div><!-- .entry-content -->
 
@@ -112,7 +112,7 @@
                             -->
 
                             <div class="entry-thumbnail">
-                                <?php the_post_thumbnail('thumbnail'); ?>
+                                <?php the_post_thumbnail(); ?>
                             </div>
 
 
@@ -149,8 +149,8 @@
 </div>
 </div>
 
-    <div class="menu-banner">
-        <div class="menu">
+    <div class="area">
+        <div class="site">
             <div class="author-info">
                 <div class="author-avatar">
                     <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) ); ?>

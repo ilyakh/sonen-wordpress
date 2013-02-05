@@ -1,11 +1,11 @@
 <?php
 
-if ( ! is_active_sidebar( 'sidebar-2' ) )
+if ( ! is_active_sidebar( 'events' ) )
     return;
 
 ?>
-<div id="secondary" role="complementary">
-    <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-        <?php dynamic_sidebar( 'sidebar-2' ); ?>
+<div class="events" id="secondary" role="complementary">
+    <?php if ( is_active_sidebar( 'events' ) ) : ?>
+        <ul><?php dynamic_sidebar( 'events' ); ?></ul>
     <?php endif; ?>
 </div><!-- #secondary -->
