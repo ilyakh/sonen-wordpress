@@ -41,7 +41,9 @@ $files = array(
 	'<meta name="viewport" content="width=device-width, initial-scale=1.0">',
 	'<link href="' . $theme_uri . '/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
 	/* fonts */
-	'<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />'
+	'<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />',
+    '<script src="' . $theme_uri . '/js/jquery.js" type="text/javascript"></script>',
+    '<script src="' . $theme_uri . '/js/tagcloud.js" type="text/javascript"></script>',
 );
 
 $less = array( 
@@ -60,27 +62,10 @@ print( implode( "\n", $less ) );
 
 <body <?php body_class(); ?>>
 
-
-
-<div id="page" class="hfeed site">
-	<header id="masthead" class="site-header" role="banner">
-		<!-- Adds HEADER IMAGE aka LOGO -->
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
-	</header><!-- #masthead -->
-</div>
-
-<!-- Creates a borderless EVENT banner -->
-
-<div class="area">
-    <nav id="site-navigation" class="main-navigation site" role="navigation">
-        <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-    </nav>
-</div>
-
+<div class="area"><?php get_sidebar('top-right'); ?></div>
 
 <div id="page" class="hfeed site">
+
+    <?php get_sidebar('content-header'); ?>
+
 	<div id="main" class="wrapper">

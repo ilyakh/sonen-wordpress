@@ -32,7 +32,7 @@
         <?php while ( $quantified_query->have_posts() ) : $quantified_query->the_post(); ?>
 
             <?php if ( $i == 1 || $i == 2 ) : ?>
-                <div class="span6 preview">
+                <div class="span6 preview recent">
                     <?php get_template_part( 'content', get_post_format() ); ?>
                 </div>
 
@@ -97,6 +97,8 @@
     <hr id="end" />
 
     <?php twentytwelve_content_nav( 'nav-below' ); ?>
+
+
 
     </div> <!-- /site -->
 

@@ -1,33 +1,34 @@
 .events {
     color: white;
 
-    .gce-list {
+    .event-widget-container {
         padding: 0;
         margin: 0;
     }
 
-    li.gce-feed-1 {
-        width: 28%;
-        height: 200px;
+    ul.gce-list {
+        padding: 0;
+        margin: 0 0 0 0;
+        margin-left: 0;
+        list-style: none;
+    }
 
-        display: inline-block;
-        float: left;
-        margin: 0.5em;
-        border: 1px solid red;
+    li.gce-feed-1 {
         overflow: hidden;
-        word-break: break-all;
-        padding: 0.5em;
+
+        a {
+            padding-left: 0;
+        }
     }
 
     .calendar-event {
-        float: left;
 
         .calendar-date-container {
             float: left;
             background-image: url('../img/red-bg.png');
             text-align: center;
-            border-radius: 0.25em;
-            padding: 0.5em 1em 0.25em 1em;
+            border-radius: 2.1em;
+            padding: 0.5em 1em 0.5em 1em;
 
 
             .calendar-day {
@@ -41,9 +42,7 @@
         }
 
         .event-description {
-            clear: both;
-            padding-top: 1em;
-            padding-bottom: 1.5em;
+            margin-top: 1em;
         }
 
         .calendar-day-name {

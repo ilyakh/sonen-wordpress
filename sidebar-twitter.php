@@ -1,11 +1,11 @@
 <?php
 
+/*
 if ( ! is_active_sidebar( 'twitter' ) )
     return;
+*/
 
 ?>
-<div id="secondary" role="complementary">
-    <?php if ( is_active_sidebar( 'twitter' ) ) : ?>
-    <?php dynamic_sidebar( 'twitter' ); ?>
-    <?php endif; ?>
-</div><!-- #secondary -->
+<div class="twitter-header">Twitter</div>
+<?php dynamic_sidebar( 'twitter' ); ?>
+<div class="twitter-footer">&nbsp;</div>

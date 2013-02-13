@@ -24,24 +24,6 @@
         <header class="entry-header">
 
             <div class="foundation">
-                <!--
-                <div class="entry-category">
-                    <a class="category-name" href="<?php the_permalink(); ?>">
-                        <?php if ( in_category( 'prosjekt' ) ) : ?>
-                            Prosjekt
-                        <?php elseif ( in_category( 'arrangement' ) ) : ?>
-                            Arrangement
-                        <?php elseif ( in_category( 'artikkel' ) ) : ?>
-                            Artikkel
-                        <?php else: ?>
-                        <?php endif; ?>
-
-                        <?php if ( in_category( 'anbefalt' ) ) : ?>
-                            <i class="icon-white icon-star">&nbsp</i>
-                        <?php endif; ?>
-                    </a>
-                </div>
-                -->
 
                 <div class="entry-thumbnail">
                     <a href="<?php the_permalink(); ?>">
@@ -88,28 +70,17 @@
             <?php endif; ?>
 
             <div class="row-fluid">
+
+                <div class="span6 entry-title-container">
+                    <h1 class="entry-title">
+                        <div class="floater">
+                            <a class="content" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+                        </div>
+                    </h1>
+                </div>
                 <div class="span6">
                     <header class="entry-header">
                         <div class="foundation">
-                            <!--
-                            <div class="entry-category">
-                                <a class="category-name" href="<?php the_permalink(); ?>">
-                                    <?php if ( in_category( 'prosjekt' ) ) : ?>
-                                        Prosjekt
-                                    <?php elseif ( in_category( 'arrangement' ) ) : ?>
-                                        Arrangement
-                                    <?php elseif ( in_category( 'artikkel' ) ) : ?>
-                                        Artikkel
-                                    <?php else: ?>
-
-                                    <?php endif; ?>
-
-                                    <?php if ( in_category( 'anbefalt' ) ) : ?>
-                                        <i class="icon-white icon-star">&nbsp;</i>
-                                    <?php endif; ?>
-                                </a>
-                            </div>
-                            -->
 
                             <div class="entry-thumbnail">
                                 <?php the_post_thumbnail(); ?>
@@ -118,13 +89,6 @@
 
                         </div>
                     </header><!-- .entry-header -->
-                </div>
-                <div class="span6 entry-title-container">
-                    <h1 class="entry-title">
-                        <div class="floater">
-                            <a class="content" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-                        </div>
-                    </h1>
                 </div>
             </div>
 
