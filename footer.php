@@ -11,8 +11,7 @@
  */
 ?>
 
-	</div><!-- #main .wrapper -->
-</div><!-- #page -->
+</div>
 
 <footer>
 
@@ -41,7 +40,7 @@
                 <a href="http://www.reddit.com/r/sonen/">Reddit: http://www.reddit.com/r/sonen/</a><br>
                 <a href="http://www.youtube.com/user/ifisonen">YouTube: http://www.youtube.com/user/ifisonen</a><br>
                 <a href="https://twitter.com/UniOslo_Sonen">Twitter: https://twitter.com/UniOslo_Sonen</a><br>
-                <a href="http://www.flickr.com/groups/sonen/">Flickr: http://www.flickr.com/groups/sonen/</a></p>
+                <a href="http://www.flickr.com/groups/sonen/">Flickr: http://www.flickr.com/groups/sonen/</a>
             </div>
         </div>
 	</div>

@@ -40,7 +40,7 @@
 
                 <?php if ( $i == 3 ) : ?>
                 </div>
-                </div>
+
                 <div class="row-fluid separator-menu"><?php get_sidebar('separator-menu'); ?></div>
 
                 <div class="row-fluid site-content">
@@ -62,7 +62,7 @@
 
                 <hr class="separator" />
                 </div>
-                </div>
+
 
                 <div class="area">
                     <div class="site">
@@ -76,7 +76,6 @@
 
 
                 <div id="page" class="hfeed site">
-                    <div id="main" class="wrapper">
 
                 <?php endif; ?>
 
@@ -98,9 +97,8 @@
         <?php endwhile; ?>
 
         </div>
-    </div>
 
-    <hr id="end" />
+        <hr id="end" />
 
     <?php twentytwelve_content_nav( 'nav-below' ); ?>
 
