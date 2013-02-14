@@ -40,7 +40,11 @@
 
                 <?php if ( $i == 3 ) : ?>
                 </div>
+                </div>
+                <div class="row-fluid separator-menu"><?php get_sidebar('separator-menu'); ?></div>
+
                 <div class="row-fluid site-content">
+
                 <?php endif; ?>
 
                 <div class="span4 preview">
@@ -48,20 +52,14 @@
                 </div>
 
 
-                <?php if ( $i == 4 ) : ++$i ?>
-
-                <!-- old twitter -->
-
-                <?php endif; ?>
-
-            <?php elseif ( $i > 4 ) : ?>
+            <?php elseif ( $i >= 4 ) : ?>
 
                 <?php if ( ( $i ) % 3 == 0 ) : ?>
 
                 </div>
 
                 <?php if ( $i == 9 ) : ?>
-                </div>
+
                 <hr class="separator" />
                 </div>
                 </div>
@@ -69,15 +67,20 @@
                 <div class="area">
                     <div class="site">
                         <div class="row-fluid">
-                            <div class="span7" id="events"><?php get_sidebar('events'); ?></div>
-                            <div class="span4 offset1" id="twitter"><?php get_sidebar( 'twitter' ); ?></div>
+                            <div class="span6" id="events"><?php get_sidebar('events'); ?></div>
+                            <div class="span4 offset2" id="twitter"><?php get_sidebar( 'twitter' ); ?></div>
                         </div>
                     </div>
                 </div>
 
+
+
                 <div id="page" class="hfeed site">
                     <div id="main" class="wrapper">
+
                 <?php endif; ?>
+
+                <hr class="separator" />
 
                 <div class="row-fluid site-content">
 

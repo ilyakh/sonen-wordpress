@@ -82,6 +82,11 @@ if (function_exists('register_sidebar')) {
         'id' => 'content-header'
     ));
 
+    register_sidebar(array(
+        'name'=> 'separator-menu',
+        'id' => 'separator-menu'
+    ));
+
 }
 
 
