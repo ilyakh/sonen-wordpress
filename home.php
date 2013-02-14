@@ -50,9 +50,7 @@
 
                 <?php if ( $i == 4 ) : ++$i ?>
 
-                <div class="span4" id="twitter">
-                    <?php get_sidebar('twitter'); ?>
-                </div>
+                <!-- old twitter -->
 
                 <?php endif; ?>
 
@@ -69,7 +67,12 @@
                 </div>
 
                 <div class="area">
-                    <div class="site" id="events"><?php get_sidebar('events'); ?></div>
+                    <div class="site">
+                        <div class="row-fluid">
+                            <div class="span7" id="events"><?php get_sidebar('events'); ?></div>
+                            <div class="span4 offset1" id="twitter"><?php get_sidebar( 'twitter' ); ?></div>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="page" class="hfeed site">

@@ -1,9 +1,14 @@
 #twitter {
 
+    h2 {
+        text-align: right;
+    }
+
+    color: white;
+    font-family: 'Neo Sans W02', "Helvetica Neue", Arial, sans;
 
     li.twitter-widget {
         list-style: none;
-
     }
 
 
@@ -16,25 +21,19 @@
     ul#twitter_update_list {
         margin: 0;
         padding: 0;
-        overflow-y: scroll;
 
         li {
-            padding: 0.5em;
-            margin-top: 0.25em;
-            margin-bottom: 0.1em;
-            border: 3px solid #DDD;
+            padding: 0.75em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            background-image: url( '../img/red-bg.png' );
+            line-height: 1.8em;
 
+            span {
+                font-size: 1.2em;
+                display: block;
+            }
         }
     }
 
-    .twitter-header {
-        color: white;
-        padding: 0.5em;
-        text-align: right;
-        background-image: url( '../img/red-bg.png' );
-    }
-
-    .twitter-footer {
-        background-image: url( '../img/dark-bg.png' );
-    }
 }

@@ -1,5 +1,6 @@
-.events {
+#events {
     color: white;
+    padding: 0.1em;
 
     .event-widget-container {
         padding: 0;
@@ -14,7 +15,7 @@
     }
 
     li.gce-feed-1 {
-        overflow: hidden;
+        padding: 0.25em;
 
         a {
             padding-left: 0;
@@ -29,6 +30,7 @@
             text-align: center;
             border-radius: 2.1em;
             padding: 0.5em 1em 0.5em 1em;
+            margin-bottom: 0.5em;
 
 
             .calendar-day {
@@ -42,32 +44,14 @@
         }
 
         .event-description {
-            margin-top: 1em;
+            clear: both;
+            float: left;
+            margin-bottom: 1.75em;
         }
 
         .calendar-day-name {
             float: left;
             padding: 1em 0.25em 0.25em 1em;
         }
-
-
     }
-
 }
-
-
-/*
-
-<div class="calendar-event">
-    <h6>[event-title]</h6>
-    <div class="calendar-date-container">
-        <div class="calendar-day">[start-custom format="d"]</div>
-        <div class="calendar-month-name">[start-custom format="F"]</div>
-    </div>
-    <div class="calendar-day-name">[start-custom format="D"], kl. [start-custom format="H:i"]</div>
-    <div class="event-description">
-        <a href="[url]">[description limit="120"]</a>
-    </div>
-</div>
-
-*/

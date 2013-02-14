@@ -6,6 +6,6 @@ if ( ! is_active_sidebar( 'twitter' ) )
 */
 
 ?>
-<div class="twitter-header">Twitter</div>
+
+<h2>Twitter</h2>
 <?php dynamic_sidebar( 'twitter' ); ?>
-<div class="twitter-footer">&nbsp;</div>
