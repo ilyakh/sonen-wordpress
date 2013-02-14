@@ -8,10 +8,10 @@ if ( ! is_active_sidebar( 'top-right' ) )
 ?>
 
 <div class="span2 separator-menu-element">
-    <a href="">Nyheter</a>
+    <a href="">Utvalgte artikler</a>
 </div>
 <div class="span2 separator-menu-element">
-    <a href="">Spørsmål og svar</a>
+    <a href="">Spør en professor</a>
 </div>
 <div class="span2 separator-menu-element">
     <a href="#events">Annerledes vitenskap</a>
