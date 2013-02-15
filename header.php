@@ -63,5 +63,5 @@ print( implode( "\n", $less ) );
 <body <?php body_class(); ?>>
 
 <div class="area"><?php get_sidebar('top-right'); ?></div>
-<div id="page" class="hfeed site">
+<div class="hfeed site">
     <?php get_sidebar('content-header'); ?>

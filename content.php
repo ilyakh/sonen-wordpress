@@ -8,7 +8,7 @@
  */
 ?>
 
-<?php if ( ! is_single() ) : ?>
+<?php if ( ! is_single() ) : /* PREVIEW */ ?>
         <div class="preview-container">
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -56,7 +56,7 @@
         </div>
 
 
-        <?php else : ?>
+        <?php else : /* SINGLE */ ?>
         <div class="single-container">
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -67,60 +67,55 @@
                 <?php endif; ?>
 
                 <div class="row-fluid">
-
-                    <div class="span6 entry-title-container">
-                        <h1 class="entry-title">
-                            <div class="floater">
-                                <a class="content" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-                            </div>
-                        </h1>
-                    </div>
-                    <div class="span6">
+                    <div class="span12 entry-title-container">
                         <header class="entry-header">
                             <div class="foundation">
-
                                 <div class="entry-thumbnail">
-                                    <?php the_post_thumbnail(); ?>
+                                    <?php the_post_thumbnail('large'); ?>
                                 </div>
-
-
+                                <div class="title-overlay">
+                                    <h1><?php the_title(); ?></h1>
+                                </div>
                             </div>
                         </header><!-- .entry-header -->
                     </div>
                 </div>
 
-            <?php if ( is_search() ) : // Only display Excerpts for Search ?>
-                <div class="entry-summary">
-                    <?php the_excerpt(); ?>
-                </div><!-- .entry-summary -->
-            <?php else : ?>
-                <div class="entry-content">
-                    <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
-                    <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-                </div>
-                <!-- .entry-content -->
-            <?php endif; ?>
+                <div class="row-fluid">
+                <?php if ( is_search() ) : // Only display Excerpts for Search ?>
+                    <div class="span8">
+                        <div class="entry-summary">
+                            <?php the_excerpt(); ?>
+                        </div><!-- .entry-summary -->
+                    </div>
+                <?php else : ?>
 
-                </article>
-            </div>
+                <div class="span8 offset1">
+                    <div class="entry-content">
+                        <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+                        <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+
+                </div>
+            </article>
         </div>
     </div>
+</div>
 </div>
 
 <div class="area">
     <div class="site">
-        <div class="author-info">
-            <div class="author-avatar">
+        <div class="row-fluid author">
+
+            <div class="span2 author-avatar">
                 <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) ); ?>
             </div><!-- .author-avatar -->
-        </div>
 
-        <div class="author-description">
-            <h4><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h4>
-            <div><?php the_author_meta( 'description' ); ?></div>
-
-            <div>
-                <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"></a>
+            <div class="span6 author-description">
+                <h4><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h4>
+                <div><?php the_author_meta( 'description' ); ?></div>
             </div>
         </div>
     </div>
@@ -129,6 +124,7 @@
 
 <div class="page">
     <div class="site">
+
 
 <?php endif; ?>
 

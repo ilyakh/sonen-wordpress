@@ -18,12 +18,12 @@
         margin-bottom: 0;
         box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
     }
-
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
     body .site {
+        overflow: hidden;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -31,14 +31,7 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
     body .site {
-        max-width: 960px;
-        max-width: 68.571428571rem;
         overflow: hidden;
         padding-left: 5px;
         padding-right: 5px;
@@ -49,32 +42,28 @@
 
 
 @media ( max-width: 600px ) {
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
     body .site {
-        max-width: 960px;
-        max-width: 68.571428571rem;
         overflow: hidden;
         padding-left: 5px;
         padding-right: 5px;
+        margin: auto;
     }
+
+   .entry-thumbnail {
+       margin-top: 0;
+       margin-bottom: 0;
+       min-height: auto;
+       max-height: auto;
+   }
 
 }
 
 /* Landscape phones and down */
 @media ( max-width: 480px) {
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
     body .site {
+        overflow: hidden;
         padding-left: 5px;
         padding-right: 5px;
     }
-
 }
 

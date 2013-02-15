@@ -56,11 +56,13 @@
 
                 <?php if ( ( $i ) % 3 == 0 ) : ?>
 
+
                 </div>
 
                 <?php if ( $i == 9 ) : ?>
 
-                <hr class="separator" />
+
+
                 </div>
 
 
@@ -75,11 +77,9 @@
 
 
 
-                <div id="page" class="hfeed site">
+                <div class="hfeed site">
 
                 <?php endif; ?>
-
-                <hr class="separator" />
 
                 <div class="row-fluid site-content">
 
@@ -106,7 +106,7 @@
 
     </div> <!-- /site -->
 
-    </div></div>
+
 
     <?php else : /* NO POSTS */ ?>
     <div id="content" role="main">

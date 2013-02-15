@@ -11,8 +11,6 @@
  */
 ?>
 
-</div>
-
 <footer>
 
 	<div class="site-info">

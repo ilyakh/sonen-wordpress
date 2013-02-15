@@ -1,28 +1,61 @@
 .single-container {
-    .single {
-        background-color: #add8e6;
+
+    h1.entry-title {
+
+        font-family: 'Neo Sans W02', Arial, sans;
+        line-height: 1em;
+
+        a { color: black; }
+    }
+
+    .entry-header .foundation {
+        .title-overlay {
+            position: relative;
+            bottom: 40px;
+            right: 0px;
+            text-align: left;
+            padding: 1em;
+            color: white;
+            background-color: rgba( 0, 0, 0, 0.5 );
+        }
+    }
+
+    .entry-thumbnail {
+        margin-top: -150px;
+        margin-bottom: -150px;
+        min-height: 300px;
+        max-height: 748px;
     }
 
     .entry-content {
         margin-top: 1.75em;
+        margin-bottom: 6em;
 
         p {
-            font-size: 1.5em;
             text-align: left;
-            line-height: 25px;
-            max-width: 720px;
+            line-height: 23px;
+            line-height: 23px;
+
+            .alignright {
+                margin: 1em 0 1em 2em;
+            }
+
+            .alignleft {
+                margin: 1em 3em 1em 0;
+            }
+
         }
+
     }
 
     .entry-title-container {
         text-align: center;
-        padding-top: 3em;
     }
 }
 
 
 @media screen and ( min-width: 960px ) {
     .single .entry-content p {
-        padding-left: 5em;
+
     }
 }

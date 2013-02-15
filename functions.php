@@ -44,6 +44,8 @@ function sonen_setup() {
     add_image_size( 'half', 503, 9999, true ); 	// half-page
 	add_image_size( 'third', 326, 9999, true ); 	// a third of a page
 
+    add_image_size( 'large', 1024, 768, true );
+
 }
 
 add_action( 'after_setup_theme', 'sonen_setup' );
