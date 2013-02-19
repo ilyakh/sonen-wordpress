@@ -38,20 +38,65 @@ $theme_uri = '/ny/wp-content/themes/sonen';
 $files = array(
 	/* bootstrap: responsive scafolding grid */
 	'<link href="' . $theme_uri . '/css/bootstrap.min.css" rel="stylesheet" media="screen">',
-	'<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+	' <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />',
 	'<link href="' . $theme_uri . '/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">',
 	/* fonts */
 	'<link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />',
     '<script src="' . $theme_uri . '/js/jquery.js" type="text/javascript"></script>',
-    '<script src="' . $theme_uri . '/js/tagcloud.js" type="text/javascript"></script>',
+    '<script src="' . $theme_uri . '/js/bootstrap.min.js" type="text/javascript"></script>',
+    '<script src="' . $theme_uri . '/js/ios-orientation-fix.js" type="text/javascript"></script>'
 );
 
 $less = array( 
 	/* less js stylesheets */
 	'<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/style.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/header.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/twitter.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/single.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/preview.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/footer.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/calendar.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/events.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/author.less" />',
+    '<link rel="stylesheet/less" type="text/css" href="' . $theme_uri . '/less/responsive.less" />',
 	/* less js script */
-	'<script src="' . $theme_uri . '/js/less.js" type="text/javascript"></script>'
+    '<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <script type="text/javascript">
+    var disqus_config = function() {
+        this.language = "no";
+    }
+
+    function destroyLessCache(pathToCss) { // e.g. "/css/" or "/stylesheets/"
+
+      if (!window.localStorage || !less || less.env !== "development") {
+        return;
+      }
+      var host = window.location.host;
+      var protocol = window.location.protocol;
+      var keyPrefix = protocol + "//" + host + pathToCss;
+
+      for (var key in window.localStorage) {
+        if (key.indexOf(keyPrefix) === 0) {
+          delete window.localStorage[key];
+        }
+    }
+
+    localStorage.clear();
+
+    destroyLessCache("/less/");
+
+
+
+    }
+
+    </script>',
+	'<script src="' . $theme_uri . '/js/less.js" type="text/javascript"></script>',
+    ' <script type="text/javascript">less.env = "development";</script>',
+    '<script src="' . $theme_uri . '/js/bootstrap.min.js" type="text/javascript"></script>',
+    '<script> /* Provisory for dev environment: */ localStorage.clear(); </script>'
 );
+
 
 print( implode( "\n", $files ) );
 print( "\n" );
@@ -62,6 +107,4 @@ print( implode( "\n", $less ) );
 
 <body <?php body_class(); ?>>
 
-<div class="area"><?php get_sidebar('top-right'); ?></div>
-<div class="hfeed site">
-    <?php get_sidebar('content-header'); ?>
+<?php get_sidebar('header'); ?>

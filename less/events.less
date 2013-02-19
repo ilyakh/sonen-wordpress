@@ -1,6 +1,18 @@
 #events {
+
     color: white;
-    padding: 1em;
+    font-family: 'Neo Sans W02', "Helvetica Neue", Arial, sans;
+
+
+    h2 {
+        text-align: center;
+        border-bottom: 2px solid darken( white, 60% );
+        padding-bottom: 0.25em;
+    }
+
+    h2 {
+        /* applied in the style.less */
+    }
 
     .event-widget-container {
         padding: 0;
@@ -18,12 +30,16 @@
         padding: 0.25em;
         padding-left: 0.75em;
 
+        border-bottom: 2px solid darken( white, 75% );
+
         a {
             padding-left: 0;
         }
     }
 
     .calendar-event {
+
+        vertical-align: middle;
 
         .calendar-date-container {
             float: left;
@@ -53,6 +69,10 @@
         .calendar-day-name {
             float: left;
             padding: 1em 0.25em 0.25em 1em;
+        }
+
+        .calendar-day-time {
+            color: darken( white, 35% );
         }
     }
 }

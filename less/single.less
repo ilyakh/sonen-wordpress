@@ -1,11 +1,60 @@
 .single-container {
 
+    .alignright {
+        padding: 1em 0 1em 3em;
+    }
+
+    .alignleft {
+        padding: 1em 3em 1em 0;
+    }
+
+    .entry-content img,
+    .comment-content img,
+    .widget img,
+    img.header-image,
+    img.wp-post-image {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    @content-font-size: 1.1em;
+    @subheader-top-spacing: 2em;
+    @subheader-bottom-spacing: 0.5em;
+
+    .entry-top {
+        border-bottom: 1px solid rgb( 192, 192, 192 );
+        font-style: italic;
+        color: rgb( 192, 192, 192 );
+        padding-bottom: 0.25em;
+        padding-right: 0.25em;
+        margin-bottom: 1em;
+        overflow: auto;
+
+        .entry-top-right {
+            float: right;
+        }
+
+        .entry-top-left {
+            float: left;
+        }
+
+    }
+
+    .entry-mobile-title {
+        display: none;
+    }
+
     h1.entry-title {
 
         font-family: 'Neo Sans W02', Arial, sans;
         line-height: 1em;
 
         a { color: black; }
+    }
+
+    h2, h3, h4, h5, h6 {
+        margin-top: @subheader-top-spacing;
+        margin-bottom: 0.5em;
     }
 
     .entry-header .foundation {
@@ -28,23 +77,23 @@
     }
 
     .entry-content {
+
         margin-top: 1.75em;
         margin-bottom: 6em;
         padding: 0;
 
         p {
+            font-size: @content-font-size;
             text-align: left;
             line-height: 23px;
-            line-height: 23px;
 
-            .alignright {
-                margin: 1em 0 1em 2em;
+
+
+            img {
+                padding: 1em;
+                box-shadow: none;
+                border-radius: 0;
             }
-
-            .alignleft {
-                margin: 1em 3em 1em 0;
-            }
-
         }
 
     }
@@ -55,8 +104,13 @@
 }
 
 
-@media screen and ( min-width: 960px ) {
-    .single .entry-content p {
+.wp-caption .wp-caption-text, .gallery-caption, .entry-caption {
 
-    }
+}
+
+.entry-content .wp-caption p {
+    font-size: 0.75em;
+    font-style: normal;
+    padding-right: 0.25em;
+    line-height: 1.2em;
 }

@@ -23,3 +23,7 @@
 	font-style: italic;
 }
 
+.calendar-day-name {
+	text-transform: uppercase;
+	font-size: large;
+}

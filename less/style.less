@@ -1,3 +1,6 @@
+@container-margin: 25px;
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family:'Neo Sans W02';
 }
@@ -8,44 +11,49 @@ body {
     margin: 0;
 }
 
+a {
+    color: black;
+}
+
+a:hover {
+    color: lighten( black, 20% );
+}
+
 body .site {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+
+    /* background-image: url( '../img/subtle_grunge.png' ); */
+    /* background-color: rgb( 240, 240, 240 ); */
 }
 
-.site-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    .header-image {
-        margin-top: 0;
-        border-radius: 0;
-    }
-
-    img.header-image,
-    img.wp-post-image {
-        box-shadow: none;
-    }
+.header-image {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
 }
 
+img.header-image,
+img.wp-post-image {
+    box-shadow: none;
+}
+
+
+hr {
+    clear: both;
+    border-top: 1px dotted lighten( black, 75% );
+}
 
 .site-content {
-    margin-top: 0.75em;
+    overflow: visible;
 }
-
-
-
-
-
 
 body.custom-background {
     background-image:
         url( '../img/light-bg.png' );
 }
-
-
 
 .area {
     width: 100%;
@@ -60,30 +68,20 @@ body.custom-background {
             color: white;
             padding: 0.5em;
         }
+
+        a {
+            color: white;
+        }
+
+        a:hover {
+            color: darken( white, 20% );
+        }
     }
+
+
+
 }
 
-#end {
-    background-color: inherit;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-
-
-
-
-.copyright-row {
-    text-align: right;
-    color: #a9a9a9;
-    background-color: black;
-    font-weight: bold;
-    padding: 0.5em 1.0em 0.5em 0.5em;
-
-    a:hover, a:active, a:visited {
-        color: #a9a9a9;
-    }
-}
 
 .author-avatar img {
     vertical-align: baseline;
@@ -98,23 +96,18 @@ body.custom-background {
     margin-bottom: 2em;
 }
 
-.nav.main-navigation {
-    color: white;
-}
-
-
 
 .foundation {
     overflow: hidden;
+    border: 1px solid lighten( black, 75% );
+    border-radius: 3px;
 
     img.wp-post-image {
         width: 100%;
         margin-bottom: 0;
         padding-bottom: 0;
-
     }
 }
-
 
 .span4 {
     .foundation {
@@ -130,9 +123,9 @@ body.custom-background {
 	}
 }
 
-
 .content-header {
     margin-top: 1em;
+    margin-bottom: 0.1em;
 }
 
 .entry-thumbnail {
@@ -150,13 +143,11 @@ body.custom-background {
 
     .entry-title {
         font-weight: normal;
-        text-transform: capitalize;
         text-align: left;
+
+        a { color: black; }
     }
 }
-
-
-
 
 .entry-content p {
 	text-align: justify;
@@ -183,24 +174,118 @@ body.custom-background {
 	hyphens: auto;
 }
 
-/*
- * Removes the default handling of the logo as image with rounded borders
- */
+.row-fluid.separator-row {
+    overflow: auto;
+    clear: both;
+    padding-top: 1.5em;
+}
 
 
+.menu {
+    list-style: none;
+    font-family: 'Neo Sans W02';
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0;
+    background-image: url('http://sonen.ifi.uio.no/ny/wp-content/themes/sonen/less/../img/dark-bg.png');
+    border-radius: 3px;
+    color: white;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    text-align: center;
+    box-shadow: 0 0 7px #999999;
 
-@import 'menu.less';
-@import 'twitter.less';
+    li, a {
+        color: white;
+    }
 
-@import 'single.less';
-@import 'preview.less';
-@import 'footer.less';
-@import 'events.less';
-@import 'twitter.less';
-@import 'author.less';
-@import 'separator.less';
+    li {
+        display: inline-block;
+        padding: 0.2em 1em 0.3em 1em;
+        width: 20%;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    li:hover {
+        background-image: url( '../img/red-bg.png' );
+    }
+}
 
 
+div.mr_social_sharing_wrapper {
+    border-top: 2px solid lighten( black, 95% );
+    padding: 0.75em;
+    border-radius: 0.1em;
+    text-align: right;
+}
 
-/* responsive media queries always last */
-@import 'responsive.less';
+
+.author {
+    padding: 0;
+    margin: 0;
+}
+
+#blogroll {
+
+    width: 92%;
+    clear: both;
+    margin: 0 auto;
+    color: #666;
+    padding-top: 3em;
+
+    .blogroll-row-first {
+
+    }
+
+    .blogroll-element {
+        padding: 0.25em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .blogroll-row-second {
+        font-size: 0.8em;
+
+
+    }
+
+    .blogroll-row-third {
+        font-size: 0.65em;
+    }
+
+    .blogroll-row {
+        margin-bottom: 1.5em;
+    }
+
+    img {
+        display: none;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        font-weight: normal;
+        line-height: 1em;
+        margin: 0;
+        padding: 0;
+        color: #666;
+
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+
+        a {
+            color: #666;
+
+        }
+    }
+
+}

@@ -8,20 +8,13 @@
  */
 ?>
 
-<?php if ( ! is_single() ) : /* PREVIEW */ ?>
+<?php if ( ! is_single() || is_archive() ) : /* PREVIEW */ ?>
         <div class="preview-container">
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-            <?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-            <div class="featured-post">
-                <?php _e( 'Featured post', 'twentytwelve' ); ?>
-            </div>
-            <?php endif; ?>
 
             <header class="entry-header">
 
                 <div class="foundation">
-
                     <div class="entry-thumbnail">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('thumbnail'); ?>
@@ -53,6 +46,7 @@
 
             <?php endif; ?>
             </article><!-- #post -->
+
         </div>
 
 
@@ -69,6 +63,10 @@
                 <div class="row-fluid">
                     <div class="span12 entry-title-container">
                         <header class="entry-header">
+                            <div class="entry-top">
+                                <div class="entry-top-right"><?php the_date(); ?></div>
+                                <div class="entry-top-left">&nbsp;</div>
+                            </div>
                             <div class="foundation">
                                 <div class="entry-thumbnail">
                                     <?php the_post_thumbnail('large'); ?>
@@ -78,6 +76,7 @@
                                 </div>
                             </div>
                         </header><!-- .entry-header -->
+                        <h1 class="entry-mobile-title visible-phone"><?php the_title(); ?></h1>
                     </div>
                 </div>
 
@@ -90,6 +89,8 @@
                     </div>
                 <?php else : ?>
 
+
+                <div class="span3 pull-right entry-date"></div>
                 <div class="span8 offset1">
                     <div class="entry-content">
                         <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
@@ -107,15 +108,18 @@
 
 <div class="area">
     <div class="site">
-        <div class="row-fluid author">
+        <div class="container-fluid author-field">
+            <div class="row-fluid">
+                <div class="span2 author-avatar">
+                    <?php echo get_avatar( get_the_author_meta( 'user_email' ),
+                          apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) );  ?>
+                </div><!-- .author-avatar -->
 
-            <div class="span2 author-avatar">
-                <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) ); ?>
-            </div><!-- .author-avatar -->
+                <div class="span6 author-description">
+                    <h4><?php /* printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); */ ?> </h4>
+                    <div><?php coauthors() ?> <?php /* the_author_meta( 'description' ); */ ?></div>
+                </div>
 
-            <div class="span6 author-description">
-                <h4><?php printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); ?></h4>
-                <div><?php the_author_meta( 'description' ); ?></div>
             </div>
         </div>
     </div>

@@ -1,22 +1,45 @@
 footer {
+    color: #a9a9a9;
     width: 100%;
-    float: left;
-    display: block;
+    clear: both;
     color: white;
     overflow: hidden !important;
 
-    .site-info {
-        padding-top: 2em;
-        padding-bottom: 2em;
-        min-height: 300px;
-        background-image: url( '../img/dark-bg.png' );
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        color: darken( white, 20% );
+    }
+
+    .sponsors-row {
+
+    }
+
+    .sponsors-info {
+        /* background-color: rgba( 0, 0, 0, 0.8 ); */
+        background-image: url( '../img/extra-dark-bg.png' );
         font-size: 0.8em;
 
-        .credits-row, .sponsors-row {
+        .sponsors-row {
             max-width: 960px;
             max-width: 68.571428571rem;
             margin: 0 auto;
-            padding: 1.5em;
+            padding: 1em 1.5em 1em 1.5em;
+        }
+    }
+
+    .site-info {
+        background-image: url( '../img/dark-bg.png' );
+        font-size: 0.8em;
+        min-height: 60px;
+        .credits-row {
+            max-width: 960px;
+            max-width: 68.571428571rem;
+            margin: 0 auto;
+            padding: 1.5em 1.5em 1em 1em;
 
             .credits-column {
                 height: auto;
@@ -24,26 +47,55 @@ footer {
                 overflow: auto;
                 padding-right: 3em;
                 padding-left: 3em;
-
-            }
-
-            .seal {
-                text-align: center;
-            }
-
-            .seal img {
-                margin: 2em auto 4em auto;
-
-            }
-
-            .sponsors-row {
-
             }
         }
     }
+
+
+    .service-bar {
+
+        padding-bottom: 0.5em;
+
+        float: right;
+
+        .service {
+            display: inline-block;
+            background-image: url('../img/light-dark-bg.png');
+            border-radius: 2.1em;
+            padding: 0.5em 0.5em 0.5em 0.5em;
+            margin: 0.25em 0.25em 0.25em 0.25em;
+            cursor: pointer;
+        }
+
+        .service:hover {
+            background-image: url('../img/red-bg.png');
+        }
+
+        .selected {
+            background-image: url('../img/red-bg.png');
+        }
+    }
+
 }
 
 .copyright-row {
     font-family:'Neo Sans W02';
     font-size: 0.9em;
+}
+
+.credits-internal {
+    border-right: 2px solid darken( white, 60% );
+    min-height: 300px;
+}
+
+.copyright-row {
+    text-align: right;
+    color: #a9a9a9;
+    background-color: black;
+    font-weight: bold;
+    padding: 0.5em 1.0em 0.5em 0.5em;
+
+    a:hover, a:active, a:visited {
+        color: #a9a9a9;
+    }
 }

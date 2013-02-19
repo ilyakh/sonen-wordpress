@@ -1,32 +1,31 @@
-nav.main-navigation .logo {
-    float: left;
-    margin-top: 0.5em;
-    margin-bottom: 1em;
-    box-shadow: none;
-}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-image: url( '../img/dark-bg.png' );
+    border-radius: 3px;
+    color: white;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    text-align: center;
 
+    li, a {
+        color: white;
+    }
 
-.service-bar {
-    float: right;
-    margin-bottom: 0.5em;
-    margin-top: 0.75em;
-
-
-    .service {
+    li {
         display: inline-block;
-        background-image: url('../img/light-dark-bg.png');
+        padding: 0.2em 1em 0.3em 1em;
+        width: 20%;
         text-align: center;
-        border-radius: 2.1em;
-        padding: 0.5em 0.5em 0.5em 0.5em;
-        margin: 0.25em;
+        border-radius: 4px;
         cursor: pointer;
     }
 
-    .service:hover {
-        background-image: url('../img/red-bg.png');
+    a:hover {
+        text-decoration: none;
     }
 
-    .selected {
-        background-image: url('../img/red-bg.png');
+    li:hover {
+        background-image: url( '../img/red-bg.png' );
     }
 }

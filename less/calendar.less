@@ -1,6 +1,7 @@
 #events {
     color: white;
-    padding: 1em;
+    padding: 1em 1.2em 1em 1.2em;
+    list-style: none;
 
     .event-widget-container {
         padding: 0;
@@ -15,8 +16,7 @@
     }
 
     li.gce-feed-1 {
-        padding: 0.25em;
-        padding-left: 0.75em;
+        position: relative;
 
         a {
             padding-left: 0;
@@ -24,35 +24,58 @@
     }
 
     .calendar-event {
+        overflow: auto;
+        padding: 1.2em 0.8em 1.2em 0.8em;
+        clear: both;
+
+        .calendar-event-details, .calendar-date-container {
+            float: left;
+        }
 
         .calendar-date-container {
-            float: left;
             background-image: url('../img/red-bg.png');
             text-align: center;
-            border-radius: 2.1em;
-            padding: 0.5em 1em 0.5em 1em;
-            margin-bottom: 0.5em;
+            border-radius: 4em;
 
+            max-width: 2.6em;
+            height: 2.8em;
+            overflow: hidden;
+            font-size: 1.5em;
+            line-height: 1em;
 
             .calendar-day {
-                font-size: 1.6em;
+                padding: 0.35em 0 0 0;
             }
 
             .calendar-month-name {
-                font-size: 0.9em;
+                font-size: 0.5em;
+            }
+        }
+
+        .calendar-event-details {
+
+            .calendar-event-title {
+                font-size: 1.4em;
+                font-family: 'Neo Sans W02';
             }
 
-        }
 
-        .event-description {
-            clear: both;
-            float: left;
-            margin-bottom: 1.75em;
-        }
+            .event-description {
+                margin-top: 0.6em;
 
-        .calendar-day-name {
-            float: left;
-            padding: 1em 0.25em 0.25em 1em;
+                img {
+                    clear: both;
+                    box-shadow: none;
+                    float: right;
+                    border-radius: 0;
+                }
+
+            }
+
+            .calendar-day-time {
+                margin: 0;
+                padding: 0;
+            }
         }
     }
 }

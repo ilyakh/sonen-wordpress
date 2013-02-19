@@ -1,23 +1,7 @@
-<?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * For example, it puts together the home page when no home.php file exists.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
- */
-
-?>
-
 <?php get_header(); ?>
 
+<div class="site">
+    <?php get_sidebar('content-header'); ?>
 
 <?php if ( have_posts() ) : /* Starts the LOOP */ ?>
 
@@ -28,7 +12,7 @@
         $quantified_query = new WP_Query( 'posts_per_page=' . $number_of_posts );
     ?>
 
-        <div class="row-fluid site-content">
+        <div class="row-fluid site-content preview-row">
         <?php while ( $quantified_query->have_posts() ) : $quantified_query->the_post(); ?>
 
             <?php if ( $i == 1 || $i == 2 ) : ?>
@@ -41,9 +25,17 @@
                 <?php if ( $i == 3 ) : ?>
                 </div>
 
-                <div class="row-fluid separator-menu"><?php get_sidebar('separator-menu'); ?></div>
+                <div class="row-fluid separator-row">
+                    <div class="span12">
+                    <?php wp_nav_menu(
+                        array( 'theme_location' => 'first',
+                               'menu' => 'first'
+                        ) );
+                    ?>
+                    </div>
+                </div>
 
-                <div class="row-fluid site-content">
+                <div class="row-fluid site-content preview-row">
 
                 <?php endif; ?>
 
@@ -56,33 +48,47 @@
 
                 <?php if ( ( $i ) % 3 == 0 ) : ?>
 
-
                 </div>
 
-                <?php if ( $i == 9 ) : ?>
+                    <?php if ( $i == 9 ) : ?>
+
+                    </div>
 
 
-
-                </div>
-
-
-                <div class="area">
-                    <div class="site">
-                        <div class="row-fluid">
-                            <div class="span4" id="events"><?php get_sidebar('events'); ?></div>
-                            <div class="span4 offset4" id="twitter"><?php get_sidebar( 'twitter' ); ?></div>
+                    <div class="area">
+                        <div class="site">
+                            <div class="row-fluid">
+                                <div class="span8" id="events">
+                                    <?php get_sidebar('events'); ?>
+                                </div>
+                                <div class="span4" id="twitter">
+                                    <?php get_sidebar( 'twitter' ); ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
 
-                <div class="hfeed site">
+                    <div class="hfeed site">
+
+                    <?php endif; ?>
+
+                <?php if ( $i == 15 ) : ?>
+
+                    <div class="row-fluid separator-row">
+                        <div class="span12"><?php wp_nav_menu( array( 'theme_location' => 'second', 'menu' => 'second' ) ); ?></div>
+                    </div>
+
+                <?php elseif ( $i == 21 ) : ?>
+
+                    <div class="row-fluid separator-row">
+                        <div class="span12"><?php wp_nav_menu( array( 'theme_location' => 'third', 'menu' => 'third' ) ); ?></div>
+                    </div>
 
                 <?php endif; ?>
 
-                <div class="row-fluid site-content">
-
+                <div class="row-fluid site-content preview-row">
 
                 <?php endif; ?>
 
@@ -98,18 +104,15 @@
 
         </div>
 
-        <hr id="end" />
-
-    <?php twentytwelve_content_nav( 'nav-below' ); ?>
 
 
 
-    </div> <!-- /site -->
+
 
 
 
     <?php else : /* NO POSTS */ ?>
-    <div id="content" role="main">
+
         <article id="post-0" class="post no-results not-found">
 
         <?php if ( current_user_can( 'edit_posts' ) ) :
@@ -134,10 +137,32 @@
                 <p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twentytwelve' ); ?></p>
                 <?php get_search_form(); ?>
             </div><!-- .entry-content -->
-        <?php endif; // end current_user_can() check ?>
+        <?php endif; ?>
 
         </article><!-- #post-0 -->
 
-    <?php endif; // end have_posts() check ?>
+    <?php endif; ?>
+
+
+<?php twentytwelve_content_nav( 'nav-below' ); ?>
+
+</div>
+
+
+
+<div class="area">
+    <div class="site">
+        <div class="row-fluid">&nbsp;</div>
+    </div>
+</div>
+
+<div class="hfeed site">
+
+<?php get_sidebar( 'blogroll' ); ?>
+
+
+
+</div><!-- /site -->
+
 
 <?php get_footer(); ?>

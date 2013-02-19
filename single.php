@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<div class="hfeed site">
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 
