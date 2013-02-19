@@ -110,15 +110,18 @@
     <div class="site">
         <div class="container-fluid author-field">
             <div class="row-fluid">
-                <div class="span2 author-avatar">
+                <!--<div class="span2 author-avatar">
                     <?php echo get_avatar( get_the_author_meta( 'user_email' ),
                           apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) );  ?>
-                </div><!-- .author-avatar -->
+                </div>--><!-- .author-avatar -->
 
-                <div class="span6 author-description">
-                    <h4><?php /* printf( __( 'About %s', 'twentytwelve' ), get_the_author() ); */ ?> </h4>
-                    <div><?php coauthors() ?> <?php /* the_author_meta( 'description' ); */ ?></div>
-                </div>
+
+                    <div class="span6"><?php sonen_coauthors() ?></div>
+
+
+
+                    <div class="span6"><?php dynamic_sidebar('authors'); ?></div>
+
 
             </div>
         </div>

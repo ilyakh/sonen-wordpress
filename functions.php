@@ -81,6 +81,11 @@ if (function_exists('register_sidebar')) {
         'after_widget' => '</div>'
     ));
 
+    register_sidebar(array(
+        'name'=> 'Bidragsytere',
+        'id' => 'authors'
+    ));
+
 }
 
 function no_more( $more ) {
@@ -89,6 +94,23 @@ function no_more( $more ) {
 }
 
 add_filter('excerpt_more', 'no_more');
+
+if ( function_exists( 'coauthors' ) ) {
+
+    function sonen_coauthors( $between = null, $betweenLast = "og ", $before = "Skrevet av ", $after = ".", $echo = true ){
+        return coauthors__echo('display_name', 'field', array(
+            'between' => $between,
+            'betweenLast' => $betweenLast,
+            'before' => $before,
+            'after' => $after
+        ), null, $echo );
+    }
+
+} else {
+    the_author();
+}
+
+
 
 
 ?>
