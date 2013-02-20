@@ -4,14 +4,7 @@
         <div class="credits-row row-fluid" style="">
 
             <!-- sponsors -->
-            <div class="span4">
-                &nbsp;
-            </div>
-
-
-            <div class="span4">&nbsp;</div>
-
-            <div class="span4">
+            <div class="span12">
                 <div class="service-bar">
                     <div class="service">
                         <a href="https://www.facebook.com/ifisonen">
@@ -47,18 +40,20 @@
 
     <div class="sponsors-info">
         <div class="sponsors-row row-fluid">
-            <div class="span3"><p>Sonen er støttet av</p></div>
-            <div class="span6">
-                <img src="/ny/wp-content/themes/sonen/img/statoil-transparent.png" />
-            </div>
-            <div class="span3">
-            </div>
-         </div>
+            <div class="span12 sponsor">
+            		<img src="/ny/wp-content/themes/sonen/img/statoil-transparent.png" />
+            	    <img src="/ny/wp-content/themes/sonen/img/studielaben_white_small.png" />
+           	</div>
+		</div>
     </div>
 
-    <div class="copyright-row">
-        <a href="http://ifi.uio.no/">Institutt for informatikk</a>,
-        <a href="http://www.uio.no/">Universitetet i Oslo</a> © 2013
+    <div class="copyright-info">
+        <div class="row-fluid copyright-row">
+            <div class="span12 copyright">
+                <a href="http://ifi.uio.no/">Institutt for informatikk</a>,
+                <a href="http://www.uio.no/">Universitetet i Oslo</a> © 2013
+            </div>
+        </div>
     </div>
 
 </footer>

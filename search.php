@@ -9,8 +9,7 @@
 
 get_header(); ?>
 
-<section id="primary">
-    <div id="content" role="main">
+<div class="hfeed site">
 
         <?php if ( have_posts() ) : ?>
 
@@ -18,7 +17,7 @@ get_header(); ?>
             <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
         </header>
 
-        <?php twentyeleven_content_nav( 'nav-above' ); ?>
+
 
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
@@ -33,7 +32,7 @@ get_header(); ?>
 
             <?php endwhile; ?>
 
-        <?php twentyeleven_content_nav( 'nav-below' ); ?>
+
 
         <?php else : ?>
 
@@ -49,9 +48,7 @@ get_header(); ?>
         </article><!-- #post-0 -->
 
         <?php endif; ?>
+    </div>
 
-    </div><!-- #content -->
-</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

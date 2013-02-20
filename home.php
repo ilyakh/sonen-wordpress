@@ -8,7 +8,7 @@
 	<?php
         $i=1; /* POST counter */
         /* modified loop allows a specific article quantity */
-        $number_of_posts = 50;
+        $number_of_posts = 25;
         $quantified_query = new WP_Query( 'posts_per_page=' . $number_of_posts );
     ?>
 
@@ -57,7 +57,7 @@
 
                     <div class="area">
                         <div class="site">
-                            <div class="row-fluid">
+                            <div class="row-fluid" style="clear: both;">
                                 <div class="span8" id="events">
                                     <?php get_sidebar('events'); ?>
                                 </div>
