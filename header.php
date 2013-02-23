@@ -32,8 +32,7 @@
 
 <?php
 
-$theme_uri = '/wordpress-no/wp-content/themes/sonen';
-$theme_uri = '/ny/wp-content/themes/sonen';
+$theme_uri = '/wp-content/themes/sonen';
 
 $files = array(
 	/* bootstrap: responsive scafolding grid */

@@ -16,7 +16,7 @@
             <div class="span6 header-right hidden-phone">
                 <div class="parent-logo">
                     <a href="http://www.ifi.uio.no/">
-                        <img class="" src="/ny/wp-content/themes/sonen/img/uio_ifi_250_segl.png" alt=""  />
+                        <img class="" src="/wp-content/themes/sonen/img/uio_ifi_250_segl.png" alt=""  />
                     </a>
                 </div>
             </div>
@@ -25,7 +25,7 @@
 </div>
 
 <div class="area" style="overflow: hidden;">
-    <div class="row-fluid site" style="overflow: hidden; height: 10px; background-image: url( '/ny/wp-content/themes/sonen/img/alspectra-large.png' );">
+    <div class="row-fluid site" style="overflow: hidden; height: 10px; background-image: url( '/wp-content/themes/sonen/img/alspectra-large.png' );">
         &nbsp;
     </div>
 </div>

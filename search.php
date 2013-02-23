@@ -1,54 +1,47 @@
-<?php
-/**
- * The template for displaying Search Results pages.
- *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 <div class="hfeed site">
+    <?php get_sidebar('content-header'); ?>
 
-        <?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) : $i = 1; // if has posts ?>
 
-        <header class="page-header">
-            <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+        <div class="row-fluid site-content preview-row">
+            <?php while ( have_posts() ) : the_post(); ?>
+
+        <div class="span4 preview">
+            <?php get_template_part( 'content', get_post_format() ); ?>
+        </div>
+
+        <?php if ( ( $i ) % 3 == 0 ) : ?>
+
+                </div>
+                <div class="row-fluid site-content preview-row">
+
+
+            <?php endif; ?>
+
+        <!-- Increments the post counter -->
+        <?php $i++; ?>
+
+        <?php endwhile; ?>
+
+
+
+    <?php else : // if no posts ?>
+    <article id="post-0" class="post no-results not-found">
+        <header class="entry-header">
+            <h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
         </header>
 
+        <div class="entry-content">
+            <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentytwelve' ); ?></p>
+            <?php get_search_form(); ?>
+        </div><!-- .entry-content -->
+    </article><!-- #post-0 -->
+    <?php endif; ?>
 
+</div>
+</div>
 
-        <?php /* Start the Loop */ ?>
-        <?php while ( have_posts() ) : the_post(); ?>
-
-            <?php
-            /* Include the Post-Format-specific template for the content.
-             * If you want to overload this in a child theme then include a file
-             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-             */
-            get_template_part( 'content', get_post_format() );
-            ?>
-
-            <?php endwhile; ?>
-
-
-
-        <?php else : ?>
-
-        <article id="post-0" class="post no-results not-found">
-            <header class="entry-header">
-                <h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
-            </header><!-- .entry-header -->
-
-            <div class="entry-content">
-                <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyeleven' ); ?></p>
-                <?php get_search_form(); ?>
-            </div><!-- .entry-content -->
-        </article><!-- #post-0 -->
-
-        <?php endif; ?>
-    </div>
-
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
