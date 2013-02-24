@@ -30,7 +30,6 @@
 
     
 	<?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
-	<!--
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/style.less" />
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/top.less" />
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/twitter.less" />
@@ -42,8 +41,8 @@
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/menu.less" />
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/blogroll.less" />
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/responsive.less" />
-	-->
 
+    <!--
     <?php /* Importerer stilarkene */ ?>
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/top.css" />
@@ -56,15 +55,14 @@
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/blogroll.css" />
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/author.css" />
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/responsive.css" />
+    -->
 
-	<!--
     <?php
     /* Inkluderer og konfigurerer less.js for utvikling: dette må skje _etter_ inkludering av *.less-filer */ ?>
     <script src="/wp-content/themes/sonen/js/less.js" type="text/javascript"></script>
     <?php /* Sørger for at less ikke sparer stilarkene i 'local storage' */ ?>
     <script type="text/javascript">less.env = "development";</script>
     <script>localStorage.clear(); </script>
-	-->
 
 </head>
 
