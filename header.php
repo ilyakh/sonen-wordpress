@@ -26,12 +26,7 @@
     <link href="/wp-content/themes/sonen/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link href="/wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-
     <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />
-    <script src="/wp-content/themes/sonen/js/jquery.js" type="text/javascript"></script>
-    <script src="/wp-content/themes/sonen/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/wp-content/themes/sonen/js/ios-orientation-fix.js" type="text/javascript"></script>
-
 
     <?php /* Importerer stilarkene */ ?>
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/style.less" />

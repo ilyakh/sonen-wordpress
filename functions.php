@@ -4,7 +4,6 @@ include_once('twitter-widget.php');
 
 
 
-
 if ( ! function_exists( 'twentytwelve_setup' ) ) :
 
 function sonen_setup() {
@@ -32,11 +31,23 @@ function sonen_setup() {
     add_image_size( 'medium', 640, 480, true );
     add_image_size( 'large', 1024, 768, true );
 
+
 }
 
 add_action( 'after_setup_theme', 'sonen_setup' );
 
 endif;
+
+function sonen_remove_scripts() {
+    wp_dequeue_script( 'twentytwelve-navigation' );
+    wp_deregister_script( 'twentytwelve-navigation' );
+
+    wp_register_script( 'bootstrap', '/wp-content/themes/sonen/js/bootstrap.min.js' );
+    wp_register_script( 'bootstrap', '/wp-content/themes/sonen/js/ios-orientation-fix.js' );
+}
+add_action( 'wp_enqueue_scripts', 'sonen_remove_scripts', 20 );
+
+sonen_remove_scripts();
 
 // registrer widgeter
 if (function_exists('register_sidebar')) {

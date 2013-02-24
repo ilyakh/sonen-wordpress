@@ -1,5 +1,5 @@
-<footer xmlns="http://www.w3.org/1999/html">
-	<div class="site-info">
+<footer>
+    <div class="site-info">
 
         <div class="credits-row row-fluid" style="">
             <div class="span12">
@@ -30,15 +30,15 @@
                 </div>
             </div>
         </div>
-	</div>
+    </div>
 
     <div class="sponsors-info">
         <div class="sponsors-row row-fluid">
             <div class="span12 sponsor">
                 <img src="/wp-content/themes/sonen/img/statoil-transparent.png" alt="" />
                 <img src="/wp-content/themes/sonen/img/studielaben_white_small.png" alt="" />
-           	</div>
-		</div>
+            </div>
+        </div>
     </div>
 
     <div class="copyright-info">
@@ -49,8 +49,8 @@
             </div>
         </div>
     </div>
-
 </footer>
+
 
 <?php wp_footer(); ?>
 
