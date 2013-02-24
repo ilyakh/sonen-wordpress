@@ -52,7 +52,7 @@ if (function_exists('register_sidebar')) {
 
     register_sidebar(array(
         'name'=> 'Sidetopp',
-        'id' => 'header'
+        'id' => 'top'
     ));
 
     register_sidebar(array(

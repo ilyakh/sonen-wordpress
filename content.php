@@ -114,15 +114,8 @@
                     <?php echo get_avatar( get_the_author_meta( 'user_email' ),
                           apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) );  ?>
                 </div>--><!-- .author-avatar -->
-
-
-                    <div class="span6"><?php sonen_coauthors() ?></div>
-
-
-
-                    <div class="span6"><?php dynamic_sidebar('authors'); ?></div>
-
-
+                <div class="span6"><?php sonen_coauthors() ?></div>
+                <div class="span6"><?php dynamic_sidebar('authors'); ?></div>
             </div>
         </div>
     </div>

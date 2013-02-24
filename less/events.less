@@ -1,8 +1,8 @@
 #events {
-
     color: white;
+    padding: 1em 1.2em 4em 1.2em;
+    list-style: none;
     font-family: 'Neo Sans W02', "Helvetica Neue", Arial, sans;
-
 
     h2 {
         text-align: center;
@@ -10,8 +10,76 @@
         padding-bottom: 0.25em;
     }
 
-    h2 {
-        /* applied in the style.less */
+    .calendar-event {
+        overflow: auto;
+        padding: 1.5em 0.8em 1.2em 0.5em;
+        clear: both;
+
+        .calendar-event-details, .calendar-date-container {
+            float: left;
+        }
+
+        .calendar-date-container {
+            background-image: url('../img/red-bg.png');
+            text-align: center;
+            border-radius: 4em;
+            padding: 0.5em 1em 0 1em;
+            max-width: 3em;
+            height: 2.8em;
+            overflow: hidden;
+            font-size: 1.8em;
+            line-height: 1em;
+
+            .calendar-day {
+                padding: 0.35em 0 0 0;
+            }
+
+            .calendar-month-name {
+                font-size: 0.5em;
+            }
+        }
+
+        .calendar-event-details {
+
+            .calendar-event-title {
+                font-size: 1.7em;
+            }
+
+
+            .event-description {
+                margin-top: 0.6em;
+                clear: both;
+                float: left;
+                margin-bottom: 1.75em;
+
+                img {
+                    clear: both;
+                    box-shadow: none;
+                    float: right;
+                    border-radius: 0;
+                }
+
+            }
+
+            .calendar-day {
+                font-size: 1.6em;
+            }
+
+            .calendar-month-name {
+                font-size: 0.9em;
+            }
+
+            .calendar-day-time {
+                margin: 0;
+                padding: 0;
+                color: darken( white, 35% );
+            }
+
+            .calendar-day-name {
+                float: left;
+                padding: 1em 0.25em 0.25em 1em;
+            }
+        }
     }
 
     .event-widget-container {
@@ -28,7 +96,6 @@
 
     li.gce-feed-1 {
         padding: 0.25em;
-        padding-left: 0.75em;
 
         border-bottom: 2px solid darken( white, 75% );
 
@@ -37,42 +104,7 @@
         }
     }
 
-    .calendar-event {
-
-        vertical-align: middle;
-
-        .calendar-date-container {
-            float: left;
-            background-image: url('../img/red-bg.png');
-            text-align: center;
-            border-radius: 2.1em;
-            padding: 0.5em 1em 0.5em 1em;
-            margin-bottom: 0.5em;
-
-
-            .calendar-day {
-                font-size: 1.6em;
-            }
-
-            .calendar-month-name {
-                font-size: 0.9em;
-            }
-
-        }
-
-        .event-description {
-            clear: both;
-            float: left;
-            margin-bottom: 1.75em;
-        }
-
-        .calendar-day-name {
-            float: left;
-            padding: 1em 0.25em 0.25em 1em;
-        }
-
-        .calendar-day-time {
-            color: darken( white, 35% );
-        }
+    li.gce-feed-1:last-child {
+        border-bottom: none;
     }
 }

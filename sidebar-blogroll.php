@@ -1,5 +1,6 @@
 <div id="blogroll">
 	<div class="head">Verdt å følge med på</div>
+
     <div class="row-fluid blogroll-row blogroll-row-first">
         <div class="span12">
             <?php dynamic_sidebar( 'blogroll-first' ); ?>

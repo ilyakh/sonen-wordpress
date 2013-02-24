@@ -1,0 +1,58 @@
+@top-box-shadow: 0 0 10px rgba(30, 30, 30, 0.75);
+
+#top {
+    overflow: hidden;
+
+    .site {
+        box-shadow: @top-box-shadow;
+    }
+
+    .top-row {
+        padding-top: 0.8em;
+
+        .top-left, .top-right {
+            padding-bottom: 1em;
+        }
+
+        .top-right {
+            padding-top: 0.35em;
+
+
+            img {
+                float: right;
+                clear: both;
+
+            }
+        }
+
+        .top-left {}
+
+        .top-right {
+
+            .parent-logo {
+                text-align: right;
+                clear: both;
+            }
+
+            img {
+                margin-right: 3em;
+            }
+        }
+
+        .uio {
+            margin-top: 5px;
+        }
+    }
+}
+
+.top-separator {
+
+    .top-separator-fill {
+
+        overflow: hidden;
+        height: 10px;
+        background-image: url( '/wp-content/themes/sonen/img/alspectra-large.png' );
+        box-shadow: @top-box-shadow;
+    }
+}
+

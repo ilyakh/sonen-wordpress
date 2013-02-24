@@ -1,12 +1,15 @@
 .menu {
     list-style: none;
+    font-family: 'Neo Sans W02';
+    font-size: 1.1em;
     margin: 0;
     padding: 0;
-    background-image: url( '../img/dark-bg.png' );
+    background-image: url('../img/dark-bg.png');
     border-radius: 3px;
     color: white;
     padding: 0.5em 0.5em 0.5em 0.5em;
     text-align: center;
+    box-shadow: 0 0 7px #999999;
 
     li, a {
         color: white;
@@ -19,6 +22,10 @@
         text-align: center;
         border-radius: 4px;
         cursor: pointer;
+        background-image: url( '../img/extra-dark-bg.png' );
+        margin: 0.1em;
+        opacity: 0.6;
+        text-transform: lowercase;
     }
 
     a:hover {
@@ -27,5 +34,43 @@
 
     li:hover {
         background-image: url( '../img/red-bg.png' );
+        opacity: 1;
     }
+
+    li:nth-child(1) {
+        background-image: url('../img/red-bg.png');
+    }
+
+    li:nth-child(2) {
+        background-image: url('../img/yellow-bg.png');
+    }
+
+    li:nth-child(3) {
+        background-image: url('../img/green-bg.png');
+    }
+
+    li:nth-child(4) {
+        background-image: url('../img/blue-bg.png');
+    }
+
+    ul {
+       margin: 0;
+    }
+
+}
+
+.separator-menu {
+
+    margin-top: 1em;
+
+    .separator-menu-element {
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+.separator {
+    background-color: white;
+    border-top: none;
+    border-bottom: none;
 }

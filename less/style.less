@@ -1,8 +1,19 @@
+/* margin som skal samstemme med gutterWidth i bootstrap */
 @container-margin: 25px;
 
 
+/* teksturer */
+@extra-dark-bg: url( '../img/extra-dark-bg.png' );
+@dark-bg: url( '../img/dark-bg.png' );
+@light-bg: url( '../img/light-bg.png' );
+@light-dark-bg: url( '../img/light-dark-bg.png' );
+@extra-light-bg: url( '../img/extra-light-bg.png' );
+
+/* skrift */
+@font-neo: 'Neo Sans W02';
+
 h1, h2, h3, h4, h5, h6 {
-    font-family:'Neo Sans W02';
+    font-family: @font-neo;
 }
 
 /* styles */
@@ -24,9 +35,6 @@ body .site {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-
-    /* background-image: url( '../img/subtle_grunge.png' ); */
-    /* background-color: rgb( 240, 240, 240 ); */
 }
 
 .header-image {
@@ -51,18 +59,16 @@ hr {
 }
 
 body.custom-background {
-    background-image:
-        url( '../img/light-bg.png' );
+    background-image: @light-bg;
 }
 
 .area {
     width: 100%;
-    background-image: url( '../img/light-dark-bg.png' );
+    background-image: @light-dark-bg;
 
     .site {
-        background-image:
-            url( '../img/dark-bg.png' );
-        box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+        background-image: @dark-bg;
+        box-shadow: 0 0 10px rgba(100, 100, 100, 0.75);
 
         li a {
             color: white;
@@ -76,19 +82,6 @@ body.custom-background {
             color: darken( white, 20% );
         }
     }
-
-
-
-}
-
-
-
-
-
-.nav-next, .nav-previous {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 2em;
 }
 
 
@@ -107,16 +100,25 @@ body.custom-background {
 .span4 {
     .foundation {
         width: 100%;
-		overflow: hidden;
+        overflow: hidden;
     }
 }
 
 .span6 {
-	.foundation {
+    .foundation {
         width: 100%;
-		overflow: hidden;
-	}
+        overflow: hidden;
+    }
 }
+
+
+.nav-next, .nav-previous {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+
 
 .content-header {
     margin-top: 1em;
@@ -175,63 +177,6 @@ body.custom-background {
     padding-top: 1.5em;
 }
 
-
-.menu {
-    list-style: none;
-    font-family: 'Neo Sans W02';
-    font-size: 1.1em;
-    margin: 0;
-    padding: 0;
-    background-image: url('../img/dark-bg.png');
-    border-radius: 3px;
-    color: white;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    text-align: center;
-    box-shadow: 0 0 7px #999999;
-
-    li, a {
-        color: white;
-    }
-
-    li {
-        display: inline-block;
-        padding: 0.2em 1em 0.3em 1em;
-        width: 20%;
-        text-align: center;
-        border-radius: 4px;
-        cursor: pointer;
-        background-image: url( '../img/extra-dark-bg.png' );
-        margin: 0.1em;
-        opacity: 0.6;
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
-
-    li:hover {
-        background-image: url( '../img/red-bg.png' );
-        opacity: 1;
-    }
-
-    #menu-item-311:hover {
-        background-image: url('../img/red-bg.png') !important;
-    }
-
-    #menu-item-313:hover {
-        background-image: url('../img/yellow-bg.png') !important;
-    }
-
-    #menu-item-314:hover {
-        background-image: url('../img/green-bg.png') !important;
-    }
-
-    #menu-item-320:hover {
-        background-image: url('../img/blue-bg.png') !important;
-    }
-}
-
-
 div.mr_social_sharing_wrapper {
     border-top: 2px solid lighten( black, 95% );
     padding: 0.75em;
@@ -239,82 +184,4 @@ div.mr_social_sharing_wrapper {
     text-align: right;
 }
 
-#blogroll {
-
-    width: 92%;
-    clear: both;
-    margin: 0 auto;
-    color: #666;
-    padding-top: 3em;
-    
-    .head {
-    	text-align: center;
-    	font-size: 1.4em;
-    	margin-bottom: 1em;
-    	}
-
-    .blogroll-row-first {
-        ul li {
-            line-height: 1.3em;
-        }
-    }
-
-    .blogroll-element {
-        padding: 0.25em;
-        margin-bottom: 1em;
-        text-align: center;
-
-    }
-
-    .blogroll-row-second {
-        font-size: 0.8em;
-
-
-        ul li {
-            line-height: 1.2em;
-        }
-
-    }
-
-    .blogroll-row-third {
-        font-size: 0.65em;
-
-
-        ul li {
-            line-height: 0.9em;
-        }
-    }
-
-    .blogroll-row {
-        margin-bottom: 1.5em;
-    }
-
-    img {
-        display: none;
-    }
-
-    h2 {
-        font-size: 1.3em;
-        font-weight: normal;
-        line-height: 1em;
-        margin: 0;
-        padding: 0;
-        color: #666;
-
-    }
-
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-
-        a {
-            color: #666;
-        }
-    }
-
-}
-
-/* temp */
 

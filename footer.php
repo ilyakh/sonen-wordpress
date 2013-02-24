@@ -2,8 +2,6 @@
 	<div class="site-info">
 
         <div class="credits-row row-fluid" style="">
-
-            <!-- sponsors -->
             <div class="span12">
                 <div class="service-bar">
                     <div class="service">
@@ -31,18 +29,14 @@
                     </div>
                 </div>
             </div>
-            <!-- /service -->
-            </div>
-			
-			
         </div>
 	</div>
 
     <div class="sponsors-info">
         <div class="sponsors-row row-fluid">
             <div class="span12 sponsor">
-            		<img src="/wp-content/themes/sonen/img/statoil-transparent.png" />
-            	    <img src="/wp-content/themes/sonen/img/studielaben_white_small.png" />
+                <img src="/wp-content/themes/sonen/img/statoil-transparent.png" alt="" />
+                <img src="/wp-content/themes/sonen/img/studielaben_white_small.png" alt="" />
            	</div>
 		</div>
     </div>
@@ -59,5 +53,9 @@
 </footer>
 
 <?php wp_footer(); ?>
+
+<?php /* Imports Bootstrap javascript dependencies: used for interactive widgets from Twitter Bootstrap */ ?>
+<script src="/wp-content/themes/sonen/js/bootstrap.min.js" type="text/javascript"></script>
+
 </body>
 </html>
