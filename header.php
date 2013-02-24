@@ -28,7 +28,9 @@
     <link href="/wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />
 
-    <?php /* Importerer stilarkene */ ?>
+    
+	<?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
+	<!--
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/style.less" />
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/top.less" />
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/twitter.less" />
@@ -40,10 +42,9 @@
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/menu.less" />
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/blogroll.less" />
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/responsive.less" />
+	-->
 
-
-    <?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
-    <!--
+    <?php /* Importerer stilarkene */ ?>
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/top.css" />
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/twitter.css" />
@@ -55,15 +56,15 @@
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/blogroll.css" />
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/author.css" />
     <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/responsive.css" />
-    -->
 
-
+	<!--
     <?php
     /* Inkluderer og konfigurerer less.js for utvikling: dette må skje _etter_ inkludering av *.less-filer */ ?>
     <script src="/wp-content/themes/sonen/js/less.js" type="text/javascript"></script>
     <?php /* Sørger for at less ikke sparer stilarkene i 'local storage' */ ?>
     <script type="text/javascript">less.env = "development";</script>
     <script>localStorage.clear(); </script>
+	-->
 
 </head>
 
@@ -72,3 +73,4 @@
 <body <?php body_class(); ?>>
 
 <?php get_sidebar('top'); ?>
+
