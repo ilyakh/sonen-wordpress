@@ -45,13 +45,22 @@ endif;
 function sonen2_remove_scripts() {
     wp_dequeue_script( 'twentytwelve-navigation' );
     wp_deregister_script( 'twentytwelve-navigation' );
-
     wp_register_script( 'bootstrap', '/wp-content/themes/sonen2/js/bootstrap.min.js' );
     // wp_register_script( 'bootstrap', '/wp-content/themes/sonen2/js/ios-orientation-fix.js' );
 }
 add_action( 'wp_enqueue_scripts', 'sonen2_remove_scripts', 20 );
-
 sonen2_remove_scripts();
+
+
+function sonen2_disable_google_fonts() {
+    wp_deregister_style( 'twentytwelve-fonts' );
+}
+add_action( 'wp_enqueue_scripts', 'sonen2_disable_google_fonts', 11 );
+sonen2_disable_google_fonts();
+
+
+
+
 
 // registrer widgeter
 if (function_exists('register_sidebar')) {
@@ -120,7 +129,7 @@ if (function_exists('register_sidebar')) {
     ));
 
     register_sidebar(array(
-        'name'=> 'Venstre Nede',
+        'name'=> 'Venstre nede',
         'id' => 'left-bottom'
     ));
 

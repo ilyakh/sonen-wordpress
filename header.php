@@ -27,8 +27,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link href="/wp-content/themes/sonen2/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />
-
-    <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
     
 	<?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/style.less" />
@@ -62,24 +60,30 @@
 </div>
 
 <div id="horizontal-left" class="horizontal">
+    <?php if ( has_nav_menu('first') ) : ?>
     <div class="row-fluid">
         <?php wp_nav_menu( array( 'theme_location' => 'first', 'menu' => 'first' ) ); ?>
     </div>
+    <?php endif; ?>
     <div class="row-fluid">
         <?php dynamic_sidebar('top'); ?>
     </div>
     <div class="row-fluid">
         <?php dynamic_sidebar('left-top'); ?>
     </div>
+    <?php if ( has_nav_menu('first') ) : ?>
     <div class="row-fluid">
         <?php wp_nav_menu( array( 'theme_location' => 'second', 'menu' => 'second' ) ); ?>
     </div>
+    <?php endif; ?>
     <div class="row-fluid">
         <?php dynamic_sidebar('left-center'); ?>
     </div>
+    <?php if ( has_nav_menu('third') ) : ?>
     <div class="row-fluid">
         <?php wp_nav_menu( array( 'theme_location' => 'third', 'menu' => 'third' ) ); ?>
     </div>
+    <?php endif; ?>
     <div class="row-fluid">
         <?php dynamic_sidebar('left-bottom'); ?>
     </div>
@@ -93,13 +97,6 @@
 <div id="content">
     <div class="container-fluid">
         <div class="row-fluid">
-            <!--
-            <div class="span2">
-                <div class="row-fluid">
-
-                </div>
-            </div>
-            -->
             <div class="span12">
                 <div class="row-fluid">
                     <div class="span12 previews">
