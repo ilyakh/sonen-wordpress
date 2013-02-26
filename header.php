@@ -71,7 +71,7 @@
     <div class="row-fluid">
         <?php dynamic_sidebar('left-top'); ?>
     </div>
-    <?php if ( has_nav_menu('first') ) : ?>
+    <?php if ( has_nav_menu('second') ) : ?>
     <div class="row-fluid">
         <?php wp_nav_menu( array( 'theme_location' => 'second', 'menu' => 'second' ) ); ?>
     </div>
