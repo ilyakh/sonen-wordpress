@@ -71,6 +71,7 @@
                         <!-- http://codex.wordpress.org/Function_Reference/wp_nav_menu -->
 
                         <!-- [/] separate into its -->
+
                         <div class="row-fluid">
                             <?php wp_nav_menu( array( 'theme_location' => 'first', 'menu' => 'first' ) ); ?>
                         </div>
@@ -78,10 +79,24 @@
                             <?php dynamic_sidebar('top'); ?>
                         </div>
                         <div class="row-fluid">
+                            <?php dynamic_sidebar('left-top'); ?>
+                        </div>
+                        <div class="row-fluid">
                             <?php wp_nav_menu( array( 'theme_location' => 'second', 'menu' => 'second' ) ); ?>
                         </div>
                         <div class="row-fluid">
+                            <?php dynamic_sidebar('left-center'); ?>
+                        </div>
+                        <div class="row-fluid">
                             <?php wp_nav_menu( array( 'theme_location' => 'third', 'menu' => 'third' ) ); ?>
+                        </div>
+                        <div class="row-fluid">
+                            <?php dynamic_sidebar('left-bottom'); ?>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="segl">
+                                <a href="http://uio.no/"><img src="/wp-content/themes/sonen2/img/segl.png" alt="" /></a>
+                            </div>
                         </div>
                     </div>
                 </div>

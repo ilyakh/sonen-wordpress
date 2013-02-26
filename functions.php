@@ -108,6 +108,22 @@ if (function_exists('register_sidebar')) {
         'id' => 'horizontal-right'
     ));
 
+
+    register_sidebar(array(
+        'name'=> 'Venstre oppe',
+        'id' => 'left-top'
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Venstre i senter',
+        'id' => 'left-center'
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Venstre Nede',
+        'id' => 'left-bottom'
+    ));
+
 }
 
 function no_more( $more ) {
@@ -132,6 +148,14 @@ if ( function_exists( 'coauthors' ) ) {
     the_author();
 }
 
+
+// fjerner ubrukte meny-områder fra temaet 'twentytwelve'
+function remove_menus() {
+    unregister_sidebar( 'sidebar-1' );
+    unregister_sidebar( 'sidebar-2' );
+    unregister_sidebar( 'sidebar-3' );
+}
+add_action( 'widgets_init', 'remove_menus', 11 );
 
 
 
