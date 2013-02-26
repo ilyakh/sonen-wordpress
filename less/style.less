@@ -1,29 +1,66 @@
-/* margin som skal samstemme med gutterWidth i bootstrap */
+/* Margin som skal samstemme med gutterWidth i bootstrap */
 @container-margin: 25px;
 
+@right-horizontal-width: 150px;
 
-/* teksturer */
+/* Teksturer */
 @extra-dark-bg:     url( '../img/extra-dark-bg.png' );
 @dark-bg:           url( '../img/dark-bg.png' );
 @light-bg:          url( '../img/light-bg.png' );
 @light-dark-bg:     url( '../img/light-dark-bg.png' );
 @extra-light-bg:    url( '../img/extra-light-bg.png' );
 
-/* skrift */
+/* Skrift */
 @font-neo: 'Neo Sans W02';
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: @font-neo;
+    font-family: 'NeoSansW01-MediumItalic';
 }
 
-/* styles */
+
+// Overlaster skrifttypen bestemt i kontrollpanelet.
+
+html, body {
+    height: 100%;
+    min-height: 400px;
+}
+
+body.custom-font-enabled {
+
+}
+
 body {
     padding: 0;
     margin: 0;
     height: 100%;
-    background: white;
+
 }
 
+body .site {
+    background: none;
+}
+
+body.custom-background {
+    background: url('../img/bg-candidate-1.png')
+
+/* background-image: @light-bg; */
+}
+
+
+#content {
+    max-width: 1920px;
+    padding-right: @right-horizontal-width;
+}
+
+/* bootstrap corrections */
+.container, .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row, .row-fluid {
+    margin-bottom: 0;
+}
 a {
     color: black;
 }
@@ -37,6 +74,8 @@ body .site {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+
+    max-width: none !important;
 }
 
 .header-image {
@@ -56,13 +95,22 @@ hr {
     border-top: 1px dotted lighten( black, 75% );
 }
 
-.site-content {
-    overflow: visible;
+
+
+body .site {
+    box-shadow: none;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
-body.custom-background {
-    background: white;
-    /* background-image: @light-bg; */
+.site {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.site-content {
+    margin: 0;
+    padding: 0;
 }
 
 .area {
@@ -70,8 +118,10 @@ body.custom-background {
     /* background-image: @light-dark-bg; */
 
     .site {
-        /* background-image: @dark-bg; */
-        box-shadow: 0 0 10px rgba(100, 100, 100, 0.75);
+        /* background: @dark-bg; */
+
+        /* box-shadow: 0 0 10px rgba(100, 100, 100, 0.75); */
+        box-shadow: none !important;
 
         li a {
             color: white;
@@ -97,20 +147,6 @@ body.custom-background {
         width: 100%;
         margin-bottom: 0;
         padding-bottom: 0;
-    }
-}
-
-.span4 {
-    .foundation {
-        width: 100%;
-        overflow: hidden;
-    }
-}
-
-.span6 {
-    .foundation {
-        width: 100%;
-        overflow: hidden;
     }
 }
 
@@ -149,11 +185,7 @@ body.custom-background {
     }
 }
 
-.entry-content p {
-	text-align: justify;
-	line-height: 17px;
-	font-size: 0.9em;
-}
+
 
 .entry-content a:hover {
 	text-decoration: none;
@@ -190,4 +222,33 @@ div.mr_social_sharing_wrapper {
 /* hides the legacy element */
 .post-edit-link {
     display: none;
+}
+
+
+
+.horizontal {
+
+}
+
+#horizontal-right {
+
+    text-align: center;
+    width: @right-horizontal-width;
+
+    position: fixed;
+    top: 72px;
+    right: 0;
+
+    .service-bar {
+        clear: both;
+        width: 80px;
+        padding: 5px 10px 10px 5px;
+        margin: 0;
+        background: url( '../img/dark-bg.png' );
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+#top, .horizontal-right {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

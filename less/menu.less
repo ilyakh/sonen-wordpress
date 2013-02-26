@@ -1,80 +1,62 @@
-.menu {
-    list-style: none;
-    font-family: 'Neo Sans W02';
-    font-size: 1.1em;
-    margin: 0;
-    padding: 0;
-    /* background-image: url('../img/dark-bg.png'); */
-    border-radius: 3px;
-    color: white;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    text-align: center;
-    box-shadow: 0 0 7px #999999;
+@menu-color: #cecece;
 
-    li, a {
-        color: white;
+
+#horizontal-left {
+
+    padding: 70px 35px 15px 20px;
+
+    .cat-item, .page_item { // sic!
+
+    }
+
+    ul {
+        margin: 0;
+        margin-bottom: 45px;
+        padding: 0;
+    }
+
+    ul:first-child {
+        padding-top: 10px;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+
+    li:first-child {
+        border-top: none;
     }
 
     li {
-        display: inline-block;
-        width: 20%;
-        text-align: center;
+        border-top: 1px solid @menu-color;
+        margin: 0;
+        padding: 0;
+
+        a {
+            display: block;
+            text-align: center;
+
+            margin: 5px 0 5px 0;
+            padding: 3px 0 3px 0;
+
+            color: @menu-color;
+
+            font-family: 'Contax W01 55 Sm Cap';
+            font-size: 1.1em;
+
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: none;
+        }
     }
 
-
-    a {
-        display: inline-block;
-        padding: 0.2em 1em 0.3em 1em;
-        text-align: center;
-        width: 80%;
-        border-radius: 4px;
-        /* background-image: url( '../img/extra-dark-bg.png' ); */
-        margin: 0.1em;
-        opacity: 0.6;
-        text-transform: lowercase;
-    }
-
-
-    a:hover {
-        text-decoration: none;
-        opacity: 1;
-    }
-
-    li:nth-child(1) a {
-        background-image: url('../img/red-bg.png');
-    }
-
-    li:nth-child(2) a {
-        background-image: url('../img/yellow-bg.png');
-    }
-
-    li:nth-child(3) a {
-        background-image: url('../img/green-bg.png');
-    }
-
-    li:nth-child(4) a {
-        background-image: url('../img/blue-bg.png');
-    }
-
-
-    ul {
-       margin: 0;
-    }
-
-}
-
-.separator-menu {
-
-    margin-top: 1em;
-
-    .separator-menu-element {
-        display: inline-block;
-        text-align: center;
+    h2.widgettitle {
+        display: none;
     }
 }
 
-.separator {
-    background-color: white;
-    border-top: none;
-    border-bottom: none;
-}
+
+

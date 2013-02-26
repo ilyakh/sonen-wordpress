@@ -8,11 +8,11 @@
 	<?php
         $i=1; /* POST counter */
         /* modified loop allows a specific article quantity */
-        $number_of_posts = 25;
+        $number_of_posts = 20;
         $quantified_query = new WP_Query( 'posts_per_page=' . $number_of_posts );
     ?>
 
-        <div class="row-fluid site-content preview-row">
+        <div class="row-fluid preview-row">
         <?php while ( $quantified_query->have_posts() ) : $quantified_query->the_post(); ?>
 
             <?php if ( $i == 1 || $i == 2 ) : ?>
@@ -25,7 +25,7 @@
                 <?php if ( $i == 3 ) : ?>
                 </div>
 
-                <div class="row-fluid separator-row">
+                <!-- <div class="row-fluid separator-row">
                     <div class="span12">
                     <?php wp_nav_menu(
                         array( 'theme_location' => 'first',
@@ -33,9 +33,9 @@
                         ) );
                     ?>
                     </div>
-                </div>
+                </div>-->
 
-                <div class="row-fluid site-content preview-row">
+                <div class="row-fluid preview-row">
 
                 <?php endif; ?>
 
@@ -50,45 +50,44 @@
 
                 </div>
 
-                    <?php if ( $i == 9 ) : ?>
+                <?php if ( $i == 9 ) : ?>
 
-                    </div>
+                </div>
+                </div>
+                </div>
 
-
-                    <div class="area">
-                        <div class="site">
-                            <div class="row-fluid" style="clear: both;">
-                                <div class="span8" id="events">
-                                    <?php get_sidebar('events'); ?>
-                                </div>
-                                <div class="span4" id="twitter">
-                                    <?php get_sidebar( 'twitter' ); ?>
-                                </div>
+                <div class="row-fluid">
+                    <div class="span12 information">
+                        <div class="row-fluid">
+                            <div class="span8" id="events">
+                                <?php get_sidebar('events'); ?>
+                            </div>
+                            <div class="span4" id="twitter">
+                                <?php get_sidebar( 'twitter' ); ?>
                             </div>
                         </div>
                     </div>
+                </div>
 
+            <div class="site">
+                <div class="row-fluid">
+                    <div class="span12 previews">
 
-
-                    <div class="hfeed site">
-
-                    <?php endif; ?>
-
-                <?php if ( $i == 15 ) : ?>
-
+                <?php elseif ( $i == 15 ) : ?>
+                    <!--
                     <div class="row-fluid separator-row">
                         <div class="span12"><?php wp_nav_menu( array( 'theme_location' => 'second', 'menu' => 'second' ) ); ?></div>
                     </div>
-
+                    -->
                 <?php elseif ( $i == 21 ) : ?>
-
+                    <!--
                     <div class="row-fluid separator-row">
                         <div class="span12"><?php wp_nav_menu( array( 'theme_location' => 'third', 'menu' => 'third' ) ); ?></div>
                     </div>
-
+                    -->
                 <?php endif; ?>
 
-                <div class="row-fluid site-content preview-row">
+                <div class="row-fluid preview-row">
 
                 <?php endif; ?>
 
@@ -148,21 +147,7 @@
 
 </div>
 
-
-
-<div class="area">
-    <div class="site">
-        <div class="row-fluid">&nbsp;</div>
-    </div>
-</div>
-
-<div class="hfeed site">
-
 <?php get_sidebar( 'blogroll' ); ?>
-
-
-
-</div><!-- /site -->
 
 
 <?php get_footer(); ?>

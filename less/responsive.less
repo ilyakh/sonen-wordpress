@@ -1,21 +1,35 @@
 /* Large desktop */
 
 @padding-normal: 25px;
-@padding-mobile: 15px;
+@padding-mobile: 2px;
 
 @media (min-width: 1200px) {
-    body .site {
+    .site {
         padding-left: @padding-normal;
         padding-right: @padding-normal;
     }
 }
+
+@media (max-width: 1370px ) {
+    #content {
+        padding-right: 0 !important;
+    }
+
+    #horizontal-right,
+    #horizontal-right .service-bar {
+        display: none;
+    }
+}
+
+
+
 
 /* Minimum width of 960 pixels. */
 @media ( min-width: 960px ) {
     body {
         background-color: none;
     }
-    body .site {
+    .site {
         padding-left: @padding-normal;
         padding-right: @padding-normal;
         margin-top: 0;
@@ -25,16 +39,27 @@
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-    body .site {
+    .site {
         overflow: hidden;
+        padding: 0;
         padding-left: @padding-normal;
         padding-right: @padding-normal;
+    }
+
+    #horizontal-left {
+        width: 100%;
+    }
+
+    #top {
+        border-radius: 0 0 0 0;
+        -moz-border-radius: none;
+        -webkit-border-radius: none;
     }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-    body .site {
+    .site {
         overflow: hidden;
         padding-left: @padding-normal;
         padding-right: @padding-normal;
@@ -45,6 +70,13 @@
         padding-top: 1em;
         padding-bottom: 1em;
         color: red;
+    }
+
+
+    #top {
+        border-radius: 0 0 0 0;
+        -moz-border-radius: none;
+        -webkit-border-radius: none;
     }
 
     .header-right .parent-logo {
@@ -89,11 +121,18 @@
 
 
 @media ( max-width: 600px ) {
-    body .site {
+    .site {
         overflow: hidden;
         padding-left: @padding-mobile;
         padding-right: @padding-mobile;
         margin: auto;
+    }
+
+    #top {
+        border-radius: 0 0 0 0;
+        -moz-border-radius: none;
+        -webkit-border-radius: none;
+        text-align: center;
     }
 
    .single-container {
@@ -138,10 +177,17 @@
 
 /* Landscape phones and down */
 @media ( max-width: 480px) {
-    body .site {
+    .site {
         overflow: hidden;
         padding-left: @padding-mobile;
         padding-right: @padding-mobile;
+    }
+
+
+    #top {
+        border-radius: 0 0 0 0;
+        -moz-border-radius: none;
+        -webkit-border-radius: none;
     }
 
     .sponsor img {

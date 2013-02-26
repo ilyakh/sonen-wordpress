@@ -1,2 +1,2 @@
-sonen-wordpress
+sonen2-wordpress
 ===============

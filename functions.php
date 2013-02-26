@@ -6,7 +6,7 @@ include_once('twitter-widget.php');
 
 if ( ! function_exists( 'twentytwelve_setup' ) ) :
 
-function sonen_setup() {
+function sonen2_setup() {
 
 
 	load_theme_textdomain( 'twentytwelve', get_template_directory() . '/languages' );
@@ -18,6 +18,10 @@ function sonen_setup() {
 	add_theme_support( 'post-formats',
         array( 'article' )
     );
+
+    add_theme_support( 'custom-background', array(
+        'default-color' => 'ffffff',
+    ) );
 
     register_nav_menu( 'first', 'first' );
     register_nav_menu( 'second', 'second' );
@@ -34,20 +38,20 @@ function sonen_setup() {
 
 }
 
-add_action( 'after_setup_theme', 'sonen_setup' );
+add_action( 'after_setup_theme', 'sonen2_setup' );
 
 endif;
 
-function sonen_remove_scripts() {
+function sonen2_remove_scripts() {
     wp_dequeue_script( 'twentytwelve-navigation' );
     wp_deregister_script( 'twentytwelve-navigation' );
 
-    wp_register_script( 'bootstrap', '/wp-content/themes/sonen/js/bootstrap.min.js' );
-    wp_register_script( 'bootstrap', '/wp-content/themes/sonen/js/ios-orientation-fix.js' );
+    wp_register_script( 'bootstrap', '/wp-content/themes/sonen2/js/bootstrap.min.js' );
+    // wp_register_script( 'bootstrap', '/wp-content/themes/sonen2/js/ios-orientation-fix.js' );
 }
-add_action( 'wp_enqueue_scripts', 'sonen_remove_scripts', 20 );
+add_action( 'wp_enqueue_scripts', 'sonen2_remove_scripts', 20 );
 
-sonen_remove_scripts();
+sonen2_remove_scripts();
 
 // registrer widgeter
 if (function_exists('register_sidebar')) {
@@ -97,6 +101,13 @@ if (function_exists('register_sidebar')) {
         'id' => 'authors'
     ));
 
+    /* */
+
+    register_sidebar(array(
+        'name'=> 'Høyre marg',
+        'id' => 'horizontal-right'
+    ));
+
 }
 
 function no_more( $more ) {
@@ -108,7 +119,7 @@ add_filter('excerpt_more', 'no_more');
 
 if ( function_exists( 'coauthors' ) ) {
 
-    function sonen_coauthors( $between = null, $betweenLast = "og ", $before = "Skrevet av ", $after = ".", $echo = true ){
+    function sonen2_coauthors( $between = null, $betweenLast = "og ", $before = "Skrevet av ", $after = ".", $echo = true ){
         return coauthors__echo('display_name', 'field', array(
             'between' => $between,
             'betweenLast' => $betweenLast,

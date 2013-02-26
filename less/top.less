@@ -1,58 +1,14 @@
-@top-box-shadow: 0 0 10px rgba(30, 30, 30, 0.75);
-
 #top {
     overflow: hidden;
+    background: url('../img/extra-dark-bg.png');
 
-    .site {
-        box-shadow: @top-box-shadow;
-    }
-
-    .top-row {
-        padding-top: 0.8em;
-
-        .top-left, .top-right {
-            padding-bottom: 1em;
-        }
-
-        .top-right {
-            padding-top: 0.35em;
-
-
-            img {
-                float: right;
-                clear: both;
-
-            }
-        }
-
-        .top-left {}
-
-        .top-right {
-
-            .parent-logo {
-                text-align: right;
-                clear: both;
-            }
-
-            img {
-                margin-right: 3em;
-            }
-        }
-
-        .uio {
-            margin-top: 5px;
-        }
-    }
+    border-radius: 0 0 15px 0;
+    padding: 10px 30px 18px 22px;
 }
 
-.top-separator {
-    overflow: hidden;
-    .top-separator-fill {
-
-        overflow: hidden;
-        height: 10px;
-        background-image: url( '/wp-content/themes/sonen/img/alspectra-large.png' );
-        box-shadow: @top-box-shadow;
-    }
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
 }
-

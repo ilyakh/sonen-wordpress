@@ -1,5 +1,12 @@
 .single-container {
 
+    .row-fluid {
+        clear: both;
+        margin-top: 1em;
+    }
+
+
+
     .alignright {
         padding: 1em 0 1em 3em;
     }
@@ -17,7 +24,7 @@
         border-radius: 0;
     }
 
-    @content-font-size: 1.1em;
+    @content-font-size: 1.2em;
     @subheader-top-spacing: 0.2em;
     @subheader-bottom-spacing: 0.5em;
 
@@ -84,10 +91,9 @@
 
         p {
             font-size: @content-font-size;
+            font-family: 'PT Serif W02 Book', serif;
             text-align: left;
-            line-height: 23px;
-
-
+            line-height: 25px;
 
             img {
                 padding: 1em;
@@ -109,7 +115,8 @@
 }
 
 .entry-content .wp-caption p {
-    font-size: 0.75em;
+    font-size: 0.95em;
+    font-family: 'Neo Sans W02', sans;
     font-style: normal;
     padding-right: 0.25em;
     line-height: 1.2em;

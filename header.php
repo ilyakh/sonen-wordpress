@@ -23,43 +23,30 @@
     <?php wp_head(); ?>
 
     <?php /* Inkluderer prosjekt-spesifikke filer */ ?>
-    <link href="/wp-content/themes/sonen/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/wp-content/themes/sonen2/css/bootstrap.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link href="/wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/wp-content/themes/sonen2/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />
 
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
     
 	<?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/style.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/top.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/twitter.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/single.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/preview.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/footer.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/author.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/events.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/menu.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/blogroll.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/responsive.less" />
-
-    <!--
-    <?php /* Importerer stilarkene */ ?>
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/top.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/twitter.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/single.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/preview.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/footer.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/menu.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/events.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/blogroll.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/author.css" />
-    <link rel="stylesheet" type="text/css" href="/wp-content/themes/sonen/css/responsive.css" />
-    -->
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/top.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/information.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/twitter.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/single.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/preview.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/footer.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/author.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/events.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/menu.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/blogroll.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/responsive.less" />
 
     <?php
     /* Inkluderer og konfigurerer less.js for utvikling: dette må skje _etter_ inkludering av *.less-filer */ ?>
-    <script src="/wp-content/themes/sonen/js/less.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/sonen2/js/less.js" type="text/javascript"></script>
     <?php /* Sørger for at less ikke sparer stilarkene i 'local storage' */ ?>
     <script type="text/javascript">less.env = "development";</script>
     <script>localStorage.clear(); </script>
@@ -70,5 +57,40 @@
 <?php /* Bestemmer stilklassene til body-taggen */ ?>
 <body <?php body_class(); ?>>
 
-<?php get_sidebar('top'); ?>
+<?php /* get_sidebar('top'); */ ?>
+
+<div id="content">
+    <div class="container-fluid">
+        <div class="row-fluid logo">
+            <?php get_sidebar('top'); ?>
+        </div>
+        <div class="row-fluid">
+            <div class="span2">
+                <div class="row-fluid">
+                    <div id="horizontal-left" class="horizontal">
+                        <!-- http://codex.wordpress.org/Function_Reference/wp_nav_menu -->
+
+                        <!-- [/] separate into its -->
+                        <div class="row-fluid">
+                            <?php wp_nav_menu( array( 'theme_location' => 'first', 'menu' => 'first' ) ); ?>
+                        </div>
+                        <div class="row-fluid">
+                            <?php dynamic_sidebar('top'); ?>
+                        </div>
+                        <div class="row-fluid">
+                            <?php wp_nav_menu( array( 'theme_location' => 'second', 'menu' => 'second' ) ); ?>
+                        </div>
+                        <div class="row-fluid">
+                            <?php wp_nav_menu( array( 'theme_location' => 'third', 'menu' => 'third' ) ); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span10">
+                <div class="row-fluid">
+                    <div class="span12 previews">
+
+
+
+
 
