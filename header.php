@@ -26,7 +26,10 @@
     <link href="/wp-content/themes/sonen2/css/bootstrap.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link href="/wp-content/themes/sonen2/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />
+    <!-- production fonts -->
+    <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/7afc5603-5dee-46a4-89bc-80b86d8a7da2.css"/>
+    <!-- development fonts -->
+    <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" /> -->
     
 	<?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/style.less" />
