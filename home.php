@@ -1,22 +1,18 @@
 <?php get_header(); ?>
 
 <div class="site">
-    <?php get_sidebar('content-header'); ?>
 
 <?php if ( have_posts() ) : /* Starts the LOOP */ ?>
 
-	<?php
-        $i=1; /* POST counter */
-        /* modified loop allows a specific article quantity */
-        $number_of_posts = 20;
-        $quantified_query = new WP_Query( 'posts_per_page=' . $number_of_posts );
-    ?>
+	<?php $i=1; /* POST counter */ ?>
+    <div class="row-fluid preview-row">
 
-        <div class="row-fluid preview-row">
-        <?php while ( $quantified_query->have_posts() ) : $quantified_query->the_post(); ?>
+        <?php /* while ( $quantified_query->have_posts() ) : $quantified_query->the_post(); */
+            while ( have_posts() ) : the_post(); ?>
 
             <?php if ( $i == 1 || $i == 2 ) : ?>
                 <div class="span6 preview recent">
+                    <h1></h1>
                     <?php get_template_part( 'content', get_post_format() ); ?>
                 </div>
 

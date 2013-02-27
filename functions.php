@@ -64,59 +64,11 @@ sonen2_disable_google_fonts();
 
 // registrer widgeter
 if (function_exists('register_sidebar')) {
-    register_sidebar(array(
-        'name'=> 'Twitter-strøm',
-        'id' => 'twitter'
-    ));
-
-    register_sidebar( array(
-        'name'=> 'Arrangementene',
-        'id' => 'events'
-    ));
-
-    register_sidebar(array(
-        'name'=> 'Sidetopp',
-        'id' => 'top'
-    ));
-
-    register_sidebar(array(
-        'name'=> 'Innholdstopp (det hvite området)',
-        'id' => 'content-header'
-    ));
-
-    register_sidebar(array(
-        'name'=> 'Bloggroll 1 (opp til 4 elementer)',
-        'id' => 'blogroll-first',
-        'before_widget' => '<div class="span3 blogroll-element">',
-        'after_widget' => '</div>'
-    ));
-
-    register_sidebar(array(
-        'name'=> 'Bloggroll 2 (opp til 4 elementer)',
-        'id' => 'blogroll-second',
-        'before_widget' => '<div class="span3 blogroll-element">',
-        'after_widget' => '</div>'
-    ));
-
-    register_sidebar(array(
-        'name'=> 'Bloggroll 3 (opp til 4 elementer)',
-        'id' => 'blogroll-third',
-        'before_widget' => '<div class="span3 blogroll-element">',
-        'after_widget' => '</div>'
-    ));
-
-    register_sidebar(array(
-        'name'=> 'Bidragsytere',
-        'id' => 'authors'
-    ));
-
-    /* */
 
     register_sidebar(array(
         'name'=> 'Høyre marg',
         'id' => 'horizontal-right'
     ));
-
 
     register_sidebar(array(
         'name'=> 'Venstre oppe',
@@ -133,6 +85,46 @@ if (function_exists('register_sidebar')) {
         'id' => 'left-bottom'
     ));
 
+    register_sidebar(array(
+        'name'=> 'Twitter-strøm',
+        'id' => 'twitter'
+    ));
+
+    register_sidebar( array(
+        'name'=> 'Arrangementene',
+        'id' => 'events'
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Bloggrull 1 (opptil 4 elementer)',
+        'id' => 'blogroll-first',
+        'before_widget' => '<div class="span3 blogroll-element">',
+        'after_widget' => '</div>'
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Bloggrull 2 (opptil 4 elementer)',
+        'id' => 'blogroll-second',
+        'before_widget' => '<div class="span3 blogroll-element">',
+        'after_widget' => '</div>'
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Bloggrull 3 (opptil 4 elementer)',
+        'id' => 'blogroll-third',
+        'before_widget' => '<div class="span3 blogroll-element">',
+        'after_widget' => '</div>'
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Bidragsytere',
+        'id' => 'authors'
+    ));
+
+    /* */
+
+
+
 }
 
 function no_more( $more ) {
@@ -143,8 +135,16 @@ function no_more( $more ) {
 add_filter('excerpt_more', 'no_more');
 
 if ( function_exists( 'coauthors' ) ) {
-
     function sonen2_coauthors( $between = null, $betweenLast = "og ", $before = "Skrevet av ", $after = ".", $echo = true ){
+        return coauthors__echo('display_name', 'field', array(
+            'between' => $between,
+            'betweenLast' => $betweenLast,
+            'before' => $before,
+            'after' => $after
+        ), null, $echo );
+    }
+
+    function sonen2_coauthors_object( $between = null, $betweenLast = "og ", $before = "Skrevet av ", $after = ".", $echo = false ){
         return coauthors__echo('display_name', 'field', array(
             'between' => $between,
             'betweenLast' => $betweenLast,
@@ -158,7 +158,9 @@ if ( function_exists( 'coauthors' ) ) {
 }
 
 
-// fjerner ubrukte meny-områder fra temaet 'twentytwelve'
+
+
+// fjerner de ubrukte meny-områdene fra hovedtemaet 'twentytwelve'
 function remove_menus() {
     unregister_sidebar( 'sidebar-1' );
     unregister_sidebar( 'sidebar-2' );

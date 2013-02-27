@@ -1,33 +1,43 @@
-<?php
-/**
- * The Template for displaying all single posts.
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-<div class="hfeed site">
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+<div class="site">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
+        <?php get_template_part( 'content', get_post_format() ); ?>
 
-				<nav class="nav-single">
-					<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '<i class="icon-chevron-left"></i></span> %title' ); ?></span>
-					<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '<i class="icon-chevron-right"></i></span> ' ); ?></span>
-				</nav>
-				<!-- .nav-single -->
+        <nav class="nav-single">
+            <span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '<i class="icon-chevron-left"></i></span> %title' ); ?></span>
+            <span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '<i class="icon-chevron-right"></i></span> ' ); ?></span>
+        </nav>
+        <!-- .nav-single -->
 
-				<?php comments_template( '', true ); ?>
+        <?php comments_template( '', true ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+    <div class="row-fluid preview-row">
+        <?php $temp_query = clone $wp_query; ?>
+        <?php query_posts(
+            array(
+                'posts_per_page' => 3,
+                'orderby' => 'rand',
+                'post_not_in' => get_the_ID()
+            )
+        ); ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+        <?php while (have_posts()) : the_post(); ?>
+        <div class="span4 preview">
+            <?php get_template_part( 'content', get_post_format() ); ?>
+        </div>
+        <?php endwhile; ?>
+        <?php $wp_query = clone $temp_query; ?>
+    </div>
+
+    <?php endwhile; // end of the loop. ?>
+</div>
+
+
+
+
 
 <?php get_sidebar(); ?>
 

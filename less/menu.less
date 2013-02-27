@@ -2,13 +2,10 @@
 
 
 #horizontal-left {
-    padding: 70px 35px 15px 20px;
-    z-index: 10;
+    padding: 50px 50px 15px 15px;
+    overflow-y: hidden;
 
-
-    .cat-item, .page_item { // sic!
-
-    }
+    .cat-item, .page_item {}
 
     ul {
         margin: 0;
@@ -79,7 +76,8 @@
 
 
     // hacks upon hacks upon hacks
-    // no underscore consistency in the namespace of the original wordpress widgets
+    // no underscore consistency in the namespace
+    // of the original wordpress widgets
     .widget_search {
         form { margin-top: 25px; }
         text-align: center;
@@ -98,6 +96,28 @@
     }
 }
 
+
+#horizontal-right {
+    // bredden er definert i style.less
+    position: fixed;
+    top: 72px;
+    right: 0;
+    text-align: center;
+
+    .service-bar {
+        margin: 0 auto;
+        clear: both;
+        width: 80px;
+        padding: 5px 10px 10px 5px;
+        margin: 0;
+        background: url( '../img/dark-bg.png' );
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+#top, .horizontal-right {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
 
 

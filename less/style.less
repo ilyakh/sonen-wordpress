@@ -1,7 +1,7 @@
 /* Margin som skal samstemme med gutterWidth i bootstrap */
 @container-margin: 25px;
 
-@right-horizontal-width: 150px;
+@horizontal-right-width: 150px;
 
 /* Teksturer */
 @extra-dark-bg:     url( '../img/extra-dark-bg.png' );
@@ -20,24 +20,33 @@ h1, h2, h3, h4, h5, h6 {
 
 // Overlaster skrifttypen bestemt i kontrollpanelet.
 
+
 html, body {
     height: 100%;
-    min-height: 400px;
+    min-height: 100%;
+    position: relative;
 }
 
 body.custom-font-enabled {
-
+    font-family: 'Neo Sans W02', Helvetica, Arial, sans;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
+    margin: 0 0 100px;
+    font-family: 'Neo Sans W02', Helvetica, Arial, sans;
 }
 
 body .site {
     background: none;
+}
 
+/*Opera Fix*/
+body:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
 }
 
 body.custom-background {
@@ -47,7 +56,12 @@ body.custom-background {
 
 #content {
     max-width: 1920px;
-    padding-right: @right-horizontal-width;
+    padding-right: @horizontal-right-width;
+
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    overflow: auto;
 }
 
 /* bootstrap corrections */
@@ -97,13 +111,10 @@ hr {
 
 body .site {
     box-shadow: none;
-    padding-left: 1em;
-    padding-right: 1em;
 }
 
 .site {
-    padding-left: 1em;
-    padding-right: 1em;
+
 }
 
 .site-content {
@@ -113,12 +124,8 @@ body .site {
 
 .area {
     width: 100%;
-    /* background-image: @light-dark-bg; */
 
     .site {
-        /* background: @dark-bg; */
-
-        /* box-shadow: 0 0 10px rgba(100, 100, 100, 0.75); */
         box-shadow: none !important;
 
         li a {
@@ -223,29 +230,29 @@ div.mr_social_sharing_wrapper {
 }
 
 
+.service-bar {
 
-.horizontal {
+    float: right;
 
-}
+    .service {
+        display: inline-block;
+        background-image: url('../img/light-dark-bg.png');
+        border-radius: 2.1em;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        margin: 0.25em 0.25em 0.25em 0.25em;
+        cursor: pointer;
+    }
 
-#horizontal-right {
-    text-align: center;
-    width: @right-horizontal-width;
+    .service:hover {
+        background-image: url('../img/red-bg.png');
+        box-shadow: 0 0 200px rgba(255, 0, 0, 1);
+    }
 
-    position: fixed;
-    top: 72px;
-    right: 0;
-
-    .service-bar {
-        clear: both;
-        width: 80px;
-        padding: 5px 10px 10px 5px;
-        margin: 0;
-        background: url( '../img/dark-bg.png' );
-        border-radius: 10px 0 0 10px;
+    .selected {
+        background-image: url('../img/red-bg.png');
     }
 }
 
-#top, .horizontal-right {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+#horitontal-right {
+    width: @horizontal-right-width;
 }
