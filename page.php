@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="hfeed site">
+<div class="site">
     <?php while ( have_posts() ) : the_post(); ?>
         <?php get_template_part( 'content', 'page' ); ?>
 

@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="row-fluid blogroll-row blogroll-row-third">
-        <div class="span12 rss-widget-third-row">
+        <div class="span12">
             <?php dynamic_sidebar( 'blogroll-third' ); ?>
         </div>
     </div>
