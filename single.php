@@ -20,7 +20,7 @@
             array(
                 'posts_per_page' => 3,
                 'orderby' => 'rand',
-                'post__not_in' => get_the_ID()
+                'post__not_in' => array( get_the_ID() )
             )
         ); ?>
 
