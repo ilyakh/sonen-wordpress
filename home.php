@@ -38,7 +38,7 @@
                         <div class="row-fluid">
                             <div class="span12 previews">
 
-                    <?php endif; ?>
+                    
                     <?php endif; ?>
 
             <?php elseif ( $i == 3 || $i == 4 ) : ?>
