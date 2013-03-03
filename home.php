@@ -12,7 +12,6 @@
 
             <?php if ( $i == 1 || $i == 2 ) : ?>
                 <div class="span6 preview recent">
-                    <h1></h1>
                     <?php get_template_part( 'content', get_post_format() ); ?>
                 </div>
 
@@ -32,7 +31,29 @@
                 </div>-->
 
                 <div class="row-fluid preview-row">
+                    <?php if ( $wp_query->post_count < 3 ) : ?>
+                    </div>
+                    </div>
+                    </div>
 
+                    <div class="row-fluid">
+                        <div class="span12 information">
+                            <div class="row-fluid">
+                                <div class="span8" id="events">
+                                    <?php get_sidebar('events'); ?>
+                                </div>
+                                <div class="span4" id="twitter">
+                                    <?php get_sidebar( 'twitter' ); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="site">
+                        <div class="row-fluid">
+                            <div class="span12 previews">
+
+                    <?php endif; ?>
                 <?php endif; ?>
 
                 <div class="span4 preview">
