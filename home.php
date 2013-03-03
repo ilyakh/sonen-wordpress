@@ -15,24 +15,9 @@
                     <?php get_template_part( 'content', get_post_format() ); ?>
                 </div>
 
-            <?php elseif ( $i == 3 || $i == 4 ) : ?>
-
-                <?php if ( $i == 3 ) : ?>
-                </div>
-
-                <!-- <div class="row-fluid separator-row">
-                    <div class="span12">
-                    <?php wp_nav_menu(
-                        array( 'theme_location' => 'first',
-                               'menu' => 'first'
-                        ) );
-                    ?>
-                    </div>
-                </div>-->
-
-                <div class="row-fluid preview-row">
                     <?php if ( $wp_query->post_count < 3 ) : ?>
-                    </div>
+                        <div class="row-fluid preview-row">
+                        </div>
                     </div>
                     </div>
 
@@ -54,7 +39,24 @@
                             <div class="span12 previews">
 
                     <?php endif; ?>
-                <?php endif; ?>
+                    <?php endif; ?>
+
+            <?php elseif ( $i == 3 || $i == 4 ) : ?>
+
+                <?php if ( $i == 3 ) : ?>
+                </div>
+
+                <!-- <div class="row-fluid separator-row">
+                    <div class="span12">
+                    <?php wp_nav_menu(
+                        array( 'theme_location' => 'first',
+                               'menu' => 'first'
+                        ) );
+                    ?>
+                    </div>
+                </div>-->
+
+                <div class="row-fluid preview-row">
 
                 <div class="span4 preview">
                     <?php get_template_part( 'content', get_post_format() ); ?>
