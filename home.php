@@ -15,7 +15,7 @@
                     <?php get_template_part( 'content', get_post_format() ); ?>
                 </div>
 
-                <?php if ( $wp_query->post_count < 3 ) : ?>
+                <?php if ( ( $i == 2 ) && ( $wp_query->post_count < 3 ) ) : ?>
                     <div class="row-fluid preview-row">
                     </div>
                 </div>
