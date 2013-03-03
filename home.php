@@ -16,8 +16,7 @@
                 </div>
 
                 <?php if ( ( $i == 2 ) && ( $wp_query->post_count < 3 ) ) : ?>
-                    <div class="row-fluid preview-row">
-                    </div>
+                </div>
                 </div>
                 </div>
 
