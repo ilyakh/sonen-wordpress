@@ -15,31 +15,30 @@
                     <?php get_template_part( 'content', get_post_format() ); ?>
                 </div>
 
-                    <?php if ( $wp_query->post_count < 3 ) : ?>
-                        <div class="row-fluid preview-row">
-                        </div>
+                <?php if ( $wp_query->post_count < 3 ) : ?>
+                    <div class="row-fluid preview-row">
                     </div>
-                    </div>
+                </div>
+                </div>
 
-                    <div class="row-fluid">
-                        <div class="span12 information">
-                            <div class="row-fluid">
-                                <div class="span8" id="events">
-                                    <?php get_sidebar('events'); ?>
-                                </div>
-                                <div class="span4" id="twitter">
-                                    <?php get_sidebar( 'twitter' ); ?>
-                                </div>
+                <div class="row-fluid">
+                    <div class="span12 information">
+                        <div class="row-fluid">
+                            <div class="span8" id="events">
+                                <?php get_sidebar('events'); ?>
+                            </div>
+                            <div class="span4" id="twitter">
+                                <?php get_sidebar( 'twitter' ); ?>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="site">
-                        <div class="row-fluid">
-                            <div class="span12 previews">
+                <div class="site">
+                    <div class="row-fluid">
+                        <div class="span12 previews">
 
-                    
-                    <?php endif; ?>
+                <?php endif; ?>
 
             <?php elseif ( $i == 3 || $i == 4 ) : ?>
 
@@ -57,6 +56,8 @@
                 </div>-->
 
                 <div class="row-fluid preview-row">
+
+                <?php endif; ?>
 
                 <div class="span4 preview">
                     <?php get_template_part( 'content', get_post_format() ); ?>
