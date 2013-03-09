@@ -1,5 +1,84 @@
 <?php get_header(); ?>
 
+<?php //
+
+
+/*
+    Layout(columns=12)
+    ------------------
+        Row(n=4): 12 columns / 4 elements per row
+        -----------------------------------------
+            Element.span3     Element.span3     Element.span3     Element.span3
+
+        Row(n=2): 12 columns / 2 elements per row
+        -----------------------------------------
+                    Element.span6                       Element.span6
+
+        Row(n=3): 12 columns / 3 elements per row
+        -----------------------------------------
+            Element.span4               Element.span4             Element.span4
+
+*/
+
+class Layout {
+    protected $rows;
+    protected $size;
+
+
+    function __construct( $size=11 ) {
+        $this->rows = array();
+        $this->size = $size;
+    }
+
+    function addRow( $n ) {
+        array_push( $this->rows, new Row( $n ) );
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    function __toString() {
+        return implode( "<br />", $this->rows );
+    }
+}
+
+class Row {
+    protected $n;
+    protected $DEFAULT_ROW_SIZE = 3;
+
+    function __construct( $n ) {
+        $this->n = $n ? ( isset( $this->n ) ) : $this->DEFAULT_ROW_SIZE;
+    }
+
+    function __toString() {
+        return "Row";
+    }
+}
+
+class Element {
+
+    protected $content;
+
+    function __toString() {
+        return "Element";
+    }
+
+}
+
+
+$layout = new Layout();
+$layout->addRow(3);
+$layout->addRow(4);
+$layout->addRow(4);
+$layout->addRow(4);
+
+echo $layout;
+
+
+
+
+
+// ?>
+
+
 <div class="site">
 
 <?php if ( have_posts() ) : /* Starts the LOOP */ ?>
