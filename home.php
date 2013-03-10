@@ -16,40 +16,114 @@
 
         Row(n=3): 12 columns / 3 elements per row
         -----------------------------------------
-            Element.span4               Element.span4             Element.span4
+                Element.span4           Element.span4           Element.span4
 
 */
 
 class Layout {
     protected $rows;
     protected $size;
+    protected $currentRow = 0;
 
-
-    function __construct( $size=11 ) {
+    function __construct( $gridSize=12, $elementsPerLayout=11 ) {
+        // row container
         $this->rows = array();
-        $this->size = $size;
+        // dimensions, limits and sizes
+        $this->gridSize = $gridSize;
+        $this->elementsPerLayout = $elementsPerLayout;
     }
 
-    function addRow( $n ) {
-        array_push( $this->rows, new Row( $n ) );
+    function addRow( $n=1 ) {
+        // limits the number of elements per row to a range from 1 to the value of 'gridSize'
+        if ( $n > $this->gridSize ) {
+            $n = $this->gridSize;
+        } elseif ( $n <= 1 ) {
+            $n = 1;
+        }
+
+        $this->rows[] = new Row( $this->gridSize / $n );
     }
+
+    function addElement( $element ) {
+
+        if ( $this->getCurrentRow() != null ) {
+
+            // selects a new row if the previous is full
+            if ( $this->getCurrentRow()->isFull() ) {
+                ++ $this->currentRow;
+            }
+
+            if ( $this->getCurrentRow() != null ) {
+                $this->getCurrentRow()->addElement( $element );
+            }
+
+        }
+    }
+
+    function getCurrentRow() {
+        return $this->rows[$this->currentRow];
+    }
+
 
     // -----------------------------------------------------------------------------------------------------------------
     function __toString() {
-        return implode( "<br />", $this->rows );
+
+        $rows = array();
+        $template = '<div class="row-fluid">%s</div>';
+
+        foreach ( $this->rows as $row ) {
+            $rows[] = sprintf( $template, $row );
+        }
+
+        return implode( "\n", $rows );
     }
 }
 
 class Row {
-    protected $n;
-    protected $DEFAULT_ROW_SIZE = 3;
+    protected $elements;
 
-    function __construct( $n ) {
-        $this->n = $n ? ( isset( $this->n ) ) : $this->DEFAULT_ROW_SIZE;
+    // faller tilbake til elementstørrelse '4', hvis ikke oppgitt
+    function __construct( $elementSize=4, $gridSize=12 ) {
+        $this->elements = array();
+        $this->gridSize = $gridSize;
+        $this->elementSize = $elementSize;
+
+        // keeps the elementSize above zero
+        if ( $elementSize <= 0 ) {
+            $elementSize = 12;
+        } elseif ( $elementSize > 12 ) {
+            $elementSize = 12;
+        }
     }
 
+    function addElement( $element ) {
+        if ( $this->isFull() ) {
+            return false;
+        } else {
+            $this->elements[] = $element;
+            return true;
+        }
+    }
+
+    function isFull() {
+        return ( count( $this->elements ) >= ( $this->gridSize / $this->elementSize ) );
+    }
+
+    function isEmpty() {
+        return ( count( $this->elements ) == 0 );
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
     function __toString() {
-        return "Row";
+        $elements = array();
+        echo '<h1>'.count( $this->elements ).'</h1>';
+        $template = '<div class="span%s">%s</div>';
+
+        foreach ( $this->elements as $element ) {
+            $elements[] = sprintf( $template, $this->elementSize, $element );
+        }
+
+        return implode( "\n", $elements );
     }
 }
 
@@ -57,18 +131,46 @@ class Element {
 
     protected $content;
 
+    function __construct( $content ) {
+        $this->content = $content;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
     function __toString() {
-        return "Element";
+        return sprintf( "Element: %s", $this->content );
     }
 
 }
 
 
 $layout = new Layout();
+$layout->addRow(2);
 $layout->addRow(3);
-$layout->addRow(4);
-$layout->addRow(4);
-$layout->addRow(4);
+$layout->addRow(3);
+$layout->addRow(3);
+$layout->addRow(0);
+
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+$layout->addElement( new Element( "aaaa" ) );
+
 
 echo $layout;
 
