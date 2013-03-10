@@ -2,7 +2,6 @@
 
     .row-fluid {
         clear: both;
-        margin-top: 1em;
     }
 
     .alignright {
@@ -57,9 +56,8 @@
         a { color: black; }
     }
 
-    h2, h3, h4, h5, h6 {
-        margin-top: @subheader-top-spacing;
-        margin-bottom: 0.5em;
+    .entry-header {
+        margin-bottom: 0;
     }
 
     .entry-header .foundation {
@@ -83,9 +81,18 @@
 
     .entry-content {
 
-        margin-top: 1.75em;
+
         margin-bottom: 6em;
         padding: 0;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 1.3em;
+            line-height: 1.3em;
+            font-style: normal;
+            margin-top: @subheader-top-spacing;
+            margin-bottom: 0.6em;
+
+        }
 
         p {
             font-size: @content-font-size;

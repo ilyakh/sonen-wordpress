@@ -52,6 +52,7 @@
 
     <?php else : /* SINGLE */ ?>
     <div class="single-container">
+
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
             <?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
@@ -98,12 +99,15 @@
             <?php else : ?>
 
 
-            <div class="span3 pull-right entry-date"></div>
+
             <div class="span8 offset1">
                 <div class="entry-content">
                     <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
                     <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
                 </div>
+            </div>
+            <div class="span3">
+                <?php get_coauthor_list_sidebar() ?>
             </div>
             <?php endif; ?>
 

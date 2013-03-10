@@ -145,17 +145,39 @@ if ( function_exists( 'coauthors' ) ) {
     }
 
     function sonen2_coauthors_object( $between = null, $betweenLast = "og ", $before = "Skrevet av ", $after = ".", $echo = false ){
-        return coauthors__echo('display_name', 'field', array(
+        return coauthors('display_name', 'field', array(
             'between' => $between,
             'betweenLast' => $betweenLast,
             'before' => $before,
             'after' => $after
-        ), null, $echo );
+        ), null, $echo = false );
+    }
+
+    function get_coauthor_list_sidebar() {
+        echo '<div class="single-authors">';
+
+        foreach( get_coauthors() as $i ) {
+            $output = array(
+                '<div class="single-author">',
+                    '<div class="single-author-avatar">',
+                        get_avatar( $i->ID ),
+                    '</div>',
+                    '<div class="single-author-name">',
+                        get_author_name( $i->ID ),
+                    '</div>',
+                '</div>'
+            );
+
+            echo implode( "\n", $output );
+        }
+        echo '</div>';
     }
 
 } else {
     the_author();
 }
+
+
 
 
 

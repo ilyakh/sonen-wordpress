@@ -47,7 +47,7 @@ class Layout {
         return $row;
     }
 
-    function addElement( $element="" ) {
+    function addElement( $element ) {
 
         if ( $this->getCurrentRow() != null ) {
 
@@ -68,13 +68,11 @@ class Layout {
 
 
     function toArray() {
-        $rows = array('<div class="site">');
+        $rows = array();
 
         foreach ( $this->rows as $row ) {
             $rows = array_merge( $rows, $row->toArray() );
         }
-
-        $rows[] = "</div>";
 
         return $rows;
 
@@ -105,9 +103,9 @@ class Row {
 
         // keeps the elementSize above zero
         if ( $elementSize <= 0 ) {
-            $elementSize = 12;
+            $this->elementSize = 12;
         } elseif ( $elementSize > 12 ) {
-            $elementSize = 12;
+            $this->elementSize = 12;
         }
     }
 
@@ -174,7 +172,6 @@ class Element {
     }
 
     function toArray() {
-
         return array(
             sprintf( '<div class="span%s preview">', $this->size ),
             'content',
@@ -193,16 +190,33 @@ class Element {
 
 }
 
+ // ?>
 
-if ( have_posts() )  {
+<div class="site">
+
+<?php //
+
+if ( have_posts() ) :
 
     $layout = new Layout();
 
+    // configures the layout
+    $layout->addRow(2);
+    $layout->addRow(3);
+    $layout->addRow(3);
+    $layout->addRow(3);
+    $layout->addRow(3);
+
+
+    // creates post placeholders, only the exact amount
     $post_count = $wp_query->post_count;
 
-    $layout->addRow(3)->populate();
+    for ( $i = 0; $i < $post_count; $i++ ) {
+        $layout->addElement( new Element() );
+    }
 
 
+    // creates the recipe
     $recipe = $layout->toArray();
 
     foreach ( $recipe as $element ) {
@@ -214,151 +228,14 @@ if ( have_posts() )  {
         }
     }
 
+?>
 
-}
+</div>
 
-
-
-
-
-// ?>
-
-
-
+<?php else : ?>
 
 
 <div class="site">
-
-
-
-<?php if ( have_posts() ) : /* Starts the LOOP */ ?>
-
-	<?php $i=1; /* POST counter */ ?>
-    <div class="row-fluid preview-row">
-
-        <?php /* while ( $quantified_query->have_posts() ) : $quantified_query->the_post(); */
-            while ( have_posts() ) : the_post(); ?>
-
-            <?php if ( $i == 1 || $i == 2 ) : ?>
-                <div class="span6 preview recent">
-                    <?php get_template_part( 'content', get_post_format() ); ?>
-                </div>
-
-                <?php if ( ( $i == 2 ) && ( $wp_query->post_count < 3 ) ) : ?>
-                </div>
-                </div>
-                </div>
-
-                <div class="row-fluid">
-                    <div class="span12 information">
-                        <div class="row-fluid">
-                            <div class="span8" id="events">
-                                <?php get_sidebar('events'); ?>
-                            </div>
-                            <div class="span4" id="twitter">
-                                <?php get_sidebar( 'twitter' ); ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site">
-                    <div class="row-fluid">
-                        <div class="span12 previews">
-
-                <?php endif; ?>
-
-            <?php elseif ( $i == 3 || $i == 4 ) : ?>
-
-                <?php if ( $i == 3 ) : ?>
-                </div>
-
-                <!-- <div class="row-fluid separator-row">
-                    <div class="span12">
-                    <?php wp_nav_menu(
-                        array( 'theme_location' => 'first',
-                               'menu' => 'first'
-                        ) );
-                    ?>
-                    </div>
-                </div>-->
-
-                <div class="row-fluid preview-row">
-
-                <?php endif; ?>
-
-                <div class="span4 preview">
-                    <?php get_template_part( 'content', get_post_format() ); ?>
-                </div>
-
-
-            <?php elseif ( $i >= 4 ) : ?>
-
-                <?php if ( ( $i ) % 3 == 0 ) : ?>
-
-                </div>
-
-                <?php if ( $i == 9 ) : ?>
-
-                </div>
-                </div>
-                </div>
-
-                <div class="row-fluid">
-                    <div class="span12 information">
-                        <div class="row-fluid">
-                            <div class="span8" id="events">
-                                <?php get_sidebar('events'); ?>
-                            </div>
-                            <div class="span4" id="twitter">
-                                <?php get_sidebar( 'twitter' ); ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="site">
-                <div class="row-fluid">
-                    <div class="span12 previews">
-
-                <?php elseif ( $i == 15 ) : ?>
-                    <!--
-                    <div class="row-fluid separator-row">
-                        <div class="span12"><?php wp_nav_menu( array( 'theme_location' => 'second', 'menu' => 'second' ) ); ?></div>
-                    </div>
-                    -->
-                <?php elseif ( $i == 21 ) : ?>
-                    <!--
-                    <div class="row-fluid separator-row">
-                        <div class="span12"><?php wp_nav_menu( array( 'theme_location' => 'third', 'menu' => 'third' ) ); ?></div>
-                    </div>
-                    -->
-                <?php endif; ?>
-
-                <div class="row-fluid preview-row">
-
-                <?php endif; ?>
-
-                <div class="span4 preview">
-                    <?php get_template_part( 'content', get_post_format() ); ?>
-                </div>
-            <?php endif; ?>
-
-            <!-- Increments the post counter -->
-            <?php $i++; ?>
-
-        <?php endwhile; ?>
-
-        </div>
-
-
-
-
-
-
-
-
-    <?php else : /* NO POSTS */ ?>
 
         <article id="post-0" class="post no-results not-found">
 
