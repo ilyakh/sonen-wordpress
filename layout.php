@@ -36,22 +36,26 @@ class Layout {
     }
 
     function addRow( $n=1 ) {
-        // limits the number of elements per row to a range
-        // from 1 to the value of 'gridSize'
-        if ( $n > $this->gridSize ) {
-            $n = $this->gridSize;
-        } elseif ( $n <= 1 ) {
-            $n = 1;
+        // allows chaining
+        if ( is_numeric( $n ) ) {
+            // limits the number of elements per row to a range
+            // from 1 to the value of 'gridSize'
+            if ( $n > $this->gridSize ) {
+                $n = $this->gridSize;
+            } elseif ( $n <= 1 ) {
+                $n = 1;
+            }
+
+            $row = new Row( $this->gridSize / $n );
+            $this->rows[] = $row;
+
+            return $row;
+        } else if ( is_subclass_of( $n, "Row" ) ) {
+            $this->rows[] = $n;
+            return $n;
+        } else {
+            return null;
         }
-
-        $row = new Row( $this->gridSize / $n );
-        $this->rows[] = $row;
-
-        return $row;
-    }
-
-    function addSidebarRow( $row ) {
-        $this->rows[] = $row;
     }
 
     function addElement( $element ) {
@@ -76,13 +80,39 @@ class Layout {
         return $this->rows[$this->currentRow];
     }
 
+    function countFullRows() {
+        $counter = 0;
+        foreach ( $this->rows as $row ) {
+            if ( $row->isFull() ) {
+               ++$counter;
+            }
+        }
+
+        return $counter;
+    }
+
     function __invoke() {
-        $this->distribute();
+        $this->distribute(); // distributes the elements throughout the grid
+
+        $rowCounter = 1;
 
         foreach( $this->rows as $row ) {
-            print( '<div class="row-fluid preview-row">' );
+
+            if ( $this->countFullRows() > 2 ) {
+                if ( $rowCounter == 3 ) {
+                    get_template_part( 'dark-area' );
+                }
+            } else {
+                if ( $rowCounter == 2 ) {
+                    get_template_part( 'dark-area' );
+                }
+            }
+
+            printf( '<div class="row-fluid preview-row preview-row-%s">', $this->currentRow );
             $row();
             print( '</div>' );
+
+            $rowCounter++;
         }
     }
 
@@ -133,9 +163,6 @@ class Row {
         }
     }
 }
-
-
-
 
 
 class Element {
