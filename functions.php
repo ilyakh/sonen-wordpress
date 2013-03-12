@@ -117,8 +117,8 @@ if (function_exists('register_sidebar')) {
     ));
 
     register_sidebar(array(
-        'name'=> 'Bidragsytere',
-        'id' => 'authors'
+        'name'=> 'Artikkelslutt',
+        'id' => 'article-end'
     ));
 
     /* */

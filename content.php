@@ -90,40 +90,28 @@
             </div>
 
             <div class="row-fluid">
-            <?php if ( is_search() ) : // Only display Excerpts for Search ?>
-                <div class="span8">
-                    <div class="entry-summary">
-                        <?php the_excerpt(); ?>
-                    </div><!-- .entry-summary -->
+                <div class="span9">
+                    <div class="entry-content">
+                        <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+                        <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+                    </div>
                 </div>
-            <?php else : ?>
-
-
-
-            <div class="span8 offset1">
-                <div class="entry-content">
-                    <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
-                    <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+                <div class="span3">
+                    <?php get_coauthor_list_sidebar() ?>
                 </div>
-            </div>
-            <div class="span3">
-                <?php get_coauthor_list_sidebar() ?>
-            </div>
-            <?php endif; ?>
-
             </div>
         </article>
+
+        <?php get_sidebar( 'article-end '); ?>
     </div>
 </div>
 
     <div class="row-fluid">
-        <div class="author-field span12">
-            <!--<div class="span2 author-avatar">
-                <?php echo get_avatar( get_the_author_meta( 'user_email' ),
-                      apply_filters( 'twentytwelve_author_bio_avatar_size', 90 ) );  ?>
-            </div>--><!-- .author-avatar -->
-            <div class="span6 author-coauthors"><?php sonen2_coauthors() ?></div>
-            <div class="span6 author-staff"><?php dynamic_sidebar('authors'); ?></div>
+        <div class="nav-field span12">
+            <nav class="nav-single">
+                <span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '<i class="icon-chevron-left icon-white"></i></span> %title' ); ?></span>
+                <span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '<i class="icon-chevron-right icon-white"></i></span> ' ); ?></span>
+            </nav>
         </div>
     </div>
 

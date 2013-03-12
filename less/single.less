@@ -22,9 +22,6 @@
     }
 
     @content-font-size: 1.2em;
-    @subheader-top-spacing: 0.2em;
-    @subheader-bottom-spacing: 0.5em;
-
     .entry-top {
         border-bottom: 1px solid rgb( 192, 192, 192 );
         font-style: italic;
@@ -81,16 +78,12 @@
 
     .entry-content {
 
-
-        margin-bottom: 6em;
-        padding: 0;
-
         h1, h2, h3, h4, h5, h6 {
             font-size: 1.3em;
             line-height: 1.3em;
             font-style: normal;
-            margin-top: @subheader-top-spacing;
-            margin-bottom: 0.6em;
+            margin-top: 2.5em;
+            margin-bottom: 1.1em;
 
         }
 
@@ -113,14 +106,64 @@
         text-align: center;
     }
 
-    .preview-row {
-        padding-top: 2px;
-        padding-bottom: 2px;
-        clear: both;
+
+    .single-authors {
+
+        padding-top: 2em;
+
         margin: 0 auto;
+        text-align: center;
+
+        .single-author {
+
+            clear: both;
+
+            float: left;
+            margin: 0 auto;
+            width: 110px;
+
+            margin-bottom: 20px;
+
+
+            .single-author-avatar {
+                text-align: center;
+
+                img {
+                    border-radius: 100%;
+                    margin: 0 auto;
+                }
+            }
+
+            .single-author-name {
+                text-align: center;
+            }
+        }
+
     }
 
 }
+
+.nav-field {
+    color: white;
+    padding: 10px 25px 10px 25px;
+    background: url( "../img/dark-bg.png" );
+
+    margin-bottom: 1em;
+
+    a {
+        color: white;
+    }
+
+    .nav-next, .nav-previous {
+        color: white;
+        display: block;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+}
+
+
+
 
 
 .wp-caption .wp-caption-text, .gallery-caption, .entry-caption {

@@ -1,16 +1,23 @@
 /* Large desktop */
 
 @padding-normal: 10px;
-@padding-mobile: 2px;
+@padding-mobile: 5px;
 
 
 
-@media (max-width: 1370px ) {
+@media ( max-width: 1370px ) {
+
+
+    .site {
+        overflow: hidden;
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     #content {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-left: 5px !important;
-        margin-right: 5px !important;
+        padding-left: 10px;
+        padding-right: 10px;
         overflow: hidden;
     }
 
@@ -23,6 +30,13 @@
     .single-container .entry-content p {
         width: auto;
     }
+
+    .single-container .entry-content {
+        padding-top: 4em;
+        padding-bottom: 3em;
+
+    }
+
 }
 
 
@@ -40,8 +54,8 @@
     .site {
         overflow: hidden;
         padding: 0;
-        padding-left: @padding-normal;
-        padding-right: @padding-normal;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     #top {
@@ -65,6 +79,14 @@
         width: auto;
     }
 
+    .single-container .entry-content {
+        padding-top: 2em;
+        padding-bottom: 3em;
+        padding-left: 5%;
+        padding-right: 7%;
+    }
+
+
 }
 
 /* Landscape phone to portrait tablet */
@@ -76,8 +98,8 @@
 
     .site {
         overflow: hidden;
-        padding-left: @padding-mobile;
-        padding-right: @padding-mobile;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     #top {
@@ -128,6 +150,13 @@
         text-align: center;
     }
 
+    .single-container .entry-content {
+        padding-top: 2em;
+        padding-bottom: 3em;
+
+    }
+
+
 }
 
 
@@ -139,8 +168,8 @@
 
     .site {
         overflow: hidden;
-        padding-left: @padding-mobile;
-        padding-right: @padding-mobile;
+        padding-left: 5px;
+        padding-right: 5px;
         margin: auto;
     }
 
@@ -185,6 +214,14 @@
            margin-bottom: 1.5em;
        }
 
+        .single-container .entry-content {
+            padding-top: 2em;
+            padding-bottom: 3em;
+
+            padding-left: 0;
+            padding-right: 0;
+        }
+
        .alignright, .alignleft {
            padding: 0;
            width: 100%;
@@ -205,7 +242,7 @@
 }
 
 /* Landscape phones and down */
-@media ( max-width: 480px) {
+@media ( max-width: 480px ) {
 
     body {
         padding: 0 !important;
@@ -213,8 +250,8 @@
 
     .site {
         overflow: hidden;
-        padding-left: @padding-mobile;
-        padding-right: @padding-mobile;
+        padding-left: 2px;
+        padding-right: 2px;
     }
 
 
@@ -244,10 +281,35 @@
 
 /* min-width */
 
-@media (min-width: 1200px) {
+@media ( min-width: 1200px ) {
     .site {
         padding-left: @padding-normal;
         padding-right: @padding-normal;
+    }
+
+
+    .single-container .entry-content {
+        margin-left: 5px;
+        padding-left: 14.6%;
+        padding-right: 20%;
+        border-right: 1px solid #cecece;
+        border-left: 1px solid #cecece;
+        padding-top: 4em;
+        padding-bottom: 10em;
+    }
+}
+
+@media ( max-width: 1200px ) {
+    .single-container .entry-content {
+        padding-left: 5%;
+        padding-right: 7%;
+    }
+}
+
+@media ( max-width: 640px ) {
+    .single-container .entry-content {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -264,6 +326,9 @@
         top: 14px;
         left: 0;
     }
+
+
+
 }
 
 /* Minimum width of 960 pixels. */
@@ -280,7 +345,5 @@
         margin-bottom: 0;
     }
 
-    .single-container .entry-content p {
-        width: 640px;
-    }
+
 }
