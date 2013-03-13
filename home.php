@@ -1,5 +1,6 @@
 <?php
 
+// gets the layout-class
 require_once "layout.php";
 get_header();
 
@@ -11,14 +12,39 @@ get_header();
 
 if ( have_posts() ) :
 
-    $layout = new Layout( $wp_query->post_count );
+    $post_count = $wp_query->post_count;
 
-    // configures the layout
-    $layout->addRow(3);
-    $layout->addRow(3);
-    $layout->addRow(3);
-    $layout->addRow(3);
-    $layout->addRow(3);
+    $layout = new Layout(
+        // how many posts does wordpress yield for this page?
+        $post_count
+    );
+
+    // configures the layout according to the number of posts
+    switch ( $post_count ) {
+        case 2:
+            $layout->addRow(2);
+            $layout->addRow(3);
+        break;
+        case 3:
+            $layout->addRow(3);
+            $layout->addRow(3);
+        break;
+        case 4:
+            $layout->addRow(3);
+            $layout->addRow(3);
+        break;
+        case 5:
+            $layout->addRow(2);
+            $layout->addRow(3);
+        break;
+        default:
+            $layout->addRow(2);
+            $layout->addRow(3);
+            $layout->addRow(3);
+            $layout->addRow(3);
+            $layout->addRow(3);
+        break;
+    }
 
     // compiles and prints the layout
     $layout();
