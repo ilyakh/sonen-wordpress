@@ -98,6 +98,7 @@ class Layout {
 
         foreach( $this->rows as $row ) {
 
+            // forces the dark area to appear on all pages despite the number of posts
             if ( $this->countFullRows() > 2 ) {
                 if ( $rowCounter == 3 ) {
                     get_template_part( 'dark-area' );

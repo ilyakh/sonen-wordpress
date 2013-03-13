@@ -14,7 +14,7 @@ if ( have_posts() ) :
     $layout = new Layout( $wp_query->post_count );
 
     // configures the layout
-    $layout->addRow(2);
+    $layout->addRow(3);
     $layout->addRow(3);
     $layout->addRow(3);
     $layout->addRow(3);
