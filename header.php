@@ -32,9 +32,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link href="/wp-content/themes/sonen2/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <!-- production fonts -->
-    <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/7afc5603-5dee-46a4-89bc-80b86d8a7da2.css"/> -->
+    <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/7afc5603-5dee-46a4-89bc-80b86d8a7da2.css"/>
     <!-- development fonts -->
-    <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" /> -->
     
 	<?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
     <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/style.less" />
@@ -57,6 +57,21 @@
     <script type="text/javascript">less.env = "development";</script>
     <script>localStorage.clear(); </script>
 
+
+<!--[if IE 8]>
+<style type="text/css">
+    .title-overlay {
+        position: relative;
+        bottom: 40px;
+        right: 0px;
+        text-align: left;
+        padding: 1em;
+        color: white;
+        background-color: #111111;
+    }
+</style>
+<![endif]-->
+
 </head>
 
 
@@ -68,7 +83,7 @@
 </div>
 
 <!-- horizontal left -->
-<div id="horizontal-left" class="horizontal clearfix">
+<div id="horizontal-left" class="horizontal span4">
     <?php if ( has_nav_menu('first') ) : ?>
     <div class="row-fluid">
         <?php wp_nav_menu( array( 'theme_location' => 'first', 'menu' => 'first' ) ); ?>
