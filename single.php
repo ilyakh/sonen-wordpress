@@ -30,7 +30,6 @@
             <div class="preview-container">
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <header class="entry-header">
-
                         <div class="foundation">
                             <div class="entry-thumbnail">
                                 <a href="<?php the_permalink(); ?>">

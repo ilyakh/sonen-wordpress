@@ -1,10 +1,14 @@
 /*
-Theme Name: sonen2
+Theme Name: sonen
 Theme URI: http://sonen.ifi.uio.no/
-Template: twentytwelve
+Description: sonen
+Author: ilyakh, rantonse, trondth, kyrrehe
+Author URI: http://sonen.ifi.uio.no/
+Version: 3.0
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+License:
+License URI:
+
 */
 
-@import url( "../twentytwelve/style.css" );
+a {}

@@ -28,31 +28,29 @@
     <?php wp_head(); ?>
 
     <?php /* Inkluderer prosjekt-spesifikke filer */ ?>
-    <link href="/wp-content/themes/sonen2/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/wp-content/themes/sonen/css/bootstrap.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link href="/wp-content/themes/sonen2/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <!-- production fonts -->
+    <link href="/wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/7afc5603-5dee-46a4-89bc-80b86d8a7da2.css"/>
-    <!-- development fonts -->
-    <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/f8722534-e446-4713-a3e7-e8740c853260.css" /> -->
+
     
 	<?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/style.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/top.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/information.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/twitter.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/single.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/preview.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/footer.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/author.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/events.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/menu.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/blogroll.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen2/less/responsive.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/top.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/information.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/twitter.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/single.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/preview.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/footer.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/author.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/events.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/menu.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/blogroll.less" />
+    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/responsive.less" />
 
     <?php
     /* Inkluderer og konfigurerer less.js for utvikling: dette må skje _etter_ inkludering av *.less-filer */ ?>
-    <script src="/wp-content/themes/sonen2/js/less.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/sonen/js/less.js" type="text/javascript"></script>
     <?php /* Sørger for at less ikke sparer stilarkene i 'local storage' */ ?>
     <script type="text/javascript">less.env = "development";</script>
     <script>localStorage.clear(); </script>
@@ -113,7 +111,7 @@
     </div>
     <div class="row-fluid">
         <div class="segl">
-            <a href="http://uio.no/"><img src="/wp-content/themes/sonen2/img/segl.png" alt="" style="z-index: 10;" /></a>
+            <a href="http://uio.no/"><img src="/wp-content/themes/sonen/img/segl.png" alt="" style="z-index: 10;" /></a>
         </div>
     </div>
 </div>
@@ -125,25 +123,25 @@
     <div class="service-bar">
         <div class="service">
             <a href="https://www.facebook.com/ifisonen">
-                <img src="/wp-content/themes/sonen2/img/facebook-white.png" alt="" />
+                <img src="/wp-content/themes/sonen/img/facebook-white.png" alt="" />
             </a>
         </div>
 
         <div class="service">
             <a href="http://www.reddit.com/r/sonen/">
-                <img src="/wp-content/themes/sonen2/img/reddit-white.png" alt="" />
+                <img src="/wp-content/themes/sonen/img/reddit-white.png" alt="" />
             </a>
         </div>
 
         <div class="service">
             <a href="https://twitter.com/UniOslo_Sonen">
-                <img src="/wp-content/themes/sonen2/img/twitter-white.png" alt="" />
+                <img src="/wp-content/themes/sonen/img/twitter-white.png" alt="" />
             </a>
         </div>
 
         <div class="service">
             <a href="http://www.uio.no/">
-                <img src="/wp-content/themes/sonen2/img/uio_white.png" alt="" />
+                <img src="/wp-content/themes/sonen/img/uio_white.png" alt="" />
             </a>
         </div>
     </div>
