@@ -1,0 +1,17 @@
+.information {
+  clear: both;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 12px 25px;
+  border-radius: 10px;
+  background: url('../img/dark-bg.png');
+  margin-bottom: 3em;
+  padding: 1.5em;
+}
+.information li a {
+  color: white;
+}
+.information a {
+  color: white;
+}
+.information a:hover {
+  color: #cccccc;
+}

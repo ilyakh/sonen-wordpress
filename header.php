@@ -16,59 +16,50 @@
         #wrap {display:table;height:100%}
     </style>
     <![endif]-->
-    <?php /* Konfigurerer dokumentet fra wordpress og twenty-twelve */ ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width" />
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php wp_title( '/', true, 'right' ); ?></title>
+
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    
+
+
+    <?php wp_head(); ?>
+
+
+    <!-- bootstrap -->
+    <link href="/wp-content/themes/sonen/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link href="/wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+
+    <!-- production fonts -->
+    <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/7afc5603-5dee-46a4-89bc-80b86d8a7da2.css"/>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/top.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/information.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/twitter.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/single.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/preview.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/author.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/events.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/blogroll.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/responsive.css" />
+
+    <!-- transparency fix -->
+    <!--[if IE 8]>
+    <style type="text/css">
+        .title-overlay { background-color: #111111; }
+    </style>
+    <![endif]-->
+
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
-    <?php wp_head(); ?>
-
-    <?php /* Inkluderer prosjekt-spesifikke filer */ ?>
-    <link href="/wp-content/themes/sonen/css/bootstrap.css" rel="stylesheet" media="screen">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link href="/wp-content/themes/sonen/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/7afc5603-5dee-46a4-89bc-80b86d8a7da2.css"/>
-
-    
-	<?php /* Importerer less-stilarkene: må importeres _før_ skriptet less.js */ ?>
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/style.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/top.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/information.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/twitter.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/single.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/preview.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/footer.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/author.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/events.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/menu.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/blogroll.less" />
-    <link rel="stylesheet/less" type="text/css" href="/wp-content/themes/sonen/less/responsive.less" />
-
-    <?php
-    /* Inkluderer og konfigurerer less.js for utvikling: dette må skje _etter_ inkludering av *.less-filer */ ?>
-    <script src="/wp-content/themes/sonen/js/less.js" type="text/javascript"></script>
-    <?php /* Sørger for at less ikke sparer stilarkene i 'local storage' */ ?>
-    <script type="text/javascript">less.env = "development";</script>
-    <script>localStorage.clear(); </script>
-
-
-<!--[if IE 8]>
-<style type="text/css">
-    .title-overlay {
-        position: relative;
-        bottom: 40px;
-        right: 0px;
-        text-align: left;
-        padding: 1em;
-        color: white;
-        background-color: #111111;
-    }
-</style>
-<![endif]-->
 
 </head>
 

@@ -88,7 +88,7 @@ if ( have_posts() ) :
 </div>
 <?php endif; ?>
 
-<?php twentytwelve_content_nav( 'nav-below' ); ?>
+<?php content_nav( 'nav-below' ); content_n?>
 
 
 

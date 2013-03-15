@@ -1,1 +1,74 @@
-#blogroll{width:92%;clear:both;margin:0 auto;color:#666;padding-top:2.1em}#blogroll .head{text-align:center;font-size:1.4em;margin:0;padding:0;margin-bottom:2em}#blogroll .blogroll-row-first ul li{line-height:1.3em}#blogroll .blogroll-element{padding:.25em;margin-bottom:1em;text-align:center}#blogroll .blogroll-row-second{font-size:.8em}#blogroll .blogroll-row-second ul li{line-height:1.2em}#blogroll .blogroll-row-third{font-size:.65em}#blogroll .blogroll-row-third ul li{line-height:.9em}#blogroll .blogroll-row{margin-bottom:1.5em}#blogroll img{display:none}#blogroll h2{font-size:1.3em;font-weight:400;line-height:1em;margin:0;padding:0;color:#666}#blogroll ul{list-style:none;margin:0;padding:0}#blogroll ul a{color:#666}
+#blogroll {
+  width: 92%;
+  clear: both;
+  margin: 0 auto;
+  color: #666;
+  padding-top: 2.1em;
+  margin-bottom: 6em;
+}
+#blogroll .head {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 2em;
+}
+#blogroll .blogroll-element {
+  padding: 0.25em;
+  text-align: center;
+}
+#blogroll .blogroll-row-first {
+  margin-bottom: 2em;
+}
+#blogroll .blogroll-row-first .widgettitle {
+  font-size: 1.3em;
+}
+#blogroll .blogroll-row-first .rsswidget {
+  font-size: 0.9em;
+}
+#blogroll .blogroll-row-first ul li {
+  line-height: 1.3em;
+}
+#blogroll .blogroll-row-second {
+  margin-bottom: 1.1em;
+}
+#blogroll .blogroll-row-second .widgettitle {
+  font-size: 1.15em;
+}
+#blogroll .blogroll-row-second .rsswidget {
+  font-size: 0.85em;
+}
+#blogroll .blogroll-row-second ul li {
+  line-height: 1.2em;
+}
+#blogroll .blogroll-row-third {
+  margin-bottom: 0.25em;
+}
+#blogroll .blogroll-row-third .widgettitle {
+  font-size: 1.0em;
+}
+#blogroll .blogroll-row-third .rsswidget {
+  font-size: 0.65em;
+}
+#blogroll .blogroll-row-third ul li {
+  line-height: 0.9em;
+}
+#blogroll img {
+  display: none;
+}
+#blogroll h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  color: #666;
+}
+#blogroll ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#blogroll ul a {
+  color: #666;
+}
