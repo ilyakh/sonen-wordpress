@@ -1,97 +1,17 @@
-#horizontal-left {
-  padding: 50px 50px 15px 15px;
-  overflow-y: hidden;
-  margin-left: 0;
-}
-#horizontal-left ul {
-  margin: 0;
-  padding: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-#horizontal-left ul:first-child {
-  padding-top: 10px;
-}
-#horizontal-left ul,
-#horizontal-left li {
-  list-style: none;
-}
-#horizontal-left li:first-child {
-  border-top: none;
-}
-#horizontal-left .segl {
-  display: block;
-  text-align: center;
-  margin: 5px 0 5px 0;
-  padding: 3px 0 3px 0;
-}
-#horizontal-left li {
-  border-top: 1px solid #cecece;
-  margin: 0;
-  padding: 0;
-}
-#horizontal-left li a {
-  display: block;
-  text-align: center;
-  margin: 5px 0 5px 0;
-  padding: 3px 0 3px 0;
-  color: #cecece;
-  font-family: 'Contax W01 55 Sm Cap';
-  font-size: 1.1em;
-  text-transform: uppercase;
-}
-#horizontal-left li a:hover {
-  color: black;
-  text-decoration: none;
-}
-#horizontal-left h2.widgettitle {
-  display: none;
-}
-#horizontal-left .author-list {
-  width: 33%;
-  margin: 0 auto;
-  padding: 15px 0 15px 0;
-}
-#horizontal-left .author-list .avatar {
-  opacity: 0.5;
-}
-#horizontal-left .widget_tag_cloud {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-top: none;
-  overflow-x: hidden;
-}
-#horizontal-left .widget_search {
-  text-align: center;
-}
-#horizontal-left .widget_search form {
-  margin-top: 25px;
-}
-#horizontal-left .widget_search input[type=text] {
-  width: 90%;
-}
-#horizontal-left .widget_search #searchsubmit {
-  width: 80%;
-}
-#horizontal-left .widget_search label {
-  display: none;
-}
-#horizontal-right {
-  position: fixed;
-  top: 72px;
-  right: 0;
-  text-align: center;
-}
-#horizontal-right .service-bar {
-  margin: 0 auto;
-  clear: both;
-  width: 80px;
-  padding: 5px 10px 10px 5px;
-  margin: 0;
-  background: url('../img/dark-bg.png');
-  border-radius: 10px 0 0 10px;
-}
-#top,
-.horizontal-right {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+#horizontal-left{padding:25px 50px 15px 15px;overflow-y:hidden;margin-left:0;}
+#horizontal-left ul,#horizontal-left .segl{margin:0;padding:0;max-width:210px;margin-top:20px;margin-bottom:20px;}
+#horizontal-left ul:first-child{padding-top:10px;}
+#horizontal-left ul,#horizontal-left li{list-style:none;}
+#horizontal-left li:first-child{border-top:none;}
+#horizontal-left .segl{display:block;text-align:center;margin:5px 0 5px 0;padding:3px 0 3px 0;}
+#horizontal-left li{border-top:1px solid #cecece;margin:0;padding:0;}#horizontal-left li a{display:block;text-align:center;margin:5px 0 5px 0;padding:3px 0 3px 0;color:#cecece;font-family:'Contax W01 55 Sm Cap';font-size:1.1em;text-transform:uppercase;}
+#horizontal-left li a:hover{color:black;text-decoration:none;}
+#horizontal-left h2.widgettitle{display:none;}
+#horizontal-left .author-list{width:33%;margin:0 auto;padding:15px 0 15px 0;}#horizontal-left .author-list .avatar{opacity:0.5;}
+#horizontal-left .widget_tag_cloud{margin-top:15px;margin-bottom:15px;border-top:none;overflow-x:hidden;}
+#horizontal-left .widget_search{text-align:center;}#horizontal-left .widget_search form{margin-top:25px;}
+#horizontal-left .widget_search input[type=text]{width:90%;}
+#horizontal-left .widget_search #searchsubmit{width:80%;}
+#horizontal-left .widget_search label{display:none;}
+#horizontal-right{position:fixed;top:72px;right:0;text-align:center;}#horizontal-right .service-bar{margin:0 auto;clear:both;width:80px;padding:5px 10px 10px 5px;margin:0;background:url('../img/dark-bg.png');border-radius:10px 0 0 10px;}
+#top,.horizontal-right{box-shadow:0 0 10px rgba(0, 0, 0, 0.2);}

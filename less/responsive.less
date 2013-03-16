@@ -82,8 +82,11 @@
     .single-container .entry-content {
         padding-top: 2em;
         padding-bottom: 3em;
-        padding-left: 5%;
-        padding-right: 7%;
+
+        p {
+            padding-left: 5%;
+            padding-right: 7%;
+        }
     }
 
 
@@ -292,24 +295,27 @@
 
     .single-container .entry-content {
         margin-left: 5px;
-        padding-left: 14.6%;
-        padding-right: 20%;
-        border-right: 1px solid #cecece;
-        border-left: 1px solid #cecece;
+        border-right: 1px solid #eaeaea;
+        border-left: 1px solid #eaeaea;
         padding-top: 4em;
         padding-bottom: 10em;
+
+        p {
+            padding-left: 14.6%;
+            padding-right: 20%;
+        }
     }
 }
 
 @media ( max-width: 1200px ) {
-    .single-container .entry-content {
+    .single-container .entry-content p {
         padding-left: 5%;
         padding-right: 7%;
     }
 }
 
 @media ( max-width: 640px ) {
-    .single-container .entry-content {
+    .single-container .entry-content p {
         padding-left: 0;
         padding-right: 0;
     }

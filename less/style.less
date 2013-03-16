@@ -50,14 +50,31 @@ body:before {
     margin-top: -32767px;
 }
 
+.gallery {
+    width: 160px;
+    float: right;
+
+    .gallery-item {
+        padding: 0.5em;
+        display: block;
+    }
+}
+
 body.custom-background {
 
     background: url('../img/bg-candidate-7.png');
 }
 
 
+.widget {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 #content {
     max-width: 1920px;
+    padding-left: 0;
     padding-right: @horizontal-right-width;
 
     min-height: 100%;
@@ -254,3 +271,5 @@ div.mr_social_sharing_wrapper {
 #horitontal-right {
     width: @horizontal-right-width;
 }
+
+

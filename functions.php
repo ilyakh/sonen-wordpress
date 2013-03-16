@@ -17,9 +17,6 @@ function sonen_setup() {
         array( 'article' )
     );
 
-    add_theme_support( 'custom-background', array(
-        'default-color' => 'ffffff',
-    ) );
 
     register_nav_menu( 'first', 'first' );
     register_nav_menu( 'second', 'second' );
@@ -64,10 +61,22 @@ function content_nav( $html_id ) {
 
     if ( $wp_query->max_num_pages > 1 ) : ?>
         <nav id="<?php echo $html_id; ?>" class="navigation" role="navigation">
-            <div class="nav-previous alignleft"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentytwelve' ) ); ?></div>
-            <div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></div>
+            <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentytwelve' ) ); ?></div>
+            <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></div>
         </nav><!-- #<?php echo $html_id; ?> .navigation -->
     <?php endif;
+}
+
+function post_nav() {
+
+    ?>
+
+    <div class="row-fluid clearfix">
+        <div class="span6"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '<i class="icon-chevron-left icon-white"></i></span> %title' ); ?></div>
+        <div class="span6"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '<i class="icon-chevron-right icon-white"></i></span> ' ); ?></div>
+    </div>
+
+    <?php
 }
 
 

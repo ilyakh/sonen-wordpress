@@ -1,67 +1,12 @@
-#footer {
-  width: 100%;
-  color: white;
-  overflow: hidden !important;
-  z-index: 50;
-  position: relative;
-  clear: both;
-}
-#footer .footer-row {
-  padding: 0 25px 0 25px;
-}
-#footer .credits-row {
-  padding: 10px 0 10px 0;
-}
-#footer a {
-  color: white;
-}
-#footer a:hover {
-  color: #cccccc;
-}
-#footer .sponsors-info {
-  background-image: url('../img/extra-dark-bg.png');
-  font-size: 0.8em;
-  padding-top: 1.3em;
-  padding-bottom: 1em;
-}
-#footer .sponsors-info .sponsors-row {
-  margin: 0 auto;
-}
-#footer .site-info {
-  background-image: url('../img/dark-bg.png');
-  font-size: 0.8em;
-  min-height: 60px;
-}
-#footer .site-info .credits-row .credits-column {
-  height: auto;
-  word-wrap: break-word;
-  overflow: auto;
-  padding-right: 3em;
-  padding-left: 3em;
-}
-#footer .copyright-info {
-  background-color: black;
-}
-#footer .copyright-info .copyright-row {
-  background-color: black;
-  clear: both;
-  font-family: 'Neo Sans W02';
-  font-size: 0.9em;
-  color: #a9a9a9;
-  font-weight: bold;
-  padding: 0.5em 1.0em 0.5em 0.5em;
-}
-#footer .copyright-info .copyright-row a:hover,
-#footer .copyright-info .copyright-row a:active,
-#footer .copyright-info .copyright-row a:visited {
-  color: #a9a9a9;
-}
-#footer .sponsor img {
-  float: right;
-  margin-left: 2.5em;
-  margin-right: 0.25em;
-}
-#footer .copyright {
-  text-align: right;
-  float: right;
-}
+#footer{width:100%;color:white;overflow:hidden !important;z-index:50;position:relative;clear:both;}#footer .footer-row{padding:0 25px 0 25px;}
+#footer .credits-row{padding:10px 0 10px 0;}
+#footer a{color:white;}
+#footer a:hover{color:#cccccc;}
+#footer .sponsors-info{background-image:url('../img/extra-dark-bg.png');font-size:0.8em;padding-top:1.3em;padding-bottom:1em;}#footer .sponsors-info .sponsors-row{margin:0 auto;}
+#footer .site-info{background-image:url('../img/dark-bg.png');font-size:0.8em;min-height:60px;}#footer .site-info .credits-row .credits-column{height:auto;word-wrap:break-word;overflow:auto;padding-right:3em;padding-left:3em;}
+#footer .copyright-info{background-color:black;}#footer .copyright-info .copyright-row{background-color:black;clear:both;font-family:'Neo Sans W02';font-size:0.9em;color:#a9a9a9;font-weight:bold;padding:0.5em 1.0em 0.5em 0.5em;}#footer .copyright-info .copyright-row a:hover,#footer .copyright-info .copyright-row a:active,#footer .copyright-info .copyright-row a:visited{color:#a9a9a9;}
+#footer .sponsor img{float:right;margin-left:2.5em;margin-right:0.25em;}
+#footer .copyright{text-align:right;float:right;}
+.nav-next,.nav-previous{display:block;}
+.nav-next{float:right;}
+.nav-previous{float:left;}

@@ -1,19 +1,11 @@
-.previews {
-    .narrow {
-        padding-left: 1em;
-        padding-right: 1em;
-        padding: 1em;
-    }
-}
-
 .preview-row {
     max-width: 1200px;
     padding-top: 2px;
     padding-bottom: 2px;
     clear: both;
-    margin: 0 auto;
     overflow: hidden;
 }
+
 
 .preview-row:first-child {
     padding-top: 30px;
@@ -25,6 +17,8 @@
 }
 
 .preview {
+    margin: 0 auto;
+
     border: 1px solid #e4e4e4;
     box-shadow: rgba(0,0,0,0.05) 0 5px 10px;
     background: rgba( 255, 255, 255, 1 );
@@ -43,10 +37,8 @@
         overflow: hidden;
     }
 
-    .entry-content, .entry-title {
-        padding-left: 5px;
-        padding-right: 10px;
-    }
+    // preview text and picture content padding
+
 
     .entry-header {
         margin-top: 0;
@@ -95,7 +87,7 @@
 
     .preview-container {
         .entry-title {
-            margin-top: 5px;
+            margin-top: 9px;
             margin-bottom: 2px;
 
             font-size: 2.1em;
@@ -109,6 +101,11 @@
             font-size: 15px;
             line-height: 17px;
         }
+
+        .entry-content, .entry-title {
+            padding-left: 5px;
+            padding-right: 10px;
+        }
     }
 }
 
@@ -117,13 +114,15 @@
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.05) 0 5px 10px;
 
+    height: auto;
+
     // padding: 16px 12px 17px 13px;
     padding: 15px 11px 12px 11px;
 
     .preview-container {
         .entry-title {
-            font-size: 1.8em;
-            margin-top: 10px;
+            font-size: 1.4em;
+            margin-top: 7px;
             margin-bottom: 0.2em;
             line-height: 1.2em;
         }
@@ -131,6 +130,11 @@
         .entry-content a p {
             font-size: 13px;
             line-height: 16px;
+        }
+
+        .entry-content, .entry-title {
+            padding-left: 3px;
+            padding-right: 8px;
         }
     }
 }
