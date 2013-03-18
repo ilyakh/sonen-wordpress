@@ -346,7 +346,7 @@
         padding-top: 4em;
         padding-bottom: 10em;
 
-        p {
+        .single-container .entry-content p {
             padding-left: 14.6%;
             padding-right: 20%;
             margin-bottom: 5.3%;
@@ -362,7 +362,7 @@
             margin-left: 7.45%;
         }
 
-        wp-caption-text {
+        p.wp-caption-text {
             padding-left: none;
         }
     }
@@ -373,12 +373,20 @@
         padding-left: 5%;
         padding-right: 7%;
     }
+
+    p.wp-caption-text {
+        padding-left: none;
+    }
 }
 
 @media ( max-width: 640px ) {
     .single-container .entry-content p {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    p.wp-caption-text {
+        padding-left: none;
     }
 }
 
