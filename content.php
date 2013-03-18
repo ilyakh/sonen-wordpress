@@ -80,9 +80,6 @@
             </div>
 
             <div class="row-fluid">
-
-
-
                 <div class="span9">
                     <div class="entry-content" style="background-color: white;">
 

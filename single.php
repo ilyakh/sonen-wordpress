@@ -4,11 +4,10 @@
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-
-        <?php /* post content */
-            get_template_part( 'content', get_post_format() ); ?>
-        <?php /* comments */
-            comments_template( '', true ); ?>
+    <?php /* post content */
+        get_template_part( 'content', get_post_format() ); ?>
+    <?php /* comments */
+        comments_template( '', true ); ?>
 
 
     <?php

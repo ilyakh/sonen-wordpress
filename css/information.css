@@ -3,9 +3,9 @@
 .information a:hover{color:#cccccc;}
 .information #events{color:white;padding:1em 1.2em 4em 1.2em;list-style:none;font-family:'Neo Sans W02',"Helvetica Neue",Arial,sans;}.information #events h2{text-align:center;border-bottom:2px solid #666666;padding-bottom:0.25em;}
 .information #events .calendar-event{overflow:auto;padding:1.5em 0.8em 1.2em 0.5em;clear:both;}.information #events .calendar-event .calendar-event-details,.information #events .calendar-event .calendar-date-container{float:left;}
-.information #events .calendar-event .calendar-date-container{background-image:url('../img/red-bg.png');text-align:center;border-radius:4em;padding:0.5em 1em 0 1em;max-width:3em;height:2.8em;overflow:hidden;font-size:1.8em;line-height:1em;}.information #events .calendar-event .calendar-date-container .calendar-day{padding:0.35em 0 0 0;}
+.information #events .calendar-event .calendar-date-container{background-image:url('../img/red-bg.png');text-align:center;border-radius:4em;padding:0.5em 1em 0 1em;max-width:3em;height:2.8em;overflow:hidden;font-size:1.8em;line-height:1em;margin-left:0.75em;}.information #events .calendar-event .calendar-date-container .calendar-day{padding:0.35em 0 0 0;}
 .information #events .calendar-event .calendar-date-container .calendar-month-name{font-size:0.5em;}
-.information #events .calendar-event .calendar-event-details .calendar-event-title{font-size:1.7em;}
+.information #events .calendar-event .calendar-event-details{padding-top:0.5em;}.information #events .calendar-event .calendar-event-details .calendar-event-title{font-size:1.7em;}
 .information #events .calendar-event .calendar-event-details .event-description{margin-top:0.6em;clear:both;float:left;margin-bottom:1.75em;}.information #events .calendar-event .calendar-event-details .event-description img{clear:both;box-shadow:none;float:right;border-radius:0;}
 .information #events .calendar-event .calendar-event-details .calendar-day{font-size:1.6em;}
 .information #events .calendar-event .calendar-event-details .calendar-month-name{font-size:0.9em;}
