@@ -1,13 +1,2 @@
-#top {
-  overflow: hidden;
-  background: url('../img/extra-dark-bg.png');
-  border-radius: 0 0 15px 0;
-  padding: 10px 30px 18px 22px;
-}
-.logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
-  z-index: 50;
-}
+#top{overflow:hidden;background:url('../img/extra-dark-bg.png');border-radius:0 0 15px 0;padding:10px 30px 18px 22px;}
+.logo{position:fixed;top:0;left:0;width:260px;z-index:50;}.logo .top-image{max-height:42px !important;}
