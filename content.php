@@ -57,11 +57,11 @@
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-            <div class="row-fluid">
+            <div class="row-fluid hidden-phone">
                 <div class="span12 entry-title-container">
                     <header class="entry-header">
 
-                        <div class="hidden-phone">
+                        <div class="">
                             <div class="entry-top">
                                 <div class="entry-top-right"><?php the_date(); ?></div>
                                 <div class="entry-top-left">&nbsp;</div>
@@ -75,6 +75,16 @@
                                 </div>
                             </div>
                         </div>
+                    </header>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+
+
+
+                <div class="span9">
+                    <div class="entry-content" style="background-color: white;">
 
                         <div class="visible-phone">
                             <div>
@@ -82,13 +92,7 @@
                             </div>
                             <h1 class="entry-mobile-title visible-phone"><?php the_title(); ?></h1>
                         </div>
-                    </header>
-                </div>
-            </div>
 
-            <div class="row-fluid">
-                <div class="span9">
-                    <div class="entry-content" style="background-color: white;">
                         <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
                         <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
                     </div>

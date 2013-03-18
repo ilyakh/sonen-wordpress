@@ -71,9 +71,9 @@ function post_nav() {
 
     ?>
 
-    <div class="row-fluid clearfix">
-        <div class="span6"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '<i class="icon-chevron-left icon-white"></i></span> %title' ); ?></div>
-        <div class="span6"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '<i class="icon-chevron-right icon-white"></i></span> ' ); ?></div>
+    <div class="row-fluid post-navigation">
+        <div class="span6 previous-post"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '', 'Previous post link', 'twentytwelve' ) . '<i class="icon-chevron-left icon-white"></i></span> %title' ); ?></div>
+        <div class="span6 next-post"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '', 'Next post link', 'twentytwelve' ) . '<i class="icon-chevron-right icon-white"></i></span> ' ); ?></div>
     </div>
 
     <?php

@@ -16,6 +16,16 @@
 .single-container .entry-title-container{text-align:center;}
 .single-container .single-authors{padding-top:2em;margin:0 auto;text-align:center;}.single-container .single-authors .single-author{clear:both;float:left;margin:0 auto;width:110px;margin-bottom:20px;}.single-container .single-authors .single-author .single-author-avatar{text-align:center;}.single-container .single-authors .single-author .single-author-avatar img{border-radius:100%;margin:0 auto;}
 .single-container .single-authors .single-author .single-author-name{text-align:center;}
-.nav-field{color:white;padding:10px 25px 10px 25px;background:url("../img/dark-bg.png");margin-bottom:1em;}.nav-field a{color:white;}
-.nav-field .nav-next,.nav-field .nav-previous{color:white;display:block;margin-top:2em;margin-bottom:2em;}
+.post-navigation{color:white;background:url("../img/dark-bg.png");margin-bottom:1em;}.post-navigation a{color:white;}
+.post-navigation .next-post,.post-navigation .previous-post{padding:40px 40px 40px 40px;display:block;color:white;}
+.post-navigation .previous-post{text-align:left;}
+.post-navigation .next-post{text-align:right;}
 .entry-content .wp-caption p{font-size:0.95em;font-family:'Neo Sans W02',sans;font-style:normal;padding-right:0.25em;line-height:1.2em;}
+.gallery-item a,.gallery-caption{width:90%;}
+.gallery-item a{display:block;}
+.gallery-caption a{display:inline;}
+.gallery-columns-1 .gallery-item a{max-width:100%;width:auto;}
+.gallery .gallery-icon img{height:auto;max-width:90%;padding:5%;margin-bottom:40px;}
+.gallery-columns-1 .gallery-icon img{padding:3%;}
+.wp-caption .wp-caption-text,.gallery-caption,.entry-caption{font-style:italic;font-size:12px;font-size:0.857142857rem;line-height:2;color:#757575;}
+.alignright{float:right;}
