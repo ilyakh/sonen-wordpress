@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="hfeed site">
-    <?php get_sidebar('content-header'); ?>
 
     <?php if ( have_posts() ) : $i = 1; // if has posts ?>
 
