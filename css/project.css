@@ -1,14 +1,17 @@
 @charset "utf-8";
 
 body {
-	background-color: black;
+	background-color: white;
+	
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	
 	font-family: 'Roboto', sans-serif;
 	padding: 0;
 	margin: 0;
 	border: none;
+	word-wrap: break-word;
 }
 
 
@@ -20,40 +23,102 @@ h1 {
 
 
 h1, h2, h3, h4, h5, h6 {
-	color: rgb( 249, 120, 10 );
+	
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: normal;
+	word-wrap: break-word;
 }
 
 h2, h3 {
-	color: rgb( 219, 100, 5 );
+	font-size: 29.5px;
+	font-weight: normal;
+	color: rgb( 18, 82, 189 );
 }
 
 h4, h5, h6 {
 	/* overrides the improper font size for roboto */
 	font-size: 24.5px;
 	font-weight: normal;
+	color: rgb( 18, 82, 189 );
+}
+
+.header .span12, .content, .frame-element {
+	padding: 28px;
+	padding-top: 20px;
+}
+
+.menu {
+	padding: 0;
+}
+
+.menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu .menu-item {
+}
+
+.menu .menu-item a {
+	color: black;
+}
+
+.frame, .header > .row-fluid {
+	margin: 0 auto;
+	max-width: 1370px;
+	background-color: rgba( 255, 255, 255, 0.95 );
+}
+
+.header > .row-fluid {
+	background-color: rgba( 255, 255, 255, 0.85 );
+}
+
+@media ( max-width: 1200px ) { 
+
 }
 
 
-.slide {
-	width: 100%;
+.content {
+	
 }
 
-.slide > div {
-	width: 80%;
-	margin: 3%;
+.preview-row {
+	margin-bottom: 30px;
+}
+
+.preview {
+	cursor: pointer;
+	background-color: rgba( 255, 255, 255, 0.75 );
+	background-size: 100%;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+	border: 1px solid #cecece;
+}
+
+.preview .description {
+	background-color: rgba( 0, 0, 0, 0.5 );
+	background-size: 100%;
 	color: white;
-	
-
-	
-	max-width: 1920px;
-	margin: 100px;
-	padding: 50px;
-	padding-bottom: 75px;
-	background-color: rgba( 0, 0, 0, 0.75 );
+	padding: 5px;
 }
 
-img {
-	width: 100%;
+.preview .description h1 {
+	background-color: black;
+}
+
+.span6 .preview .description {
+	height: 250px;
+}
+
+.span4 .preview .description {
+	height: 200px;
+}
+
+.span4 .preview .description h1 {
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+}
+
+.preview a {
+	color: white;
 }
