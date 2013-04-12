@@ -10,15 +10,19 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/project.css" rel="stylesheet" media="screen">
 </head>
 
-<body style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/banner-3.jpg')">
+<body style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/banner-5.jpg')">
 
 
 <div class="header">
 	<div class="row-fluid">
-		<div class="span12">
+		<div class="span6">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/logo-small.png" alt="" class="" />
+			</a>
+		</div>
+		<div class="span6"><!--
 			<a href="http://uio.no/">
 				<img src="http://sonen.ifi.uio.no/wp-content/themes/sonen/img/segl.png" alt="" class="pull-right" />
-			</a>
+			</a>-->
 		</div>
 	</div>
 </div>

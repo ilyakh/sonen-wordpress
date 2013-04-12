@@ -42,45 +42,25 @@ h4, h5, h6 {
 	color: rgb( 18, 82, 189 );
 }
 
-.header .span12, .content, .frame-element {
+.header .span6, .content, .frame-element {
 	padding: 28px;
 	padding-top: 20px;
-}
-
-.menu {
-	padding: 0;
-}
-
-.menu ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.menu .menu-item {
-}
-
-.menu .menu-item a {
-	color: black;
 }
 
 .frame, .header > .row-fluid {
 	margin: 0 auto;
 	max-width: 1370px;
-	background-color: rgba( 255, 255, 255, 0.95 );
+	background-color: rgba( 255, 255, 255, 0.05 );
+	background-image: url( '../img/semi-transparent.png' );
 }
 
-.header > .row-fluid {
-	background-color: rgba( 255, 255, 255, 0.85 );
+.header .span6 {
+	padding: 20px 0px 0px 28px;
 }
+
 
 @media ( max-width: 1200px ) { 
 
-}
-
-
-.content {
-	
 }
 
 .preview-row {
@@ -97,7 +77,8 @@ h4, h5, h6 {
 
 .preview .description {
 	background-color: rgba( 0, 0, 0, 0.5 );
-	background-size: 100%;
+	/* background-size: 100%; */
+	background-image: url( '../img/semi-transparent-black.png' );
 	color: white;
 	padding: 5px;
 }
@@ -121,4 +102,24 @@ h4, h5, h6 {
 
 .preview a {
 	color: white;
+}
+
+
+
+
+.menu {
+	padding: 0;
+}
+
+.menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu .menu-item {
+}
+
+.menu .menu-item a {
+	color: black;
 }
