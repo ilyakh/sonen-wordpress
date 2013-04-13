@@ -95,9 +95,9 @@ h4, h5, h6 {
 	height: 200px;
 }
 
-.span4 .preview .description h1 {
-	font-size: 1.4rem;
-	line-height: 1.4rem;
+.span4 .preview .description {
+	font-size: 0.75rem;
+	line-height: 1rem;
 }
 
 .preview a {
