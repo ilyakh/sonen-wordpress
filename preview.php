@@ -6,8 +6,18 @@
 <div class="preview" style="background-image: url('<?php echo $url; ?>'); background-repeat: no-repeat;">
 	<div class="row-fluid">
 		<div class="span6 offset6 description">
-			<h1><?php the_title(); ?></h1>
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_excerpt(); ?></a>
+			<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<a href="<?php the_permalink(); ?>" rel="bookmark">
+				<?php 
+					$content = get_the_content(''); 	
+					
+					if ( strlen( $content ) > 140 ) {
+						the_excerpt();
+					} else {
+						the_content('');
+					}
+				?>
+			</a>
 		</div>
 	</div>
 </div>

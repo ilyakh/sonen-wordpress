@@ -7,13 +7,12 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans;
 	padding: 0;
 	margin: 0;
 	border: none;
 	word-wrap: break-word;
 }
-
 
 img {}
 
@@ -24,27 +23,28 @@ h1 {
 
 h1, h2, h3, h4, h5, h6 {
 	
-	font-family: 'Roboto Condensed', sans-serif;
+	/* font-family: 'Roboto Condensed', sans-serif; */
+	font-family: 'Oswald', 'Times New Roman', sans-serif;
 	font-weight: normal;
 	word-wrap: break-word;
 }
 
 h2, h3 {
-	font-size: 29.5px;
+	font-size: 24.5px;
 	font-weight: normal;
 	color: rgb( 18, 82, 189 );
 }
 
 h4, h5, h6 {
 	/* overrides the improper font size for roboto */
-	font-size: 24.5px;
+	font-size: 22.5px;
 	font-weight: normal;
 	color: rgb( 18, 82, 189 );
 }
 
 .header .span6, .content, .frame-element {
 	padding: 28px;
-	padding-top: 20px;
+	padding-top: 0px;
 }
 
 .frame, .header > .row-fluid {
@@ -59,6 +59,8 @@ h4, h5, h6 {
 }
 
 
+
+
 @media ( max-width: 1200px ) { 
 
 }
@@ -67,12 +69,17 @@ h4, h5, h6 {
 	margin-bottom: 30px;
 }
 
+.preview-row-1 {
+	padding-top: 20px;
+}
+
 .preview {
-	cursor: pointer;
+	
 	background-color: rgba( 255, 255, 255, 0.75 );
 	background-size: 100%;
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
 	border: 1px solid #cecece;
+	overflow: hidden;
 }
 
 .preview .description {
@@ -86,6 +93,12 @@ h4, h5, h6 {
 .preview .description h1 {
 	background-color: black;
 }
+
+.preview .description h1 a:hover {
+	text-decoration: none;
+}
+
+
 
 .span6 .preview .description {
 	height: 250px;
@@ -122,4 +135,85 @@ h4, h5, h6 {
 
 .menu .menu-item a {
 	color: black;
+}
+
+
+/* IMAGES */
+
+.wp-post-image {
+	border-radius: 5px;
+	width: 100%;
+}
+
+.entry-content img {
+	border-radius: 3px;
+}
+
+.avatar, .photo {
+	border-radius: 100%;
+}
+
+
+/* CONTENT FEATURES */
+
+.breadcrumb li a {
+	white-space: nowrap;
+}
+
+
+/* SINGLE */
+
+.authors {
+	width: 100px;
+	padding: 0px 0px 15px 0px;
+}
+
+.authors .author-name {
+	text-align: center;
+}
+
+.entry-title {
+	font-size: 1.3em;
+	line-height: 1.3em;
+	padding-top: 15px;
+	/* padding: 15px 0px 12px 0px; */
+}
+
+
+
+.entry-content {
+	
+}
+
+.ingress {
+	font-weight: bold;
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+
+.paragraph {
+	margin: 15px 0px 10px 0px;
+	font-size: 1.15em;
+	line-height: 1.5em;
+}
+
+
+
+.tags {
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tag {
+	background-image: url( '../img/flag.png' );
+	background-repeat: no-repeat;
+	height: 30px;
+	margin-top: 2px;
+	padding: 3px;
+}
+
+.tag a {
+	color: white;
 }

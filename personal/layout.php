@@ -108,8 +108,8 @@ class Layout {
                     
                 }
             }
-
-            printf( '<div class="row-fluid preview-row preview-row-%s">', $this->currentRow );
+			
+            printf( '<div class="row-fluid preview-row preview-row-%s">', $rowCounter );
             $row();
             print( '</div>' );
 
