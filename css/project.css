@@ -14,8 +14,6 @@ body {
 	word-wrap: break-word;
 }
 
-img {}
-
 h1 {
 	font-size: 2.5em;
 }
@@ -42,20 +40,30 @@ h4, h5, h6 {
 	color: rgb( 18, 82, 189 );
 }
 
-.header .span6, .content, .frame-element {
+
+.content, .frame-element {
 	padding: 28px;
 	padding-top: 0px;
 }
 
-.frame, .header > .row-fluid {
+.frame, 
+.header > .row-fluid {
 	margin: 0 auto;
 	max-width: 1370px;
 	background-color: rgba( 255, 255, 255, 0.05 );
 	background-image: url( '../img/semi-transparent.png' );
 }
 
-.header .span6 {
+.header .logo-container {
 	padding: 20px 0px 0px 28px;
+}
+
+.header .logo-container img {
+	min-width: 272px;
+}
+
+.header .menu-container {
+	padding: 32px 20px 0px 28px;
 }
 
 
@@ -69,7 +77,7 @@ h4, h5, h6 {
 	margin-bottom: 30px;
 }
 
-.preview-row-1 {
+.preview-row-1 { /* [!] hack */
 	padding-top: 20px;
 }
 
@@ -100,15 +108,15 @@ h4, h5, h6 {
 
 
 
-.span6 .preview .description {
+.preview-row .span6 .preview .description {
 	height: 250px;
 }
 
-.span4 .preview .description {
+.preview-row .span4 .preview .description {
 	height: 200px;
 }
 
-.span4 .preview .description {
+.preview-row .span4 .preview .description {
 	font-size: 0.75rem;
 	line-height: 1rem;
 }
@@ -177,12 +185,27 @@ h4, h5, h6 {
 	line-height: 1.3em;
 	padding-top: 15px;
 	/* padding: 15px 0px 12px 0px; */
+	border-bottom: 1px solid #CECECE;
 }
 
 
 
-.entry-content {
+.entry-content .row-fluid {
 	
+}
+
+
+.paragraph {
+	padding: 15px 0px 10px 0px;
+	font-size: 1.15em;
+	line-height: 1.5em;
+	background-color: white;
+	background-color: rgba( 255, 255, 255, 0.75 );
+}
+
+.paragraph, .box {
+	background-color: white;
+	background-color: rgba( 255, 255, 255, 0.75 );
 }
 
 .ingress {
@@ -191,29 +214,62 @@ h4, h5, h6 {
 	line-height: 1.5em;
 }
 
-.paragraph {
-	margin: 15px 0px 10px 0px;
-	font-size: 1.15em;
-	line-height: 1.5em;
-}
-
 
 
 .tags {
 	list-style: none;
 	list-style-type: none;
+	width: 150px;
+	max-height: 150px;
 	margin: 0;
 	padding: 0;
+	padding-top: 15px;
 }
 
 .tag {
-	background-image: url( '../img/flag.png' );
+	background-color: rgba( 0, 0, 0, 0.75 );
+	background-image: url( '../img/semi-transparent-black.png' );
 	background-repeat: no-repeat;
-	height: 30px;
+	display: inline-block;
 	margin-top: 2px;
-	padding: 3px;
+	padding: 5px;
+	margin-right: 3px;
 }
 
 .tag a {
 	color: white;
+}
+
+.box {
+	width: 40%;
+	margin: 7px;
+}
+
+.factbox {
+	font-style: italic;
+	color: #888;
+	font-size: 1.2em;
+	padding: 12px;
+}
+
+.post-thumbnail-caption {
+	margin-top: 4em;
+	max-width: 180px;
+	font-style: italic;
+}
+
+.wp-caption-text,
+.gallery-caption,
+.post-thumbnail-caption {
+	font-size: 0.9em;
+	padding-top: 4px;
+	color: #888;
+}
+
+.gallery-caption {
+	text-align: right;
+}
+
+.wp-caption-text {
+	
 }

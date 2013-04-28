@@ -29,7 +29,7 @@
 			</ul>
 			
 			
-			<div>
+			<div class="post-thumbnail-caption">
 			<?php 
 				if ( has_post_thumbnail() ) :
 				
@@ -39,19 +39,12 @@
 			?>
 			</div>
 		</div>
-		
 	</div>
 	
 
-	<div class="row-fluid">
-		<div class="span8">
-			<div class="entry-content" style="background-color: white;">			
-				<hr />
-				
-				<?php the_content(); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-			</div>
-		</div>
+	<div class="entry-content">
+			<?php the_content(''); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
 	</div>
 	
 	<div class="row-fluid">

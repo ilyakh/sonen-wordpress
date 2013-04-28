@@ -18,15 +18,25 @@ style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/ba
 
 <div class="header">
 	<div class="row-fluid">
-		<div class="span6">
-		<a href="<?php bloginfo('url'); ?>">
-			<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-		</a>
+		<div class="span3">
+			<div class="logo-container">
+				<a href="<?php bloginfo('url'); ?>">
+					<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+				</a>
+			</div>
 		</div>
-		<div class="span6"><!--
-			<a href="http://uio.no/">
-				<img src="http://sonen.ifi.uio.no/wp-content/themes/sonen/img/segl.png" alt="" class="pull-right" />
-			</a>-->
+		<div class="span9">
+			<div class="menu-container">
+				<!-- main menu -->
+				<ul class="nav nav-pills">
+				  <li class="active">
+					<a href="#">HOVEDSIDE</a>
+				  </li>
+				  <li><a href="#">PROSJEKTER</a></li>
+				  <li><a href="#">ARTIKLER</a></li>
+				  <li><a href="#">WIKI</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

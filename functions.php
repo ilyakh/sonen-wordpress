@@ -38,10 +38,18 @@ function wp_fathom_clean_setup() {
     
 
 }
-
 add_action( 'after_setup_theme', 'wp_fathom_clean_setup' );
 
 
+/**
+ *
+ *	SHORTCODES
+ *
+ */
+add_shortcode('factbox', 'sonen_factbox');  
+function sonen_factbox( $atts, $content=null ) {
+	return '<div class="box factbox pull-right">'. $content .'</div>';
+}
 
 
 /**
@@ -85,13 +93,41 @@ function sonen_content_filter( $content ) {
 		
 		for ( $i = 0; $i < count( $paragraphs ); $i++ ) {
 			$p = $paragraphs[$i];
-			if ( $i == 0 && $p->tag == "p" ) {
-				// ingress
-				$p = '<span class="ingress">'. $p .'</span>';
-			} else if ( $p->tag == "p" ) {
-				// regular paragraph
-				$p = '<div class="row-fluid"><div class="span10 paragraph">'. $p->xmltext() .'</div></div>';
+			
+			$classes = explode( " ", $p->getAttribute('class') );
+			
+			
+			
+			if ( strstr( $p->xmltext(), '<span id="more-' ) || strlen( $p->xmltext() ) == 0 ) {
+				// empty paragraph
+				$p = '';
+			} else {
+			
+				if ( $i == 0 && $p->tag == "p" ) {
+					// ingress
+					$p = '<div class="row-fluid"><div class="span8 paragraph ingress">'. $p .'</div></div>';
+				} else if ( $p->tag == "p" ) {
+					// regular paragraph
+					$p = '<div class="row-fluid"><div class="span6 paragraph">'. $p->xmltext() .'</div></div>';
+				} 
+				
+				if ( in_array( "wp-caption", $classes ) ) {
+					// distribute the image and caption in their own columns
+					$image = $p->find( "a" )[0];
+					$caption = $p->find( ".wp-caption-text" )[0];
+					
+					
+					
+					$p = '<div class="row-fluid">
+							<div class="span4 paragraph">'. $image .'</div>
+							<div class="span4 paragraph">'. $caption .'</div>
+						</div>
+					';
+					
+				}
 			}
+
+			
 			$normal_paragraphs[] = $p;
 		}
 		
@@ -238,7 +274,7 @@ function my_post_gallery( $output, $attr) {
         </style>
         
         <div id='$selector' class=\"gallery galleryid-{$id}\">
-		<div class=\"row-fluid\">" 
+		<div class=\"row-fluid\"><div class=\"span8\"><div class=\"row-fluid\">"
 	);
 	
 	
