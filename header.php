@@ -9,6 +9,12 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link href="<?php echo get_template_directory_uri(); ?>/css/project.css" rel="stylesheet" media="screen">
 	<?php wp_head(); ?>
+    
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    
 </head>
 
 <body <?php body_class(''); ?> style="background-size: 100%; background-repeat: no-repeat; background-attachment: fixed;">
@@ -30,11 +36,12 @@ style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/ba
 				<!-- main menu -->
 				<ul class="nav nav-pills">
 				  <li class="active">
-					<a href="#">HOVEDSIDE</a>
+					<a href="/">HOVEDSIDE</a>
 				  </li>
-				  <li><a href="#">PROSJEKTER</a></li>
-				  <li><a href="#">ARTIKLER</a></li>
-				  <li><a href="#">WIKI</a></li>
+				  <li><a href="/tag/prosjekt">PROSJEKTER</a></li>
+				  <li><a href="/category/article">ARTIKLER</a></li>
+				  <li><a href="/wiki/">WIKI</a></li>
+                  <li><a href="/om-sonen">OM SONEN</a></li>
 				</ul>
 			</div>
 		</div>

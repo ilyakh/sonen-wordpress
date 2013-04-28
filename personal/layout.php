@@ -61,10 +61,10 @@ class Layout {
     function addElement( $element ) {
         if ( $this->getCurrentRow() != null ) {
             if ( ! $this->getCurrentRow()->isFull() ) {
-
                 $this->getCurrentRow()->addElement( $element );
             } else {
-                ++ $this->currentRow;
+                // if the row is full
+                ++ $this->currentRow;                
                 $this->addElement( $element );
             }
         }
@@ -101,7 +101,12 @@ class Layout {
             // forces the dark area to appear on all pages despite the number of posts
             if ( $this->countFullRows() >= 2 ) {
                 if ( $rowCounter == 3 ) {
-                    
+                    $e = new MenuElement(
+                        "Wiki",
+                        "Les vår wiki",
+                        "asda"
+                    );
+                    echo $e();
                 }
             } else {
                 if ( $rowCounter == 2 ) {
@@ -177,6 +182,27 @@ class Element {
     function __invoke() {
         the_post(); // fetches the next Wordpress-post and adopts its scope
         get_template_part( 'preview', get_post_format() );
+    }
+
+    function setSize( $size ) {
+        $this->size = $size;
+    }
+}
+
+
+class MenuElement {
+
+    protected $size;
+
+    function __construct( $title, $description, $image ) {
+        $this->size = 4;
+        $this->title = $title;
+        $this->description = $description;
+        $this->image = $image;
+    }
+
+    function __invoke() {
+        get_template_part( 'menu', 'home' );
     }
 
     function setSize( $size ) {

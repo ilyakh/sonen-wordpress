@@ -1,6 +1,4 @@
-﻿<?php
-
-
+<?php
 
 function wp_fathom_clean_setup() {
 
@@ -13,7 +11,11 @@ function wp_fathom_clean_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	
-	
+    /**
+     *
+     *  THEME SUPPORT
+     *
+     */
 	
 	$args = array(
 		'default-color'          => 'white',
@@ -30,6 +32,36 @@ function wp_fathom_clean_setup() {
 	);
 	add_theme_support( 'custom-header', $args );
 
+    
+    /**
+     *
+     *  SIDEBARS
+     *
+     */
+    
+    register_sidebar(array(
+        'name'=> 'Bloggrull 1 (opptil 4 elementer)',
+        'id' => 'blogroll-first',
+        'before_widget' => '<div class="span3 blogroll-element">',
+        'after_widget' => '</div>'
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Bloggrull 2 (opptil 4 elementer)',
+        'id' => 'blogroll-second',
+        'before_widget' => '<div class="span3 blogroll-element">',
+        'after_widget' => '</div>'
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Bloggrull 3 (opptil 4 elementer)',
+        'id' => 'blogroll-third',
+        'before_widget' => '<div class="span3 blogroll-element">',
+        'after_widget' => '</div>'
+    ));
+    
+    
+    
     // register_nav_menu( 'first', 'first' );
     
 	// set_post_thumbnail_size( 505, 400, true );
@@ -98,7 +130,7 @@ function sonen_content_filter( $content ) {
 			
 			
 			
-			if ( strstr( $p->xmltext(), '<span id="more-' ) || strlen( $p->xmltext() ) == 0 ) {
+			if ( strstr( $p->xmltext(), '<span id="more-' ) || strlen( $p->xmltext() ) == 0 || $p->xmltext() == '&nbsp;' ) {
 				// empty paragraph
 				$p = '';
 			} else {
@@ -114,14 +146,21 @@ function sonen_content_filter( $content ) {
 				if ( in_array( "wp-caption", $classes ) ) {
 					// distribute the image and caption in their own columns
 					$image = $p->find( "a" )[0];
-					$caption = $p->find( ".wp-caption-text" )[0];
+					$text = $p->find( ".wp-caption-text" )[0];
 					
 					
 					
-					$p = '<div class="row-fluid">
-							<div class="span4 paragraph">'. $image .'</div>
-							<div class="span4 paragraph">'. $caption .'</div>
-						</div>
+					$p = '
+					<div class="row-fluid">
+						<div class="span8">
+							<div class="row-fluid caption-row">
+								<div class="caption-container">
+									<div class="span6"><div class="caption-image">'. $image .'</div></div>
+									<div class="span6"><div class="caption-text">'. $text .'</div></div>
+								</div>
+							</div>
+                        </div>
+                    </div>
 					';
 					
 				}
@@ -322,6 +361,4 @@ function my_post_gallery( $output, $attr) {
 
     return $output;
 }
-
-
 ?>

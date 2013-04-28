@@ -1,4 +1,4 @@
-﻿<?php require_once "personal/layout.php"; ?>
+<?php require_once "personal/layout.php"; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
