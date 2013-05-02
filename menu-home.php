@@ -1,6 +1,6 @@
 <div class="row-fluid preview-row">
     <div class="span4">
-        <div class="preview" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/wiki-thumbnail.png'); background-repeat: no-repeat;">
+        <div class="preview page-preview" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/wiki-thumbnail.png'); background-repeat: no-repeat;">
             <div class="row-fluid">
                 <div class="span6 description">
                     <h1><a href="http://sonen.ifi.uio.no/wiki/" rel="bookmark">Wiki</a></h1>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="span4">
-        <div class="preview" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/prosjekter-thumbnail.png'); background-repeat: no-repeat;">
+        <div class="preview page-preview" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/prosjekter-thumbnail.png'); background-repeat: no-repeat;">
             <div class="row-fluid">
                 <div class="span6 description">
                     <h1><a href="" rel="bookmark">Prosjekter</a></h1>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="span4">
-        <div class="preview" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/arrangementer-thumbnail.jpg'); background-repeat: no-repeat;">
+        <div class="preview page-preview" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/arrangementer-thumbnail.jpg'); background-repeat: no-repeat;">
             <div class="row-fluid">
                 <div class="span6 description">
                     <h1><a href="" rel="bookmark">Arrangementer</a></h1>

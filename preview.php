@@ -9,7 +9,7 @@
 			<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php 
-					$content = get_the_content(''); 	
+					$content = strip_tags( get_the_content('') );
 					
 					if ( strlen( $content ) > 140 ) {
 						the_excerpt();

@@ -326,13 +326,10 @@ function my_post_gallery( $output, $attr) {
 			wp_get_attachment_link($id, $size, false, false);
 		}
 		
-
-		
-		// first item
+        
         $output .= "<{$itemtag} class=\"span6 gallery-item\">";
-		
-		$output .= '<!-- here -->';
-		
+        
+        
 		// icon
         $output .= "
             <{$icontag} class=\"gallery-icon\">
@@ -341,7 +338,7 @@ function my_post_gallery( $output, $attr) {
 		
         if ( $captiontag && trim($attachment->post_excerpt) ) {
             $output .= "
-                <{$captiontag} class=\"gallery-caption\">
+                <{$captiontag} width=\"{$itemwidth}\" class=\"gallery-caption\">
                 " . wptexturize($attachment->post_excerpt) . "
                 </{$captiontag}>";
         }

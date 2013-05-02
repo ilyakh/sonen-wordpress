@@ -173,7 +173,7 @@ h4, h5, h6 {
 
 .authors {
 	width: 100px;
-	padding: 0px 0px 15px 0px;
+	padding: 10px 5px 15px 5px;
 }
 
 .authors .author-name {
@@ -186,12 +186,24 @@ h4, h5, h6 {
 	padding-top: 15px;
 	/* padding: 15px 0px 12px 0px; */
 	border-bottom: 1px solid #CECECE;
+    color: rgb( 64, 64, 64 );
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    margin-top: 32px;
+    margin-bottom: 5px;
+    color: rgb( 64, 64, 64 );
 }
 
 
 
-.entry-content .row-fluid {
-	
+.entry-content {
+	padding-bottom: 62px;
 }
 
 
